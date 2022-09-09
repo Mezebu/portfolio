@@ -1,4 +1,5 @@
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import { green } from "@mui/material/colors";
 import { styled, alpha } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
@@ -40,6 +41,7 @@ export const NavLink = styled(Box)({
     borderBottom: "1px solid grey",
   },
   "&.active": {
-    borderBottom: "1px solid #8a2387",
+    borderBottom: "2px solid #8a2387",
+    color: green[600],
   },
 });
