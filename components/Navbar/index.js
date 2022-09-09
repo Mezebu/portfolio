@@ -15,9 +15,9 @@ import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../src/ThemeContext";
 
 const NavBar = ({ children }) => {
-  const theme = useTheme();
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
+  const theme = useTheme();
   const { darkMode, setDarkMode } = useContext(ThemeContext);
   const themeTitle =
     theme.palette.mode.charAt(0).toUpperCase() + theme.palette.mode.slice(1);
@@ -64,15 +64,18 @@ const NavBar = ({ children }) => {
                 </IconButton>
               </Tooltip>
             </Box>
-            <ButtonBase color="inherit" sx={{ mr: 2, display: { md: "none" } }}>
-              <HamburgerBtn>
-                <Hamburger
-                  toggled={isHamburgerOpen}
-                  toggle={setIsHamburgerOpen}
-                  size={20}
-                />
-              </HamburgerBtn>
-            </ButtonBase>
+
+            <IconButton
+              color="inherit"
+              size="small"
+              sx={{ mr: 2, display: { md: "none" } }}
+            >
+              <Hamburger
+                toggled={isHamburgerOpen}
+                toggle={setIsHamburgerOpen}
+                size={20}
+              />
+            </IconButton>
           </StyledToolbar>
         </StyledAppBar>
       </ElevationScroll>
