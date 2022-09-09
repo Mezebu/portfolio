@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Toolbar, Typography } from "@mui/material";
 
 const About = () => {
   return (
     <Box sx={{ my: 4 }}>
+      <Toolbar />
       <Container maxWidth="lg">
         <Box id="about" sx={{ my: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom>
