@@ -41,7 +41,6 @@ export const NavLink = styled(Box)({
     borderBottom: "1px solid grey",
   },
   "&.active": {
-    borderBottom: "2px solid #8a2387",
     color: green[600],
   },
 });
