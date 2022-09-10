@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useState } from "react";
-import { Box, ButtonBase, CssBaseline } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import { IconButton, Toolbar, Tooltip } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Squash as Hamburger } from "hamburger-react";
@@ -9,7 +9,7 @@ import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 
 import { StyledToolbar, StyledAppBar, StyledNavLogo } from "./styles";
-import { HamburgerBtn, NavLink } from "./styles";
+import { NavLink } from "./styles";
 import { navLinks } from "./NavData";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../src/ThemeContext";
@@ -34,10 +34,9 @@ const NavBar = ({ children }) => {
           <StyledToolbar>
             <StyledNavLogo variant="h5">Henry</StyledNavLogo>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              {navLinks.map(({ id, page, title, offSet }) => (
+              {navLinks.map(({ id, page, title, offSet, icon }) => (
                 <NavLink
                   component={Link}
-                  sx={{ mx: 1 }}
                   key={id}
                   activeClass="active"
                   to={page}
@@ -46,7 +45,7 @@ const NavBar = ({ children }) => {
                   offset={offSet}
                   duration={1000}
                 >
-                  {title}
+                  {icon} {title}
                 </NavLink>
               ))}
             </Box>
