@@ -21,7 +21,7 @@ export const StyledGreyDot = styled(Box)(({ theme }) => ({
   background:
     theme.palette.mode === "light"
       ? "linear-gradient(145deg, #cacaca, #f0f0f0)"
-      : "linear-gradient(145deg, #24335e, #1f2b4f)",
+      : "#001E3C",
   width: 30,
   height: 30,
   position: "absolute",
@@ -31,7 +31,7 @@ export const StyledGreyDot = styled(Box)(({ theme }) => ({
   boxShadow:
     theme.palette.mode === "light"
       ? "20px 20px 60px #bebebe, -20px -20px 60px #ffffff"
-      : "21px 21px 43px #001428,-21px -21px 43px #002850",
+      : "inset 8px 8px 18px #001122,inset -8px -8px 18px #002b56 ",
 }));
 
 export const StyledPinkDot = styled(Box)(({ theme }) => ({
