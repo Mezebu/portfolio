@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Toolbar, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Link } from "react-scroll";
+import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Image from "next/image";
 
 import { dot, OIcon, PIcon, ArrowDown, multiDot } from "../../assets";
@@ -50,8 +51,7 @@ const HomeHero = () => {
         <StyledGreyDot />
       </StyledWrapper>
       <FlexSpaceBtween>
-        <Image src={multiDot} alt="dots" height={40} width={40} />
-        <Image src={dot} alt="dots" height={40} width={40} />
+        <BlurOnIcon sx={{ fontSize: 50 }} />
       </FlexSpaceBtween>
     </Container>
   );
