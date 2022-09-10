@@ -36,11 +36,12 @@ export const HamburgerBtn = styled(Box)(({ theme }) => ({
 }));
 
 export const NavLink = styled(Box)({
+  display: "flex",
+  alignItems: "center",
   cursor: "pointer",
-  "&:hover": {
-    borderBottom: "1px solid grey",
-  },
+  fontWeight: 500,
   "&.active": {
     color: green[600],
   },
+  marginRight: 15,
 });
