@@ -3,7 +3,10 @@ import { green } from "@mui/material/colors";
 import { styled, alpha } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  background: "rgba( 255, 255, 255, 0.25 )",
+  background:
+    theme.palette.mode === "light"
+      ? "rgba( 255, 255, 255, 0.25 )"
+      : "rgba(0, 30, 60, 0.85)",
   border: "1px solid rgba( 255, 255, 255, 0.18 )",
   borderRadius: theme.shape.borderRadius,
   marginTop: theme.spacing(2),
