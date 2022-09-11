@@ -50,11 +50,8 @@ const NavBar = ({ children }) => {
               ))}
             </Box>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <IconButton>
-                <GitHubIcon />
-              </IconButton>
               <Tooltip title={`${themeTitle} mode`}>
-                <IconButton onClick={toggleTheme} sx={{ mx: 1 }}>
+                <IconButton onClick={toggleTheme}>
                   {theme.palette.mode === "dark" ? (
                     <NightsStayRoundedIcon fontSize="medium" />
                   ) : (
