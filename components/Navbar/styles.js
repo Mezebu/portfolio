@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import { green } from "@mui/material/colors";
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
   background:
@@ -29,14 +29,6 @@ export const StyledNavLogo = styled(Typography)({
   backgroundClip: "text",
   color: "transparent",
 });
-
-export const HamburgerBtn = styled(Box)(({ theme }) => ({
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.black, 0.1),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.black, 0.15),
-  },
-}));
 
 export const NavLink = styled(Box)({
   display: "flex",
