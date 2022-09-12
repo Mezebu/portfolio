@@ -4,7 +4,6 @@ import { IconButton, Toolbar, Tooltip } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Squash as Hamburger } from "hamburger-react";
 import { Link } from "react-scroll";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 
