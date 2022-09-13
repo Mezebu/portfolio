@@ -27,7 +27,7 @@ export const navLinks = [
   },
   {
     id: 4,
-    title: "Projects",
+    title: "Works",
     page: "projects",
     icon: <WorkHistoryIcon sx={{ fontSize: 15, mr: 0.5 }} />,
     offSet: 100,
