@@ -33,7 +33,7 @@ const NavBar = ({ children }) => {
           <StyledToolbar>
             <StyledNavLogo variant="h5">Henry</StyledNavLogo>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              {navLinks.map(({ id, page, title, offSet, icon }) => (
+              {navLinks.map(({ id, page, title, offSet }) => (
                 <NavLink
                   component={Link}
                   key={id}
@@ -44,7 +44,7 @@ const NavBar = ({ children }) => {
                   offset={offSet}
                   duration={1000}
                 >
-                  {icon} {title}
+                  {title}
                 </NavLink>
               ))}
             </Box>
