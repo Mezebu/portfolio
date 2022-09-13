@@ -1,12 +1,11 @@
 import React from "react";
 import { Box, Container, Toolbar, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { Link } from "react-scroll";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Image from "next/image";
 
-import { dot, OIcon, PIcon, ArrowDown, multiDot } from "../../assets";
 import { StyledDate, StyledGreyDot, StyledText, StyledWrapper } from "./styles";
+import { OIcon, PIcon, ArrowDown } from "../../assets";
 import { FlexSpaceBtween } from "../../../styles/globalStyles";
 
 const HomeHero = () => {
@@ -30,23 +29,8 @@ const HomeHero = () => {
             Develo<Image src={PIcon} alt="image" height={isMobile ? 35 : 95} width={isMobile ? 40 : 105}/>er
            </StyledText>
         </Box>
-        <Box
-          component={Link}
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={1000}
-          sx={{ display: "flex", alignItems: "flex-end" }}
-        >
-          <Image
-            src={ArrowDown}
-            alt="image"
-            height="100px"
-            width="100px"
-            style={{ cursor: "pointer" }}
-          />
+        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+          <Image src={ArrowDown} alt="image" height="100px" width="100px" />
         </Box>
         <StyledGreyDot />
       </StyledWrapper>
