@@ -35,8 +35,34 @@ export const NavLink = styled(Box)({
   alignItems: "center",
   cursor: "pointer",
   fontWeight: 500,
-  "&.active": {
-    color: green[600],
-  },
   marginRight: 15,
+
+  "&:hover": {
+    borderBottom: "1px solid white",
+    backgroundImage: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
+    backgroundSize: "200% 100%",
+    backgroundPosition: "-100%",
+    display: "inline-block",
+    position: "relative",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    transition: "all 0.3s ease-in-out",
+
+    "&::before": {
+      content: null,
+      background: "#54b3d6",
+      display: "block",
+      position: "absolute",
+      bottom: "-3px",
+      left: 0,
+      width: 0,
+      height: "3px",
+      transition: "all 0.3s ease-in-out",
+    },
+  },
+
+  "&.active": {
+    color: green[300],
+    borderBottom: "1px solid green",
+  },
 });
