@@ -1,17 +1,11 @@
 import React from "react";
-import Copyright from "../../src/Copyright";
-
-import Navbar from "../Navbar";
+import { Box } from "@mui/material";
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <Navbar />
-      <main>
-        <section>{children}</section>
-      </main>
-      <Copyright />
-    </>
+    <Box component="main">
+      <section>{children}</section>
+    </Box>
   );
 };
 
