@@ -22,12 +22,12 @@ const HomeHero = () => {
         <Box>
           {/* prettier-ignore */}
           <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
-            Fr<Image src={OIcon} alt="image" height={isMobile ? 33 : 83} width={isMobile ? 33 : 85}/>ntend
+           Fr<Image src={OIcon} alt="image" height={isMobile ? 33 : 83} width={isMobile ? 33 : 85}/>ntend
           </StyledText>
           {/* prettier-ignore */}
           <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
             Develo<Image src={PIcon} alt="image" height={isMobile ? 35 : 95} width={isMobile ? 40 : 105}/>er
-           </StyledText>
+          </StyledText>
         </Box>
         <Box sx={{ display: "flex", alignItems: "flex-end" }}>
           <Image src={ArrowDown} alt="image" height="100px" width="100px" />
