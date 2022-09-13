@@ -10,6 +10,8 @@ import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/Layout/Layout";
 import darkTheme from "../src/darkTheme";
 import ThemeContext from "../src/ThemeContext";
+import NavBar from "../components/Navbar";
+import Copyright from "../src/Copyright";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -43,9 +45,11 @@ export default function MyApp(props) {
         <ThemeProvider theme={darkMode ? darkTheme : theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
+          <NavBar />
           <Layout>
             <Component {...pageProps} />
           </Layout>
+          <Copyright />
         </ThemeProvider>
       </ThemeContext.Provider>
     </CacheProvider>
