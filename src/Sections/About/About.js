@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Container, Toolbar, Typography } from "@mui/material";
+import AnimateText from "../../../components/FramerInviewAnimation/AnimateText";
+import { motion, useInView } from "framer-motion";
 
 const About = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { once: true });
   return (
     <Box sx={{ my: 4 }}>
       <Toolbar />
       <Container maxWidth="lg">
-        <Box id="about" sx={{ my: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            About Page
-          </Typography>
+        <Box id="about" sx={{ my: 4 }} ref={ref}>
+          {isInView && <AnimateText text="About Page" />}
 
           <Box sx={{ my: 2 }}>
             {[...new Array(12)]
