@@ -7,10 +7,35 @@ import Image from "next/image";
 import { StyledDate, StyledGreyDot, StyledText, StyledWrapper } from "./styles";
 import { OIcon, PIcon, ArrowDown } from "../../assets";
 import { FlexSpaceBtween } from "../../../styles/globalStyles";
+import { motion } from "framer-motion";
 
 const HomeHero = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const item = {
+    hidden: {
+      y: 10,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const container = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+        delay: 0.5,
+        duration: 1,
+        delayChildren: 0.9,
+      },
+    },
+  };
 
   return (
     <Container>
@@ -19,13 +44,18 @@ const HomeHero = () => {
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <StyledDate variant="button">©{new Date().getFullYear()}</StyledDate>
         </Box>
-        <Box>
+        <Box
+          component={motion.div}
+          initial="hidden"
+          variants={container}
+          animate="visible"
+        >
           {/* prettier-ignore */}
-          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
+          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }} component={motion.div} variants={item}>
            Fr<Image src={OIcon} alt="image" height={isMobile ? 33 : 83} width={isMobile ? 33 : 85}/>ntend
           </StyledText>
           {/* prettier-ignore */}
-          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
+          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }} component={motion.div} variants={item}>
             Develo<Image src={PIcon} alt="image" height={isMobile ? 35 : 95} width={isMobile ? 40 : 105}/>er
           </StyledText>
         </Box>
