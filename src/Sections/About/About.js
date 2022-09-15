@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { Box, Container, Toolbar, Typography } from "@mui/material";
+import { Box, Container, Toolbar } from "@mui/material";
 import AnimateText from "../../../components/FramerInviewAnimation/AnimateText";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 const About = () => {
   const ref = useRef();
@@ -11,7 +11,9 @@ const About = () => {
       <Toolbar />
       <Container maxWidth="lg">
         <Box id="about" sx={{ my: 4 }} ref={ref}>
-          {isInView && <AnimateText text="About Page" />}
+          {isInView && (
+            <AnimateText text="About Page" variant="h4" fontWeight={700} />
+          )}
 
           <Box sx={{ my: 2 }}>
             {[...new Array(12)]
