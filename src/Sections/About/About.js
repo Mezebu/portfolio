@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Box, Container, Toolbar } from "@mui/material";
-import AnimateText from "../../../components/FramerInviewAnimation/AnimateText";
+import AnimateText from "../../../components/FramerAnimations/AnimateText";
 import { useInView } from "framer-motion";
 
 const About = () => {
