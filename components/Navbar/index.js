@@ -4,12 +4,12 @@ import { Squash as Hamburger } from "hamburger-react";
 import { Box, CssBaseline } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Link } from "react-scroll";
-import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
+import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 
 import { StyledToolbar, StyledAppBar, StyledNavLogo } from "./styles";
-import { NavLink } from "./styles";
 import { navLinks } from "./NavData";
+import { NavLink } from "./styles";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../src/ThemeContext";
 
