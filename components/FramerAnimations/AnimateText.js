@@ -46,7 +46,7 @@ const AnimateText = ({ text, variant, fontWeight, fontFamily }) => {
 export default AnimateText;
 
 AnimateText.propTypes = {
-  fontWeight: PropTypes.string,
+  fontWeight: PropTypes.number,
   variant: PropTypes.string,
   text: PropTypes.string.isRequired,
   fontFamily: PropTypes.string,
