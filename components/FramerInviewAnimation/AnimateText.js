@@ -1,15 +1,17 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Box, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
-const AnimateText = ({ text }) => {
+const AnimateText = ({ text, variant, fontWeight, fontFamily }) => {
   const header = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.9,
+        delay: 2,
         staggerChildren: 0.08,
+        duration: 5,
       },
     },
   };
@@ -27,10 +29,12 @@ const AnimateText = ({ text }) => {
     >
       {text.split("").map((char, index) => (
         <Typography
-          variant="h4"
+          variant={variant}
+          fontWeight={fontWeight}
           component={motion.span}
           key={char + "_" + index}
           variants={letter}
+          sx={{ fontFamily: fontFamily }}
         >
           {char}
         </Typography>
@@ -40,3 +44,10 @@ const AnimateText = ({ text }) => {
 };
 
 export default AnimateText;
+
+AnimateText.propTypes = {
+  fontWeight: PropTypes.string,
+  variant: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  fontFamily: PropTypes.string,
+};
