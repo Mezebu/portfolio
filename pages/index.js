@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Ezeigwe Henry</title>
+        <title>Ezeigwe Henry | Portfolio</title>
       </Head>
       <HomeHero />
       <About />
