@@ -1,8 +1,8 @@
 import React, { Fragment, useContext, useState } from "react";
-import { Box, CssBaseline } from "@mui/material";
 import { IconButton, Toolbar, Tooltip } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import { Squash as Hamburger } from "hamburger-react";
+import { Box, CssBaseline } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { Link } from "react-scroll";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
@@ -16,8 +16,8 @@ import ThemeContext from "../../src/ThemeContext";
 const NavBar = ({ children }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
-  const theme = useTheme();
   const { darkMode, setDarkMode } = useContext(ThemeContext);
+  const theme = useTheme();
   const themeTitle =
     theme.palette.mode.charAt(0).toUpperCase() + theme.palette.mode.slice(1);
 
