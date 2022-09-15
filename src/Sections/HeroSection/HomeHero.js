@@ -1,26 +1,33 @@
-import React from "react";
-import { Box, Container, Toolbar, useMediaQuery } from "@mui/material";
+import React, { useRef } from "react";
+import { Box, Container, useMediaQuery } from "@mui/material";
+import { motion, useInView } from "framer-motion";
 import { useTheme } from "@mui/material/styles";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Image from "next/image";
 
 import { StyledDate, StyledGreyDot, StyledText, StyledWrapper } from "./styles";
 import { OIcon, PIcon, ArrowDown } from "../../assets";
-import { FlexSpaceBtween } from "../../../styles/globalStyles";
-import { motion } from "framer-motion";
+import { FlexJustifyCenter, FlexSpaceBtween } from "../../../styles";
+import AnimateText from "../../../components/FramerInviewAnimation/AnimateText";
 
 const HomeHero = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const ref = useRef();
+  const isInView = useInView(ref, { once: true });
 
   const item = {
     hidden: {
-      y: 10,
+      y: 30,
       opacity: 0,
     },
     visible: {
       y: 0,
       opacity: 1,
+      transition: {
+        delay: 0.5,
+        duration: 0.9,
+      },
     },
   };
 
@@ -29,7 +36,7 @@ const HomeHero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.05,
+        staggerChildren: 0.07,
         delay: 0.5,
         duration: 1,
         delayChildren: 0.9,
@@ -39,8 +46,7 @@ const HomeHero = () => {
 
   return (
     <Container>
-      <Toolbar />
-      <StyledWrapper id="hero">
+      <StyledWrapper id="hero" sx={{ mt: 3 }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <StyledDate variant="button">©{new Date().getFullYear()}</StyledDate>
         </Box>
@@ -67,6 +73,16 @@ const HomeHero = () => {
       <FlexSpaceBtween>
         <BlurOnIcon sx={{ fontSize: 50 }} />
       </FlexSpaceBtween>
+      <FlexJustifyCenter ref={ref}>
+        {isInView && (
+          <AnimateText
+            text="Hi! I'm Ezeigwe Henry, I Code Cool Websites"
+            variant="h4"
+            fontWeight={700}
+            fontFamily="Josefin Slab"
+          />
+        )}
+      </FlexJustifyCenter>
     </Container>
   );
 };
