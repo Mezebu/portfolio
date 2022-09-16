@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, Typography, Box } from "@mui/material";
-import { green } from "@mui/material/colors";
+import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
+import { green, purple } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
@@ -30,39 +30,65 @@ export const StyledNavLogo = styled(Typography)({
   color: "transparent",
 });
 
-export const NavLink = styled(Box)({
-  display: "flex",
+export const NavLink = styled(Box)(({ theme }) => ({
+  display: "inline-block",
   alignItems: "center",
   cursor: "pointer",
   fontWeight: 500,
   marginRight: 15,
-
-  "&:hover": {
-    borderBottom: "1px solid white",
-    backgroundImage: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-    backgroundSize: "200% 100%",
-    backgroundPosition: "-100%",
-    display: "inline-block",
-    position: "relative",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
+  position: "relative",
+  transition: "all 0.3s ease-in-out",
+  "&:before": {
+    content: "''",
+    position: "absolute",
+    width: "0",
+    height: "2px",
+    bottom: "-3px",
+    left: "0%",
+    transform: "translate(0%,0%)",
+    backgroundColor:
+      theme.palette.mode === "light"
+        ? theme.palette.getContrastText(purple[100])
+        : theme.palette.getContrastText(purple[400]),
+    visibility: "hidden",
     transition: "all 0.3s ease-in-out",
-
-    "&::before": {
-      content: null,
-      background: "#54b3d6",
-      display: "block",
-      position: "absolute",
-      bottom: "-3px",
-      left: 0,
-      width: 0,
-      height: "3px",
-      transition: "all 0.3s ease-in-out",
-    },
   },
-
+  "&:hover:before": {
+    visibility: "visible",
+    width: "100%",
+  },
   "&.active": {
-    color: green[300],
-    borderBottom: "1px solid green",
+    color: green[600],
   },
-});
+}));
+
+export const ContactButton = styled(Button)(({ theme }) => ({
+  color:
+    theme.palette.mode === "light"
+      ? theme.palette.primary.dark
+      : theme.palette.info.main,
+  transition: "all 0.7s ease-in-out",
+  textTransform: "none",
+  "&:hover": {
+    position: "relative",
+  },
+  "&:before": {
+    content: "''",
+    position: "absolute",
+    width: "0",
+    height: "2px",
+    bottom: "-3px",
+    left: "0%",
+    transform: "translate(0%,0%)",
+    backgroundColor:
+      theme.palette.mode === "light"
+        ? theme.palette.getContrastText(purple[100])
+        : theme.palette.getContrastText(purple[400]),
+    visibility: "hidden",
+    transition: "all 0.3s ease-in-out",
+  },
+  "&:hover:before": {
+    visibility: "visible",
+    width: "100%",
+  },
+}));
