@@ -11,7 +11,8 @@ import Layout from "../components/Layout/Layout";
 import darkTheme from "../src/darkTheme";
 import ThemeContext from "../src/ThemeContext";
 import NavBar from "../components/Navbar";
-import Copyright from "../src/Copyright";
+import Copyright from "../components/Copyright/Copyright";
+import { Footer } from "../src/Sections";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -49,6 +50,7 @@ export default function MyApp(props) {
           <Layout>
             <Component {...pageProps} />
           </Layout>
+          <Footer />
           <Copyright />
         </ThemeProvider>
       </ThemeContext.Provider>
