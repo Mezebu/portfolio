@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useState } from "react";
-import { IconButton, Toolbar, Tooltip } from "@mui/material";
+import { IconButton, Toolbar, Tooltip, MuiLink } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
 import { Box, CssBaseline } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -8,8 +8,8 @@ import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 
 import { StyledToolbar, StyledAppBar, StyledNavLogo } from "./styles";
+import { ContactButton, NavLink } from "./styles";
 import { navLinks } from "./NavData";
-import { NavLink } from "./styles";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../src/ThemeContext";
 
@@ -49,6 +49,14 @@ const NavBar = ({ children }) => {
               ))}
             </Box>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <ContactButton
+                component={MuiLink}
+                href="mailto:mezebu07@gmail.com?Subject=Hey Henry!✋"
+                target="_blank"
+                rel="noopener"
+              >
+                Contact Me
+              </ContactButton>
               <Tooltip title={`${themeTitle} mode`}>
                 <IconButton onClick={toggleTheme}>
                   {theme.palette.mode === "dark" ? (
@@ -59,7 +67,6 @@ const NavBar = ({ children }) => {
                 </IconButton>
               </Tooltip>
             </Box>
-
             <IconButton
               color="inherit"
               size="small"
