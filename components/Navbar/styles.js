@@ -65,8 +65,8 @@ export const NavLink = styled(Box)(({ theme }) => ({
 export const ContactButton = styled(Button)(({ theme }) => ({
   color:
     theme.palette.mode === "light"
-      ? theme.palette.primary.dark
-      : theme.palette.info.main,
+      ? theme.palette.common.black
+      : theme.palette.common.white,
   transition: "all 0.7s ease-in-out",
   textTransform: "none",
   "&:hover": {
