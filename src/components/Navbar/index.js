@@ -13,6 +13,7 @@ import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../ThemeContext";
 import Link from "../../Link";
 import { motion } from "framer-motion";
+import ProgressBar from "../FramerAnimations/ProgressBar";
 
 const NavBar = ({ children }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -38,6 +39,7 @@ const NavBar = ({ children }) => {
           transition={{ duration: 2 }}
           color="inherit"
         >
+          <ProgressBar />
           <StyledToolbar>
             <StyledNavLogo variant="h5">Henry</StyledNavLogo>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
