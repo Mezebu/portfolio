@@ -7,11 +7,11 @@ import Head from "next/head";
 
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
-import Layout from "../components/Layout/Layout";
+import Layout from "../src/components/Layout/Layout";
 import darkTheme from "../src/darkTheme";
 import ThemeContext from "../src/ThemeContext";
-import NavBar from "../components/Navbar";
-import Copyright from "../components/Copyright/Copyright";
+import NavBar from "../src/components/Navbar";
+import Copyright from "../src/components/Copyright/Copyright";
 import { Footer } from "../src/Sections";
 
 // Client-side cache, shared for the whole session of the user in the browser.
