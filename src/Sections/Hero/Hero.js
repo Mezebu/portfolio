@@ -8,7 +8,7 @@ import Image from "next/image";
 import { StyledDate, StyledGreyDot, StyledText, StyledWrapper } from "./styles";
 import { OIcon, PIcon, ArrowDown } from "../../assets";
 import { FlexJustifyCenter, FlexSpaceBtween } from "../../../styles";
-import AnimateText from "../../../components/FramerAnimations/AnimateText";
+import AnimateText from "../../components/FramerAnimations/AnimateText";
 
 const Hero = () => {
   const theme = useTheme();
