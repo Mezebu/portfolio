@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import ProTip from "../src/ProTip";
 import Link from "../src/Link";
 import AnimateInview from "../src/components/FramerAnimations/AnimateInview";
-import ProgressBar from "../src/components/FramerAnimations/ProgressBar";
 
 const container = {
   hidden: { opacity: 0 },
@@ -26,7 +25,6 @@ const item = {
 export default function About() {
   return (
     <Container maxWidth="lg">
-      <ProgressBar />
       <Toolbar />
       <Box
         component={motion.div}
