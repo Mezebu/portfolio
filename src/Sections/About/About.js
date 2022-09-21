@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Box, Container, Grid, Toolbar, Typography } from "@mui/material";
-import AnimateText from "../../components/FramerAnimations/AnimateText";
 import { useInView } from "framer-motion";
-import { FlexJustifyCenter } from "../../../styles";
+
 import AnimateInview from "../../components/FramerAnimations/AnimateInview";
+import AnimateText from "../../components/FramerAnimations/AnimateText";
+import { FlexJustifyCenter } from "../../../styles";
 
 const About = () => {
   const ref = useRef();
@@ -22,7 +23,7 @@ const About = () => {
           <Box sx={{ my: 2 }}>
             <Grid container>
               <Grid item lg={8} md={8} sm={12} xs={12}>
-                <AnimateInview transform="translateX(-100px)">
+                <AnimateInview transform="translateX(-90px)">
                   <Typography>
                     {[...new Array(4)]
                       .map(
@@ -39,7 +40,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
             <Grid container spacing={2}>
               <Grid item lg={4} md={2} sm={12} xs={12} />
               <Grid item lg={8} md={10} sm={12} xs={12}>
-                <AnimateInview transform="translateX(80px)">
+                <AnimateInview transform="translateX(60px)">
                   <Typography>
                     {[...new Array(4)]
                       .map(
