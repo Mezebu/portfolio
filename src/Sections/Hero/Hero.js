@@ -1,6 +1,4 @@
-import React, { useRef } from "react";
 import { Box, Container, useMediaQuery } from "@mui/material";
-import { motion, useInView } from "framer-motion";
 import { useTheme } from "@mui/material/styles";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Image from "next/image";
@@ -13,36 +11,6 @@ import AnimateText from "../../components/FramerAnimations/AnimateText";
 const Hero = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const ref = useRef();
-  const isInView = useInView(ref, { once: true });
-
-  const item = {
-    hidden: {
-      y: 30,
-      opacity: 0,
-    },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.5,
-        duration: 0.9,
-      },
-    },
-  };
-
-  const container = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.07,
-        delay: 0.5,
-        duration: 1,
-        delayChildren: 0.9,
-      },
-    },
-  };
 
   return (
     <Container>
@@ -50,18 +18,13 @@ const Hero = () => {
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <StyledDate variant="button">©{new Date().getFullYear()}</StyledDate>
         </Box>
-        <Box
-          component={motion.div}
-          initial="hidden"
-          variants={container}
-          animate="visible"
-        >
+        <Box>
           {/* prettier-ignore */}
-          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }} component={motion.div} variants={item}>
+          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
            Fr<Image src={OIcon} alt="image" height={isMobile ? 33 : 83} width={isMobile ? 33 : 85}/>ntend
           </StyledText>
           {/* prettier-ignore */}
-          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }} component={motion.div} variants={item}>
+          <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
             Develo<Image src={PIcon} alt="image" height={isMobile ? 35 : 95} width={isMobile ? 40 : 105}/>er
           </StyledText>
         </Box>
@@ -73,15 +36,13 @@ const Hero = () => {
       <FlexSpaceBtween>
         <BlurOnIcon sx={{ fontSize: 50 }} />
       </FlexSpaceBtween>
-      <FlexJustifyCenter ref={ref}>
-        {isInView && (
-          <AnimateText
-            text="Hi! I'm Ezeigwe Henry, I Code Cool Websites"
-            variant="h4"
-            fontWeight={700}
-            fontFamily="Josefin Slab"
-          />
-        )}
+      <FlexJustifyCenter>
+        <AnimateText
+          text="Hi! I'm Ezeigwe Henry, I Code Cool Websites"
+          variant="h4"
+          fontWeight={700}
+          fontFamily="Josefin Slab"
+        />
       </FlexJustifyCenter>
     </Container>
   );
