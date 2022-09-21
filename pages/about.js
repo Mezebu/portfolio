@@ -1,11 +1,13 @@
-import React from "react";
+import { Fragment } from "react";
 import { Container, Typography, Button, Box } from "@mui/material";
 import { Grid, Toolbar } from "@mui/material";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 import ProTip from "../src/ProTip";
 import Link from "../src/Link";
 import AnimateInview from "../src/components/FramerAnimations/AnimateInview";
+import NavBar from "../src/components/Navbar";
 
 const container = {
   hidden: { opacity: 0 },
@@ -24,69 +26,75 @@ const item = {
 
 export default function About() {
   return (
-    <Container maxWidth="lg">
-      <Toolbar />
-      <Box
-        component={motion.div}
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
+    <Fragment>
+      <Head>
+        <title>Ezeigwe Henry | About</title>
+      </Head>
+      <NavBar />
+      <Container maxWidth="lg">
+        <Toolbar />
         <Box
           component={motion.div}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 1,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
+          variants={container}
+          initial="hidden"
+          animate="show"
         >
-          <Typography variant="h4" align="center" gutterBottom>
-            Next.js example
-          </Typography>
-        </Box>
+          <Box
+            component={motion.div}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <Typography variant="h4" align="center" gutterBottom>
+              Next.js example
+            </Typography>
+          </Box>
 
-        <Box sx={{ my: 2 }}>
-          <Grid container>
-            <Grid item lg={8} md={8} sm={12} xs={12}>
-              <AnimateInview transform="translateX(-100px)">
-                <Box component={motion.p} variants={item}>
-                  {[...new Array(4)]
-                    .map(
-                      () => `Cras mattis consectetur purus sit amet fermentum.
+          <Box sx={{ my: 2 }}>
+            <Grid container>
+              <Grid item lg={8} md={8} sm={12} xs={12}>
+                <AnimateInview transform="translateX(-100px)">
+                  <Box component={motion.p} variants={item}>
+                    {[...new Array(4)]
+                      .map(
+                        () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.
 Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                    )
-                    .join("\n")}
-                </Box>
-              </AnimateInview>
+                      )
+                      .join("\n")}
+                  </Box>
+                </AnimateInview>
+              </Grid>
             </Grid>
-          </Grid>
-          <Grid container spacing={2}>
-            <Grid item lg={4} md={2} sm={12} xs={12} />
-            <Grid item lg={8} md={10} sm={12} xs={12}>
-              <AnimateInview transform="translateX(80px)">
-                <Box component={motion.p} variants={item}>
-                  {[...new Array(4)]
-                    .map(
-                      () => `Cras mattis consectetur purus sit amet fermentum.
+            <Grid container spacing={2}>
+              <Grid item lg={4} md={2} sm={12} xs={12} />
+              <Grid item lg={8} md={10} sm={12} xs={12}>
+                <AnimateInview transform="translateX(80px)">
+                  <Box component={motion.p} variants={item}>
+                    {[...new Array(4)]
+                      .map(
+                        () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.
 Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                    )
-                    .join("\n")}
-                </Box>
-              </AnimateInview>
+                      )
+                      .join("\n")}
+                  </Box>
+                </AnimateInview>
+              </Grid>
             </Grid>
-          </Grid>
+          </Box>
+          <Button variant="contained" component={Link} noLinkStyle href="/">
+            Go to the main page
+          </Button>
+          <ProTip />
         </Box>
-        <Button variant="contained" component={Link} noLinkStyle href="/">
-          Go to the main page
-        </Button>
-        <ProTip />
-      </Box>
-    </Container>
+      </Container>
+    </Fragment>
   );
 }
