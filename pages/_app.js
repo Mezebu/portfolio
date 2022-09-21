@@ -5,20 +5,21 @@ import { CacheProvider } from "@emotion/react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 
-import theme from "../src/theme";
+import Copyright from "../src/components/Copyright/Copyright";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../src/components/Layout/Layout";
-import darkTheme from "../src/darkTheme";
 import ThemeContext from "../src/ThemeContext";
-import NavBar from "../src/components/Navbar";
-import Copyright from "../src/components/Copyright/Copyright";
+import darkTheme from "../src/darkTheme";
+import theme from "../src/theme";
+import { AnimatePresence, motion } from "framer-motion";
 import { Footer } from "../src/Sections";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  // prettier-ignore
+  const { Component, emotionCache = clientSideEmotionCache, pageProps, router } = props;
 
   // Set dark mode based on media query
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -46,10 +47,21 @@ export default function MyApp(props) {
         <ThemeProvider theme={darkMode ? darkTheme : theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <NavBar />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              key={router.route}
+            >
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </motion.div>
+          </AnimatePresence>
+
           <Footer />
           <Copyright />
         </ThemeProvider>
