@@ -1,19 +1,21 @@
-import React, { Fragment, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { IconButton, Toolbar, Tooltip, MuiLink } from "@mui/material";
+import { Box, CssBaseline, Fab } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
-import { Box, CssBaseline } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { motion } from "framer-motion";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 import { StyledToolbar, StyledAppBar, StyledNavLogo } from "./styles";
 import { ContactButton, NavLink } from "./styles";
 import { navLinks } from "./NavData";
+import ProgressBar from "../FramerAnimations/ProgressBar";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../ThemeContext";
 import Link from "../../Link";
-import { motion } from "framer-motion";
-import ProgressBar from "../FramerAnimations/ProgressBar";
 
 const NavBar = ({ children }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -28,17 +30,15 @@ const NavBar = ({ children }) => {
   };
 
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 1, y: -100 }}
+      transition={{ duration: 1.5 }}
+    >
       <CssBaseline />
       <ElevationScroll {...children}>
-        <StyledAppBar
-          component={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 2 }}
-          color="inherit"
-        >
+        <StyledAppBar color="inherit">
           <ProgressBar />
           <StyledToolbar>
             <StyledNavLogo variant="h5">Henry</StyledNavLogo>
@@ -83,7 +83,12 @@ const NavBar = ({ children }) => {
         </StyledAppBar>
       </ElevationScroll>
       <Toolbar />
-    </Fragment>
+      <ScrollToTop {...children}>
+        <Fab size="small" color="primary" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollToTop>
+    </motion.div>
   );
 };
 
