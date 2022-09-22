@@ -1,6 +1,14 @@
 export { default as dot } from "./rec.png";
-export { default as OIcon } from "./o.png";
-export { default as PIcon } from "./p.png";
+export { default as O } from "./o.png";
+export { default as P } from "./p.png";
 export { default as ArrowDown } from "./down-arrow.png";
 export { default as multiDot } from "./blur.png";
 export { default as HeroPic } from "./hero.png";
+export { default as zero } from "./zero.png";
+export { default as four } from "./four.png";
+export { default as F } from "./f.png";
+export { default as R } from "./r.png";
+export { default as N } from "./n.png";
+export { default as H } from "./h.png";
+export { default as E } from "./e.png";
+export { default as Y } from "./y.png";
