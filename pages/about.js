@@ -1,8 +1,7 @@
-import { Fragment } from "react";
-import { Typography, Button, Box } from "@mui/material";
-import { Grid, Toolbar } from "@mui/material";
-import { motion } from "framer-motion";
 import Head from "next/head";
+import { Fragment } from "react";
+import { Typography, Button, Grid, Box } from "@mui/material";
+import { motion } from "framer-motion";
 
 import ProTip from "../src/ProTip";
 import Link from "../src/Link";
