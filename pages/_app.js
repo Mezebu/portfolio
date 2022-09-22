@@ -5,14 +5,12 @@ import { CacheProvider } from "@emotion/react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 
-import Copyright from "../src/components/Copyright/Copyright";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../src/components/Layout/Layout";
 import ThemeContext from "../src/ThemeContext";
 import darkTheme from "../src/darkTheme";
 import theme from "../src/theme";
 import { AnimatePresence, motion } from "framer-motion";
-import { Footer } from "../src/Sections";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -61,9 +59,6 @@ export default function MyApp(props) {
               </Layout>
             </motion.div>
           </AnimatePresence>
-
-          <Footer />
-          <Copyright />
         </ThemeProvider>
       </ThemeContext.Provider>
     </CacheProvider>
