@@ -34,7 +34,7 @@ const NavBar = ({ children }) => {
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 1, y: -100 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1.2 }}
     >
       <CssBaseline />
       <ElevationScroll {...children}>
