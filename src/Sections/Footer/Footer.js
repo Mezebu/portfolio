@@ -1,6 +1,4 @@
-import * as React from "react";
 import Typography from "@mui/material/Typography";
-import MuiLink from "@mui/material/Link";
 import { StyledFooter, StyledTypography } from "./styles";
 import { Box, Container } from "@mui/material";
 
