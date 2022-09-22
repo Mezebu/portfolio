@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import { Hero, About } from "../src/Sections";
 import SkillsSection from "../src/Sections/Skills/SkillsSection";
-import NavBar from "../src/components/Navbar";
 
 const Index = () => {
   return (
@@ -11,7 +10,6 @@ const Index = () => {
       <Head>
         <title>Ezeigwe Henry | Portfolio</title>
       </Head>
-      <NavBar />
       <Hero />
       <About />
       <SkillsSection />
