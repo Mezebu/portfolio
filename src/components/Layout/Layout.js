@@ -7,9 +7,7 @@ const Layout = ({ children }) => {
     <>
       <NavBar />
       <Toolbar />
-      <Container maxWidth="lg">
-        <section>{children}</section>
-      </Container>
+      <section>{children}</section>
       <Copyright />
     </>
   );
