@@ -12,3 +12,6 @@ export { default as N } from "./n.png";
 export { default as H } from "./h.png";
 export { default as E } from "./e.png";
 export { default as Y } from "./y.png";
+export { default as quote } from "./quote.png";
+export { default as react } from "./react.png";
+export { default as HtmlIcon } from "./html.png";
