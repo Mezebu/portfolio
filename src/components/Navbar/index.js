@@ -4,6 +4,7 @@ import { Box, CssBaseline, Fab } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
 import { useTheme } from "@mui/material/styles";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -15,7 +16,6 @@ import ProgressBar from "../FramerAnimations/ProgressBar";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../ThemeContext";
-import Link from "../../Link";
 
 const NavBar = ({ children }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -43,8 +43,16 @@ const NavBar = ({ children }) => {
           <StyledToolbar>
             <StyledNavLogo variant="h5">Henry</StyledNavLogo>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              {navLinks.map(({ id, page, title }) => (
-                <NavLink component={Link} key={id} href={page} underline="none">
+              {navLinks.map(({ id, page, title, offSet }) => (
+                <NavLink
+                  component={Link}
+                  key={id}
+                  to={page}
+                  spy={true}
+                  smooth={true}
+                  offset={offSet}
+                  duration={1000}
+                >
                   {title}
                 </NavLink>
               ))}
