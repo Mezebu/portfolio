@@ -1,63 +1,62 @@
-import { useRef } from "react";
 import { Box, Container, Grid, Toolbar, Typography } from "@mui/material";
-import { useInView } from "framer-motion";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 
-import AnimateInview from "../../components/FramerAnimations/AnimateInview";
-import AnimateText from "../../components/FramerAnimations/AnimateText";
-import { FlexJustifyCenter } from "../../../styles";
+import { StyledAboutWrapper, StyledUnderline } from "./styles";
 
 const About = () => {
-  const ref = useRef();
-  const isInView = useInView(ref, { once: true });
   return (
-    <Box sx={{ my: 4 }}>
-      <Toolbar />
+    <StyledAboutWrapper component="section" id="about">
       <Container maxWidth="lg">
-        <Box id="about" sx={{ my: 4 }} ref={ref}>
-          <FlexJustifyCenter>
-            {isInView && (
-              <AnimateText text="About Page" variant="h4" fontWeight={700} />
-            )}
-          </FlexJustifyCenter>
+        <Toolbar />
 
-          <Box sx={{ my: 2 }}>
-            <Grid container>
-              <Grid item lg={8} md={8} sm={12} xs={12}>
-                <AnimateInview transform="translateX(-90px)">
-                  <Typography>
-                    {[...new Array(4)]
-                      .map(
-                        () => `Cras mattis consectetur purus sit amet fermentum.
+        <Typography variant="h6" align="center">
+          A LITTLE ABOUT ME
+        </Typography>
+        <StyledUnderline sx={{ my: 3 }}>
+          <KeyboardArrowDownRoundedIcon />
+        </StyledUnderline>
+
+        {[...new Array(4)]
+          .map(
+            () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.
 Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                      )
-                      .join("\n")}
-                  </Typography>
-                </AnimateInview>
-              </Grid>
-            </Grid>
-            <Grid container spacing={2}>
-              <Grid item lg={4} md={2} sm={12} xs={12} />
-              <Grid item lg={8} md={10} sm={12} xs={12}>
-                <AnimateInview transform="translateX(60px)">
-                  <Typography>
-                    {[...new Array(4)]
-                      .map(
-                        () => `Cras mattis consectetur purus sit amet fermentum.
+          )
+          .join("\n")}
+
+        {/* <Grid container>
+            <Grid item lg={8} md={8} sm={12} xs={12}>
+              <Typography>
+                {[...new Array(4)]
+                  .map(
+                    () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.
 Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                      )
-                      .join("\n")}
-                  </Typography>
-                </AnimateInview>
-              </Grid>
+                  )
+                  .join("\n")}
+              </Typography>
             </Grid>
-          </Box>
-        </Box>
+          </Grid>
+          <Grid container spacing={2}>
+            <Grid item lg={4} md={2} sm={12} xs={12} />
+            <Grid item lg={8} md={10} sm={12} xs={12}>
+              <Typography>
+                {[...new Array(4)]
+                  .map(
+                    () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
+                  )
+                  .join("\n")}
+              </Typography>
+            </Grid>
+          </Grid> */}
+        <Toolbar />
       </Container>
-    </Box>
+    </StyledAboutWrapper>
   );
 };
 
