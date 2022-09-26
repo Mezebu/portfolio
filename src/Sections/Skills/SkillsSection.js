@@ -1,50 +1,53 @@
-import React, { useRef } from "react";
-import { Box, Container, Grid } from "@mui/material";
-import { useInView } from "framer-motion";
+import { Container, Grid, Toolbar, Typography } from "@mui/material";
 
-import ProjectItems from "../../components/ProjectItems/ProjectItems";
-import AnimateText from "../../components/FramerAnimations/AnimateText";
-import { FlexJustifyCenter } from "../../../styles";
+import { SkillsWrapper, StyledAvatar, StyledText } from "./styles";
+import { FlexColumn } from "../../../styles/globalStyles";
+
+import Image from "next/image";
+import { data } from "./data";
 
 const SkillsSection = () => {
-  const ref = useRef();
-  const isInView = useInView(ref, { once: true });
-
   return (
-    <Box sx={{ my: 7 }}>
+    <SkillsWrapper component="section" id="skills">
       <Container maxWidth="lg">
-        <Box id="skills" sx={{ my: 2 }} ref={ref}>
-          <FlexJustifyCenter>
-            {isInView && (
-              <AnimateText text="Projects" variant="h4" fontWeight={700} />
-            )}
-          </FlexJustifyCenter>
-
-          <Grid container spacing={2}>
-            <Grid item lg={8} md={8} sm={12} xs={12}>
-              <Box sx={{ my: 5 }}>
-                {[...new Array(5)]
-                  .map(
-                    () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                  )
-                  .join("\n")}
-              </Box>
+        <Toolbar />
+        <Typography sx={{ mb: 5 }} variant="h6" align="center">
+          Things i have worked with
+        </Typography>
+        <Toolbar />
+        <Grid container spacing={3}>
+          <Grid item lg={6} md={6}>
+            <Typography>
+              The nature of my project may influence the web stack I employ in
+              development. When developing a web application, I address the
+              difficulty of data processing on web pages and how to make it run
+              quickly and smoothly. As a result, the web development technology
+              stack should be cost-effective.
+            </Typography>
+          </Grid>
+          <Grid item lg={6} md={6}>
+            <Grid container>
+              {data.map(({ id, icon, title }) => (
+                <Grid item key={id} lg={4} xs={6} sm={4} md={4}>
+                  <FlexColumn>
+                    <StyledAvatar>
+                      <Image
+                        src={icon}
+                        alt="react-icon"
+                        height="50%"
+                        width="50%"
+                      />
+                    </StyledAvatar>
+                    <StyledText variant="button">{title}</StyledText>
+                  </FlexColumn>
+                </Grid>
+              ))}
             </Grid>
           </Grid>
-          <Grid container spacing={2}>
-            <Grid item lg={4} md={2} sm={12} xs={12} />
-            <Grid item lg={8} md={10} sm={12} xs={12}>
-              <Box sx={{ my: 5 }}>
-                <ProjectItems />
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
+        </Grid>
+        <Toolbar />
       </Container>
-    </Box>
+    </SkillsWrapper>
   );
 };
 
