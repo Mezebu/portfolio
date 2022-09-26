@@ -4,7 +4,7 @@ import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Image from "next/image";
 
 import { StyledDate, StyledGreyDot, StyledText, StyledWrapper } from "./styles";
-import { OIcon, PIcon, ArrowDown } from "../../assets";
+import { O, P, ArrowDown } from "../../assets";
 import { FlexJustifyCenter, FlexSpaceBtween } from "../../../styles";
 import AnimateText from "../../components/FramerAnimations/AnimateText";
 
@@ -21,11 +21,11 @@ const Hero = () => {
         <Box>
           {/* prettier-ignore */}
           <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
-           Fr<Image src={OIcon} alt="image" height={isMobile ? 33 : 83} width={isMobile ? 33 : 85}/>ntend
+           Fr<Image src={O} alt="image" height={isMobile ? 33 : 83} width={isMobile ? 33 : 85}/>ntend
           </StyledText>
           {/* prettier-ignore */}
           <StyledText sx={{ fontSize: isMobile ? 60 : 150 }}>
-            Develo<Image src={PIcon} alt="image" height={isMobile ? 35 : 95} width={isMobile ? 40 : 105}/>er
+            Develo<Image src={P} alt="image" height={isMobile ? 35 : 95} width={isMobile ? 40 : 105}/>er
           </StyledText>
         </Box>
         <Box sx={{ display: "flex", alignItems: "flex-end" }}>
