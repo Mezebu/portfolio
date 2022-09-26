@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Head from "next/head";
 
-import { Hero, About } from "../src/Sections";
+import { Hero, About, Works, Contact } from "../src/Sections";
 import SkillsSection from "../src/Sections/Skills/SkillsSection";
 
 const Index = () => {
@@ -13,6 +13,8 @@ const Index = () => {
       <Hero />
       <About />
       <SkillsSection />
+      <Works />
+      <Contact />
     </Fragment>
   );
 };
