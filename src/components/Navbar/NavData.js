@@ -23,13 +23,13 @@ export const navLinks = [
     title: "Experiences",
     page: "skills",
     icon: <PsychologyIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -110,
+    offSet: -90,
   },
   {
     id: 4,
     title: "Works",
-    page: "/projects",
+    page: "works",
     icon: <WorkHistoryIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: 100,
+    offSet: -130,
   },
 ];
