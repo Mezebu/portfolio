@@ -1,9 +1,10 @@
-import { Grid, Toolbar, Typography } from "@mui/material";
+import { Avatar, Grid, Toolbar, Typography } from "@mui/material";
 import { Box, Container, Divider } from "@mui/material";
 import { motion } from "framer-motion";
+import Link from "../../Link";
 
 import { contactData } from "./data";
-import { StyledPaper } from "./styles";
+import { StyledAvatar, StyledFooter, StyledPaper } from "./styles";
 
 const Contact = () => {
   return (
@@ -18,9 +19,10 @@ const Contact = () => {
             <Toolbar />
             {contactData.length > 0 && (
               <Grid container spacing={3}>
-                {contactData.map(({ id, title, icon, detail }) => (
+                {contactData.map(({ id, title, icon, detail, link }) => (
                   <Grid item key={id} lg={4} md={4} sm={6} xs={12}>
-                    <Box
+                    <StyledFooter
+                      elevation={0}
                       component={motion.div}
                       whileHover={{ scale: 1.04 }}
                       transition={{
@@ -29,13 +31,24 @@ const Contact = () => {
                         damping: 10,
                       }}
                     >
-                      <StyledPaper elevation={0}>
+                      <StyledAvatar variant="rounded">
                         <Box>{icon}</Box>
-                        <Typography>{title}</Typography>
-                        <Divider variant="inset" sx={{ my: 2 }} />
-                        <Typography>{detail}</Typography>
-                      </StyledPaper>
-                    </Box>
+                      </StyledAvatar>
+                      <Box sx={{ p: 2 }}>
+                        <Typography variant="subtitle1" fontWeight={600}>
+                          {title}
+                        </Typography>
+                        <Divider sx={{ my: 0.5 }} />
+                        <Typography
+                          component={Link}
+                          href={link}
+                          variant="subtitle2"
+                          fontWeight={600}
+                        >
+                          {detail}
+                        </Typography>
+                      </Box>
+                    </StyledFooter>
                   </Grid>
                 ))}
               </Grid>
