@@ -6,7 +6,7 @@ export const data = [
   { id: 2, title: "CSS", icon: css },
   { id: 3, title: "Javascript", icon: javaScript },
   { id: 4, title: "ReactJs", icon: react },
+  { id: 7, title: "NextJs", icon: nextjs },
   { id: 5, title: "Version Control", icon: git },
   { id: 6, title: "Material UI", icon: mui },
-  { id: 7, title: "Next Js", icon: nextjs },
 ];
