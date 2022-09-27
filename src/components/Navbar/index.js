@@ -4,7 +4,7 @@ import { Box, CssBaseline, Fab } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
 import { useTheme } from "@mui/material/styles";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -27,6 +27,10 @@ const NavBar = ({ children }) => {
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
+  };
+
+  const handleScroll = () => {
+    scroll.scrollToBottom({ duration: 2000 });
   };
 
   return (
@@ -59,10 +63,11 @@ const NavBar = ({ children }) => {
             </Box>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <ContactButton
-                component={MuiLink}
+                onClick={handleScroll}
+                /* component={MuiLink}
                 href="mailto:mezebu07@gmail.com?Subject=Hey Henry!✋"
                 target="_blank"
-                rel="noopener"
+                rel="noopener" */
               >
                 Contact Me
               </ContactButton>
