@@ -28,7 +28,7 @@ const ProjectItems = () => {
           <Tabs
             value={value}
             onChange={handleChange}
-            variant="scrollable"
+            variant="fullWidth"
             scrollButtons
             allowScrollButtonsMobile
             aria-label="projects tab"
