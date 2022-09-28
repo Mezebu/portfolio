@@ -3,10 +3,6 @@ import { blue, grey, red } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 
 export const SkillsWrapper = styled(Box)(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === "light"
-      ? theme.palette.common.white
-      : '"rgb(0, 30, 60)"',
   display: "flex",
   justifyContent: "center",
 }));
