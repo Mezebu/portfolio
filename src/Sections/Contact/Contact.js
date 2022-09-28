@@ -2,18 +2,26 @@ import { Avatar, Grid, Toolbar, Typography } from "@mui/material";
 import { Box, Container, Divider } from "@mui/material";
 import { motion } from "framer-motion";
 import Link from "../../Link";
+import Copyright from "../../components/Copyright/Copyright";
 
 import { contactData } from "./data";
-import { StyledAvatar, StyledFooter, StyledPaper } from "./styles";
+import { StyledAvatar, StyledContactSection, StyledFooter } from "./styles";
 
 const Contact = () => {
   return (
-    <Box component="section" id="contact">
+    <StyledContactSection component="section" id="contact">
       <Container maxWidth="lg">
         <Toolbar />
         <Box>
-          <Typography align="center" variant="h5">
-            Contact me
+          <Typography
+            sx={{ fontSize: 11, letterSpacing: 3 }}
+            color="text.primary"
+            variant="button"
+          >
+            Get in touch
+          </Typography>
+          <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
+            CONTACT
           </Typography>
           <Box sx={{ mb: 5 }}>
             <Toolbar />
@@ -55,8 +63,9 @@ const Contact = () => {
             )}
           </Box>
         </Box>
+        <Copyright />
       </Container>
-    </Box>
+    </StyledContactSection>
   );
 };
 
