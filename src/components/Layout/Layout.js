@@ -1,5 +1,4 @@
-import { Box, Container, Toolbar } from "@mui/material";
-import Copyright from "../Copyright/Copyright";
+import { Toolbar } from "@mui/material";
 import NavBar from "../Navbar/index";
 
 const Layout = ({ children }) => {
@@ -8,7 +7,6 @@ const Layout = ({ children }) => {
       <NavBar />
       <Toolbar />
       <section>{children}</section>
-      <Copyright />
     </>
   );
 };
