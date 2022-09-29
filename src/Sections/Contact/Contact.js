@@ -1,17 +1,17 @@
-import { Avatar, Grid, Toolbar, Typography } from "@mui/material";
-import { Box, Container, Divider } from "@mui/material";
+import { Grid, Toolbar, Typography } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import { motion } from "framer-motion";
 import Link from "../../Link";
 import Copyright from "../../components/Copyright/Copyright";
 
 import { contactData } from "./data";
 import { StyledAvatar, StyledContactSection, StyledFooter } from "./styles";
+import Section from "../../components/Section/Section";
 
 const Contact = () => {
   return (
-    <StyledContactSection component="section" id="contact">
-      <Container maxWidth="lg">
-        <Toolbar />
+    <StyledContactSection>
+      <Section component="section" id="contact">
         <Box>
           <Typography
             sx={{ fontSize: 11, letterSpacing: 3 }}
@@ -52,6 +52,7 @@ const Contact = () => {
                           href={link}
                           variant="subtitle2"
                           fontWeight={600}
+                          underline="hover"
                         >
                           {detail}
                         </Typography>
@@ -64,7 +65,7 @@ const Contact = () => {
           </Box>
         </Box>
         <Copyright />
-      </Container>
+      </Section>
     </StyledContactSection>
   );
 };

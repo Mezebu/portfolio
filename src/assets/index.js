@@ -21,3 +21,8 @@ export { default as nextJs } from "./nextjs-icon.png";
 export { default as git } from "./git.png";
 export { default as mui } from "./icons8-material-ui-480.png";
 export { default as nextjs } from "./nextjs-icon.svg";
+export { default as rocket } from "./rocket.png";
+export { default as circleLogo } from "./CircleLogo.png";
+export { default as twist } from "./twist-knots.png";
+export { default as sphere } from "./sphere.png";
+export { default as wave } from "./wave-sphere.png";

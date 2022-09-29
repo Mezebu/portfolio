@@ -4,9 +4,7 @@ import { styled } from "@mui/material/styles";
 
 export const StyledContactSection = styled(Box)(({ theme }) => ({
   backgroundColor:
-    theme.palette.mode === "light"
-      ? "rgba(182, 169, 140, 1)"
-      : "rgb(71, 45, 45)",
+    theme.palette.mode === "light" ? "rgb(182, 137, 115)" : "rgb(71, 45, 45)",
 }));
 
 export const StyledFooter = styled(Paper)(({ theme }) => ({
@@ -28,7 +26,9 @@ export const StyledFooter = styled(Paper)(({ theme }) => ({
     left: "0%",
     transform: "translate(0%,0%)",
     backgroundColor:
-      theme.palette.mode === "light" ? green[900] : theme.palette.info.light,
+      theme.palette.mode === "light"
+        ? theme.palette.error.light
+        : theme.palette.info.light,
     visibility: "hidden",
     transition: "all 0.6s ease-in-out",
   },
@@ -41,11 +41,13 @@ export const StyledFooter = styled(Paper)(({ theme }) => ({
 export const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: 100,
   height: 100,
+  backgroundColor:
+    theme.palette.mode === "light" ? "rgb(112, 79, 79)" : "rgb(167, 121, 121)",
   borderTopRightRadius: 0,
   borderBottomRightRadius: 0,
   borderBottomLeftRadius: 0,
   borderBottom:
     theme.palette.mode === "light"
-      ? `2px solid ${theme.palette.success.dark}`
+      ? `2px solid ${theme.palette.error.light}`
       : `2px solid ${theme.palette.info.light}`,
 }));

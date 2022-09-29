@@ -1,11 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const StyledWrapper = styled(Box)({
-  display: "flex",
-  justifyContent: "space-between",
-});
-
 export const StyledDate = styled(Typography)({
   writingMode: "vertical-rl",
   textOrientation: "upright",
@@ -14,7 +9,7 @@ export const StyledDate = styled(Typography)({
 
 export const StyledText = styled(Typography)({
   fontFamily: "Montserrat",
-  fontWeight: 400,
+  fontWeight: 600,
 });
 
 export const StyledGreyDot = styled(Box)(({ theme }) => ({

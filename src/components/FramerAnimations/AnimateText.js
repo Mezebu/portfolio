@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-const AnimateText = ({ text, variant, fontWeight, fontFamily }) => {
+const AnimateText = ({ text, variant, letterSpacing, fontSize }) => {
   const header = {
     hidden: { opacity: 1 },
     visible: {
@@ -30,11 +30,10 @@ const AnimateText = ({ text, variant, fontWeight, fontFamily }) => {
       {text.split("").map((char, index) => (
         <Typography
           variant={variant}
-          fontWeight={fontWeight}
           component={motion.span}
           key={char + "_" + index}
           variants={letter}
-          sx={{ fontFamily: fontFamily }}
+          sx={{ fontSize: fontSize, letterSpacing: letterSpacing }}
         >
           {char}
         </Typography>

@@ -97,7 +97,7 @@ const NavBar = ({ children }) => {
       </ElevationScroll>
       <Toolbar />
       <ScrollToTop {...children}>
-        <Fab size="small" color="primary" aria-label="scroll back to top">
+        <Fab size="small" color="warning" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollToTop>
