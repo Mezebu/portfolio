@@ -11,14 +11,14 @@ export const StyledAvatar = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderColor:
-    theme.palette.mode === "light" ? red[200] : theme.palette.primary,
-  borderRadius: "50%",
-  borderStyle: "solid",
-  borderWidth: 1,
-  backgroundColor: theme.palette.mode === "light" ? "#fff" : "#073763",
-  width: 150,
-  height: 150,
+  boxShadow: "8px 8px 20px #e4ddcc,-8px -8px 20px #fffff4",
+
+  borderRadius: 12,
+
+  backgroundColor:
+    theme.palette.mode === "light" ? "rgb(250, 243, 224)" : "#073763",
+  width: 130,
+  height: 130,
   opacity: 0.8,
   transition: "all 0.4s ease-out",
   "&:hover": {
@@ -28,6 +28,7 @@ export const StyledAvatar = styled(Box)(({ theme }) => ({
 }));
 
 export const StyledText = styled(Typography)({
-  lineHeight: 5,
-  fontWeight: 800,
+  lineHeight: 4,
+  fontWeight: 700,
+  fontSize: 11,
 });
