@@ -26,3 +26,4 @@ export { default as circleLogo } from "./CircleLogo.png";
 export { default as twist } from "./twist-knots.png";
 export { default as sphere } from "./sphere.png";
 export { default as wave } from "./wave-sphere.png";
+export { default as bootstrap } from "./bootstrap.png";
