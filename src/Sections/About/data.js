@@ -11,4 +11,10 @@ export const accordionData = [
     content:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum provident aliquam incidunt maiores totam dolores placeat! Nam harum nobis, officiis molestiae quisquam maxime iusto saepe aliquid iste, natus repudiandae eligendi?",
   },
+  {
+    pos: 3,
+    title: "Testing & Debugging",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum provident aliquam incidunt maiores totam dolores placeat! Nam harum nobis, officiis molestiae quisquam maxime iusto saepe aliquid iste, natus repudiandae eligendi?",
+  },
 ];
