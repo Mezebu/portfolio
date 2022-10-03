@@ -32,7 +32,7 @@ const ProjectItems = () => {
             scrollButtons
             allowScrollButtonsMobile
             aria-label="projects tab"
-            sx={{ pt: 1 }}
+            sx={{ pt: 1, mx: 1 }}
           >
             <StyledTab label="Item One" {...a11yProps(0)} />
             <StyledTab label="Item Two" {...a11yProps(1)} />
