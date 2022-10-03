@@ -1,16 +1,16 @@
-import React, { useState } from "react";
 import { Box, Collapse, Container, Typography } from "@mui/material";
 import { Divide as Hamburger } from "hamburger-react";
+import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
+import AddRoundedIcon from "@mui/icons-material/AddRounded";
 
 import { StyledAccordion } from "./styles";
 import { FlexAlignCenter, FlexSpaceBtween } from "../../../styles/globalStyles";
 
-const Accordion = ({ pos, title, content }) => {
-  const [selected, setSelected] = useState(false);
-
+const Accordion = ({ pos, title, content, selected, setSelected }) => {
   const handleSelect = () => {
-    setSelected((prev) => !prev);
+    setSelected(selected ? null : pos);
   };
+
   return (
     <StyledAccordion sx={{ py: { xs: 2, md: 5 } }} onClick={handleSelect}>
       <FlexSpaceBtween>
@@ -30,7 +30,7 @@ const Accordion = ({ pos, title, content }) => {
           </Box>
         </FlexAlignCenter>
         <Box onClick={handleSelect}>
-          <Hamburger toggled={selected} toggle={setSelected} size={20} />
+          {selected ? <RemoveRoundedIcon /> : <AddRoundedIcon />}
         </Box>
       </FlexSpaceBtween>
 
