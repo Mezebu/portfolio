@@ -1,11 +1,13 @@
-import { Box, Container, Grid, Toolbar, Typography } from "@mui/material";
+import { useState } from "react";
+import { Box, Toolbar, Typography } from "@mui/material";
+
 import Accordion from "../../components/Accordion/Accordion";
 import Section from "../../components/Section/Section";
 import { accordionData } from "./data";
 
-import { StyledUnderline } from "./styles";
-
 const About = () => {
+  const [selected, setSelected] = useState(false);
+
   return (
     <Section component="section" id="about">
       <Typography
@@ -18,8 +20,7 @@ const About = () => {
       <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
         A LITTLE ABOUT ME
       </Typography>
-      <Box>
-        <Toolbar />
+      <Box sx={{ my: 4 }}>
         {[...new Array(4)]
           .map(
             () => `Cras mattis consectetur purus sit amet fermentum.
@@ -31,7 +32,14 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
 
         <Box sx={{ mt: 5 }}>
           {accordionData.map(({ pos, title, content }) => (
-            <Accordion key={pos} title={title} content={content} pos={pos} />
+            <Accordion
+              key={pos}
+              title={title}
+              content={content}
+              pos={pos}
+              selected={selected === pos}
+              setSelected={setSelected}
+            />
           ))}
         </Box>
       </Box>
