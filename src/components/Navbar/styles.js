@@ -38,7 +38,7 @@ export const NavLink = styled(Box)(({ theme }) => ({
   display: "inline-block",
   alignItems: "center",
   cursor: "pointer",
-  fontWeight: 500,
+  fontWeight: 600,
   fontSize: 14,
   marginRight: 15,
   position: "relative",
