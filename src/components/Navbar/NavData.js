@@ -16,20 +16,20 @@ export const navLinks = [
     title: "About",
     page: "about",
     icon: <InfoIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -89,
+    offSet: -50,
   },
   {
     id: 3,
     title: "Experiences",
     page: "skills",
     icon: <PsychologyIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -80,
+    offSet: -50,
   },
   {
     id: 4,
     title: "Works",
     page: "works",
     icon: <WorkHistoryIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -120,
+    offSet: -50,
   },
 ];
