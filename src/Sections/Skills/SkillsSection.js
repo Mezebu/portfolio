@@ -23,7 +23,7 @@ const SkillsSection = () => {
       <Toolbar />
 
       <Box sx={{ mb: 7 }}>
-        <Typography>
+        <Typography sx={{ fontWeight: 500 }} variant="subtitle1">
           The nature of my project may influence the web stack I employ in
           development. When developing a web application, I address the
           difficulty of data processing on web pages and how to make it run
