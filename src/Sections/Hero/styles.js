@@ -5,6 +5,15 @@ export const StyledDate = styled(Typography)({
   writingMode: "vertical-rl",
   textOrientation: "upright",
   fontWeight: 800,
+  position: "relative",
+  right: 450,
+  top: 100,
+});
+
+export const StyledBannerText = styled(Typography)({
+  background: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
+  backgroundClip: "text",
+  color: "transparent",
 });
 
 export const StyledText = styled(Typography)({
@@ -21,7 +30,7 @@ export const StyledGreyDot = styled(Box)(({ theme }) => ({
   height: 30,
   position: "absolute",
   borderRadius: 50,
-  left: "80%",
+  left: "90%",
   top: 150,
   boxShadow:
     theme.palette.mode === "light"
