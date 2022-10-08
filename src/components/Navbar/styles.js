@@ -91,7 +91,7 @@ export const ContactButton = styled(Button)(({ theme }) => ({
         ? theme.palette.getContrastText(purple[100])
         : theme.palette.getContrastText(purple[400]),
     visibility: "hidden",
-    transition: "all 0.3s ease-in-out",
+    transition: "all 0.5s ease-in-out",
   },
   "&:hover:before": {
     visibility: "visible",
