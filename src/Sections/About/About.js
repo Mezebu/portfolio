@@ -4,6 +4,7 @@ import { Box, Toolbar, Typography } from "@mui/material";
 import Accordion from "../../components/Accordion/Accordion";
 import Section from "../../components/Section/Section";
 import { accordionData } from "./data";
+import PageNumber from "../../components/PageNumber/PageNumber";
 
 const About = () => {
   const [selected, setSelected] = useState(false);
@@ -42,6 +43,9 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
             />
           ))}
         </Box>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <PageNumber page="02" />
       </Box>
     </Section>
   );

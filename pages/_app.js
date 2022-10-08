@@ -41,9 +41,7 @@ export default function MyApp(props) {
       </Head>
       <ThemeContext.Provider value={{ darkMode, setDarkMode: _setDarkMode }}>
         <ThemeProvider theme={darkMode ? darkTheme : theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-
           <Layout>
             <Component {...pageProps} />
           </Layout>

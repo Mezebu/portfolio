@@ -1,22 +1,15 @@
-import { Box, Container, Grid, useMediaQuery } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Image from "next/image";
 
-import { StyledDate, StyledGreyDot, StyledText, StyledWrapper } from "./styles";
-import {
-  O,
-  P,
-  ArrowDown,
-  rocket,
-  twist,
-  sphere,
-  wave,
-  multiDot,
-} from "../../assets";
+import { StyledBannerText, StyledDate, StyledGreyDot } from "./styles";
+import { twist, sphere } from "../../assets";
 import { FlexJustifyCenter, FlexSpaceBtween } from "../../../styles";
 import AnimateText from "../../components/FramerAnimations/AnimateText";
 import Section from "../../components/Section/Section";
+import BannerText from "../../components/BannerText/BannerText";
+import PageNumber from "../../components/PageNumber/PageNumber";
 
 const Hero = () => {
   const theme = useTheme();
@@ -25,39 +18,63 @@ const Hero = () => {
   return (
     <Section id="hero" component="section">
       <Grid container>
-        <Grid item lg={8}>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <StyledDate variant="button">
-              ©{new Date().getFullYear()}
-            </StyledDate>
-          </Box>
+        <Grid
+          item
+          lg={5}
+          md={5}
+          sm={5}
+          xs={12}
+          sx={{ display: { xs: "none", md: "block" } }}
+        >
+          <Image src={sphere} alt="image" layout="responsive" />
         </Grid>
-
-        <Grid item lg={4}>
-          <Box sx={{ position: "absolute", right: 190, top: 290 }}>
-            <Image src={sphere} alt="image" height={200} width={200} />
-          </Box>
-          <Box sx={{ position: "relative" }}>
-            <Image src={twist} alt="image" layout="intrinsic" />
-          </Box>
-          <StyledGreyDot />
+        <Grid item lg={7} md={7} sm={12} xs={12}>
+          <BannerText />
         </Grid>
       </Grid>
+
+      {/* <StyledDate
+        variant="button"
+        sx={{ display: { xs: "none", lg: "block" } }}
+      >
+        ©{new Date().getFullYear()}
+      </StyledDate> */}
+
+      <StyledGreyDot />
+
       {/* <Box sx={{ display: "flex", alignItems: "flex-end" }}>
           <Image src={ArrowDown} alt="image" height="100px" width="100px" />
         </Box> */}
-      <FlexSpaceBtween>
+      {/*  <FlexSpaceBtween>
         <BlurOnIcon sx={{ fontSize: 50 }} />
-      </FlexSpaceBtween>
-      <FlexJustifyCenter>
-        <AnimateText
-          text="Hi! I'm Ezeigwe Henry, I Code Cool Websites"
-          variant="h6"
-          fontWeight={800}
-          fontSize={30}
-          letterSpacing={3}
-        />
-      </FlexJustifyCenter>
+      </FlexSpaceBtween> */}
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            ml: 15,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: { xs: "center", lg: "space-evenly" },
+          }}
+        >
+          <Typography
+            variant="subtitle2"
+            sx={{ letterSpacing: 3, fontWeight: 700 }}
+            align="right"
+          >
+            Interface
+          </Typography>
+          <Typography
+            variant="subtitle12"
+            sx={{ letterSpacing: 3, fontWeight: 700 }}
+          >
+            Minimalism in UI Design
+          </Typography>
+        </Box>
+        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+          <PageNumber page="01" />
+        </Box>
+      </Box>
     </Section>
   );
 };
