@@ -1,5 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { StyledBannerText } from "./styles";
+import { rocket, wave } from "../../assets";
+import Image from "next/image";
+import { StyledDate } from "../../Sections/Hero/styles";
 
 const BannerText = () => {
   return (
@@ -12,14 +15,14 @@ const BannerText = () => {
             justifyContent: "center",
           }}
         >
-          <StyledBannerText sx={{ mr: 1 }}>Frontend</StyledBannerText>
-          <Typography
-            variant="subtitle2"
-            component="span"
-            sx={{ fontSize: 11, fontWeight: 600, fontFamily: "Montserrat" }}
-          >
-            -- {"I'm Henry Ezeigwe"} --
-          </Typography>
+          <Box>
+            <StyledBannerText component="article" sx={{ mr: 1 }}>
+              Frontend
+            </StyledBannerText>
+          </Box>
+          <Box sx={{ width: "6vw" }}>
+            <Image src={rocket} alt="rocket-icon" layout="responsive" />
+          </Box>
         </Box>
       </Grid>
       <Grid item xs={12}>
@@ -30,14 +33,19 @@ const BannerText = () => {
             justifyContent: "center",
           }}
         >
-          <Typography
-            variant="subtitle2"
-            component="span"
-            sx={{ fontSize: 11, fontWeight: 600, fontFamily: "Montserrat" }}
-          >
-            {"I have a passion for crafting experiences that users rave about"}
-          </Typography>
-          <StyledBannerText sx={{ ml: 2 }}>Developer</StyledBannerText>
+          <Box sx={{ width: "7vw" }}>
+            <StyledDate
+              variant="button"
+              sx={{ display: { xs: "none", md: "block" } }}
+            >
+              ©{new Date().getFullYear()}
+            </StyledDate>
+          </Box>
+          <Box>
+            <StyledBannerText component="article" sx={{ ml: 2 }}>
+              Developer
+            </StyledBannerText>
+          </Box>
         </Box>
       </Grid>
 
