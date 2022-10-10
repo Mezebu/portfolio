@@ -3,7 +3,8 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-const AnimateText = ({ text, variant, letterSpacing, fontSize }) => {
+// prettier-ignore
+const AnimateText = ({ text, variant, letterSpacing, fontSize, align, fontWeight }) => {
   const header = {
     hidden: { opacity: 1 },
     visible: {
@@ -33,7 +34,8 @@ const AnimateText = ({ text, variant, letterSpacing, fontSize }) => {
           component={motion.span}
           key={char + "_" + index}
           variants={letter}
-          sx={{ fontSize: fontSize, letterSpacing: letterSpacing }}
+          sx={{ fontSize: fontSize, letterSpacing: letterSpacing, fontWeight: fontWeight }}
+          align={align}
         >
           {char}
         </Typography>
