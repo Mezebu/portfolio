@@ -1,11 +1,21 @@
 import Head from "next/head";
-import { Fragment } from "react";
-import { Typography, Button, Grid, Box } from "@mui/material";
+import { Fragment, useState } from "react";
+import {
+  Typography,
+  Button,
+  Grid,
+  Box,
+  Container,
+  Toolbar,
+} from "@mui/material";
 import { motion } from "framer-motion";
 
 import ProTip from "../src/ProTip";
 import Link from "../src/Link";
 import AnimateInview from "../src/components/FramerAnimations/AnimateInview";
+import Accordion from "../src/components/Accordion/Accordion";
+import PageNumber from "../src/components/PageNumber/PageNumber";
+import { accordionData } from "../src/Sections/About/data";
 
 const container = {
   hidden: { opacity: 0 },
@@ -23,72 +33,65 @@ const item = {
 };
 
 export default function About() {
+  const [selected, setSelected] = useState(false);
+
   return (
     <Fragment>
       <Head>
         <title>Ezeigwe Henry | About</title>
       </Head>
-      <Box
-        component={motion.div}
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
+      <Container>
+        <Toolbar />
         <Box
           component={motion.div}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 1,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
+          variants={container}
+          initial="hidden"
+          animate="show"
         >
-          <Typography variant="h4" align="center" gutterBottom>
-            Next.js example
-          </Typography>
-        </Box>
+          <Box sx={{ my: 2 }}>
+            <Typography
+              sx={{ fontSize: 11, letterSpacing: 3 }}
+              color="text.secondary"
+              variant="button"
+            >
+              About
+            </Typography>
+            <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
+              A LITTLE ABOUT ME
+            </Typography>
+            <Box sx={{ my: 4 }}>
+              {[...new Array(4)]
+                .map(
+                  () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
+                )
+                .join("\n")}
 
-        <Box sx={{ my: 2 }}>
-          <Grid container>
-            <Grid item lg={8} md={8} sm={12} xs={12}>
-              <AnimateInview transform="translateX(-100px)">
-                <Box component={motion.p} variants={item}>
-                  {[...new Array(4)]
-                    .map(
-                      () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                    )
-                    .join("\n")}
-                </Box>
-              </AnimateInview>
-            </Grid>
-          </Grid>
-          <Grid container spacing={2}>
-            <Grid item lg={4} md={2} sm={12} xs={12} />
-            <Grid item lg={8} md={10} sm={12} xs={12}>
-              <AnimateInview transform="translateX(80px)">
-                <Box component={motion.p} variants={item}>
-                  {[...new Array(4)]
-                    .map(
-                      () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                    )
-                    .join("\n")}
-                </Box>
-              </AnimateInview>
-            </Grid>
-          </Grid>
+              <Box sx={{ mt: 5 }}>
+                {accordionData.map(({ pos, title, content }) => (
+                  <Accordion
+                    key={pos}
+                    title={title}
+                    content={content}
+                    pos={pos}
+                    selected={selected === pos}
+                    setSelected={setSelected}
+                  />
+                ))}
+              </Box>
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+              <PageNumber page="02" />
+            </Box>
+          </Box>
+          <Button variant="contained" component={Link} noLinkStyle href="/">
+            Go to the main page
+          </Button>
+          <ProTip />
         </Box>
-        <Button variant="contained" component={Link} noLinkStyle href="/">
-          Go to the main page
-        </Button>
-        <ProTip />
-      </Box>
+      </Container>
     </Fragment>
   );
 }
