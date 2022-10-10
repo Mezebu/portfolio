@@ -18,16 +18,12 @@ const Hero = () => {
   return (
     <Section id="hero" component="section">
       <Grid container>
-        <Grid
-          item
-          lg={5}
-          md={5}
-          sm={5}
-          xs={12}
-          sx={{ display: { xs: "none", md: "block" } }}
-        >
-          <Image src={sphere} alt="image" layout="responsive" />
-        </Grid>
+        {/*prettier-ignore*/}
+        <Grid item lg={5} md={5} sm={5} xs={12} sx={{ display: { xs: "none", md: "block" } }}>
+      
+         <Image src={sphere} alt="image" layout="responsive" />
+         </Grid>
+
         <Grid item lg={7} md={7} sm={12} xs={12}>
           <BannerText />
         </Grid>
@@ -48,7 +44,40 @@ const Hero = () => {
       {/*  <FlexSpaceBtween>
         <BlurOnIcon sx={{ fontSize: 50 }} />
       </FlexSpaceBtween> */}
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Grid container>
+        <Grid item lg={6} md={6} sm={6}>
+          <AnimateText
+            text="Interface"
+            variant="subtitle2"
+            letterSpacing={3}
+            fontWeight={700}
+            align="left"
+          />
+          <AnimateText
+            text="Minimalism in UI Design"
+            variant="subtitle2"
+            letterSpacing={3}
+            fontWeight={700}
+            align="left"
+          />
+        </Grid>
+        <Grid
+          item
+          lg={6}
+          md={6}
+          sm={6}
+          sx={{
+            display: "flex",
+            alignItems: "end",
+            justifyContent: "flex-end",
+          }}
+        >
+          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+            <PageNumber page="01" />
+          </Box>
+        </Grid>
+      </Grid>
+      {/*  <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box
           sx={{
             ml: 15,
@@ -74,7 +103,7 @@ const Hero = () => {
         <Box sx={{ display: "flex", alignItems: "flex-end" }}>
           <PageNumber page="01" />
         </Box>
-      </Box>
+      </Box> */}
     </Section>
   );
 };
