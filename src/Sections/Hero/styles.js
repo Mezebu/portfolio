@@ -5,9 +5,9 @@ export const StyledDate = styled(Typography)({
   writingMode: "vertical-rl",
   textOrientation: "upright",
   fontWeight: 800,
-  position: "relative",
-  right: 450,
-  top: 100,
+  /* position: "relative",
+  right: 50,
+  top: 10, */
 });
 
 export const StyledBannerText = styled(Typography)({
