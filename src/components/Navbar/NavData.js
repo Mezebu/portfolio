@@ -7,14 +7,14 @@ export const navLinks = [
   {
     id: 1,
     title: "Home",
-    page: "hero",
+    page: "/",
     icon: <RoofingIcon sx={{ fontSize: 15, mr: 0.5 }} />,
     offSet: -160,
   },
   {
     id: 2,
     title: "About",
-    page: "about",
+    page: "/about",
     icon: <InfoIcon sx={{ fontSize: 15, mr: 0.5 }} />,
     offSet: -50,
   },
