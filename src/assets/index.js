@@ -27,4 +27,3 @@ export { default as twist } from "./twist-knots.png";
 export { default as sphere } from "./sphere.png";
 export { default as wave } from "./wave-sphere.png";
 export { default as bootstrap } from "./bootstrap.png";
-export { default as web } from "./perspective_matte-460-128x128.png";
