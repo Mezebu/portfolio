@@ -4,18 +4,17 @@ import { Box, CssBaseline, Fab } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
 import { useTheme } from "@mui/material/styles";
 import { motion } from "framer-motion";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 import { StyledToolbar, StyledAppBar, StyledNavLogo } from "./styles";
 import { ContactButton, NavLink } from "./styles";
 import { navLinks } from "./NavData";
 import ProgressBar from "../FramerAnimations/ProgressBar";
-import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../ThemeContext";
+import Link from "../../Link";
 
 const NavBar = ({ children }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -37,7 +36,7 @@ const NavBar = ({ children }) => {
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 1, y: -100 }}
+      exit={{ opacity: 0, y: -100 }}
       transition={{ duration: 1.2 }}
     >
       <CssBaseline />
@@ -47,16 +46,8 @@ const NavBar = ({ children }) => {
           <StyledToolbar>
             <StyledNavLogo variant="h5">Henry</StyledNavLogo>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              {navLinks.map(({ id, page, title, offSet }) => (
-                <NavLink
-                  component={Link}
-                  key={id}
-                  to={page}
-                  spy={true}
-                  smooth={true}
-                  offset={offSet}
-                  duration={1000}
-                >
+              {navLinks.map(({ id, page, title }) => (
+                <NavLink component={Link} key={id} href={page} underline="none">
                   {title}
                 </NavLink>
               ))}
@@ -96,11 +87,6 @@ const NavBar = ({ children }) => {
         </StyledAppBar>
       </ElevationScroll>
       <Toolbar />
-      <ScrollToTop {...children}>
-        <Fab size="small" color="warning" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollToTop>
     </motion.div>
   );
 };

@@ -3,8 +3,9 @@ import { Box, Container, Toolbar } from "@mui/material";
 const Section = ({ children, id, component }) => {
   return (
     <Box component={component} id={id}>
-      <Toolbar />
-      <Container maxWidth="lg">{children}</Container>
+      <Container maxWidth="lg">
+        <Box sx={{ my: 5 }}>{children}</Box>
+      </Container>
     </Box>
   );
 };

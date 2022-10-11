@@ -10,12 +10,15 @@ import Layout from "../src/components/Layout/Layout";
 import ThemeContext from "../src/ThemeContext";
 import darkTheme from "../src/darkTheme";
 import theme from "../src/theme";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const router = useRouter();
 
   // Set dark mode based on media query
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -42,9 +45,28 @@ export default function MyApp(props) {
       <ThemeContext.Provider value={{ darkMode, setDarkMode: _setDarkMode }}>
         <ThemeProvider theme={darkMode ? darkTheme : theme}>
           <CssBaseline />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={router.route}
+              initial={{
+                opacity: 0,
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+              }}
+              animate={{
+                opacity: 1,
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+              }}
+              exit={{
+                opacity: 0,
+                clipPath: "polygon(49% 0, 49% 0, 50% 100%, 50% 100%)",
+              }}
+              transition={{ duration: 0.75 }}
+            >
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </motion.div>
+          </AnimatePresence>
         </ThemeProvider>
       </ThemeContext.Provider>
     </CacheProvider>

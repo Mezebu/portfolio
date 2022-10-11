@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 import NavBar from "../Navbar/index";
 
 const Layout = ({ children }) => {
