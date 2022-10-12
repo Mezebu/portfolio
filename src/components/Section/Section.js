@@ -4,7 +4,7 @@ const Section = ({ children, id, component }) => {
   return (
     <Box component={component} id={id}>
       <Container maxWidth="lg">
-        <Box sx={{ my: 5 }}>{children}</Box>
+        <Box sx={{ mt: 5 }}>{children}</Box>
       </Container>
     </Box>
   );
