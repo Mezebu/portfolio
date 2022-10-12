@@ -64,7 +64,7 @@ export default function About() {
                 sx={{ fontWeight: 700, letterSpacing: 3 }}
                 variant="h6"
               >
-                A LITTLE ABOUT ME
+                More ABOUT ME
               </Typography>
               <Box sx={{ my: 4 }}>
                 {[...new Array(4)]
