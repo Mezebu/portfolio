@@ -7,10 +7,19 @@ import { FlexCenter } from "../../../styles/globalStyles";
 
 const BannerText = () => {
   return (
-    <>
+    <Box sx={{ position: "relative" }}>
       <Grid container sx={{ marginTop: { xs: 0, sm: 5, lg: 8 } }}>
-        <Grid item xs={12}>
+        <Grid item md={12} sm={12} xs={12}>
           <FlexCenter>
+            <Box sx={{ position: "absolute", right: 1140, bottom: 150 }}>
+              <StyledDate
+                variant="button"
+                sx={{ display: { xs: "none", lg: "block" } }}
+              >
+                ©{new Date().getFullYear()}
+              </StyledDate>
+            </Box>
+
             <Box>
               <StyledBannerText sx={{ mr: 1 }}>Frontend</StyledBannerText>
             </Box>
@@ -19,16 +28,8 @@ const BannerText = () => {
             </Box>
           </FlexCenter>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item md={12} sm={12} xs={12}>
           <FlexCenter>
-            <Box sx={{ position: "relative", right: 500, bottom: 100 }}>
-              <StyledDate
-                variant="button"
-                sx={{ display: { xs: "none", md: "block" } }}
-              >
-                ©{new Date().getFullYear()}
-              </StyledDate>
-            </Box>
             <Typography>test</Typography>
             <Box>
               <StyledBannerText sx={{ ml: 2 }}>Developer</StyledBannerText>
@@ -36,7 +37,7 @@ const BannerText = () => {
           </FlexCenter>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };
 
