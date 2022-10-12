@@ -12,6 +12,7 @@ const Contact = () => {
   return (
     <StyledContactSection>
       <Section component="section" id="contact">
+        <Toolbar />
         <Box>
           <Typography
             sx={{ fontSize: 11, letterSpacing: 3 }}
