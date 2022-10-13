@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { IconButton, Toolbar, Tooltip } from "@mui/material";
-import { Box, CssBaseline } from "@mui/material";
+import { animateScroll as scroll } from "react-scroll";
 import { Squash as Hamburger } from "hamburger-react";
+import { Box, CssBaseline } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { motion } from "framer-motion";
-import { animateScroll as scroll } from "react-scroll";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 
