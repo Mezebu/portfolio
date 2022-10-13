@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Button, Paper } from "@mui/material";
 import { green, purple } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 
@@ -96,5 +96,30 @@ export const ContactButton = styled(Button)(({ theme }) => ({
   "&:hover:before": {
     visibility: "visible",
     width: "100%",
+  },
+}));
+
+export const StyledMobileMenu = styled(Paper)(({ theme }) => ({
+  width: { xs: "70%", sm: "50%" },
+  zIndex: 1200,
+  position: "fixed",
+  right: 60,
+  top: 75,
+  display: { xs: "block", md: "none" },
+  bgcolor: "background.paper",
+  mt: 2,
+  transformOrigin: { horizontal: "right", vertical: "top" },
+  anchorOrigin: { horizontal: "right", vertical: "bottom" },
+  "&:before": {
+    content: '""',
+    display: "block",
+    position: "absolute",
+    top: 0,
+    right: 24,
+    width: 10,
+    height: 10,
+    bgcolor: "background.paper",
+    transform: "translateY(-50%) rotate(45deg)",
+    zIndex: 1200,
   },
 }));

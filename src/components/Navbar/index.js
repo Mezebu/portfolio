@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { IconButton, Toolbar, Tooltip, MuiLink } from "@mui/material";
-import { Box, CssBaseline, Fab } from "@mui/material";
+import { IconButton, Toolbar, Tooltip } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
 import { useTheme } from "@mui/material/styles";
 import { motion } from "framer-motion";
@@ -15,9 +15,10 @@ import ProgressBar from "../FramerAnimations/ProgressBar";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../ThemeContext";
 import Link from "../../Link";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 const NavBar = ({ children }) => {
-  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const { darkMode, setDarkMode } = useContext(ThemeContext);
   const theme = useTheme();
@@ -72,21 +73,14 @@ const NavBar = ({ children }) => {
                 </IconButton>
               </Tooltip>
             </Box>
-            <IconButton
-              color="inherit"
-              size="small"
-              sx={{ mr: 2, display: { md: "none" } }}
-            >
-              <Hamburger
-                toggled={isHamburgerOpen}
-                toggle={setIsHamburgerOpen}
-                size={20}
-              />
-            </IconButton>
+            <Box sx={{ mr: 2, display: { md: "none" } }}>
+              <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
+            </Box>
           </StyledToolbar>
         </StyledAppBar>
       </ElevationScroll>
       <Toolbar />
+      {isOpen && <MobileMenu />}
     </motion.div>
   );
 };
