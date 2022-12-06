@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { StyledBannerText } from "./styles";
 import { rocket, wave, web } from "../../assets";
-import Image from "next/image";
 import { StyledDate } from "../../Sections/Hero/styles";
 import { FlexCenter } from "../../../styles/globalStyles";
 
