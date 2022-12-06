@@ -40,8 +40,8 @@ export const NavLink = styled(Box)(({ theme }) => ({
   cursor: "pointer",
   fontWeight: 600,
   fontSize: 14,
-  marginRight: 20,
-  marginLeft: 20,
+  marginRight: 15,
+  marginLeft: 15,
   position: "relative",
   transition: "all 0.7s ease-in-out",
   "&:before": {
