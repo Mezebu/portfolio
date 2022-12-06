@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Box, Button, Toolbar, Typography } from "@mui/material";
 
 import Accordion from "../../components/Accordion/Accordion";
-import Section from "../../components/Section/Section";
 import { accordionData } from "./data";
 import PageNumber from "../../components/PageNumber/PageNumber";
 import Link from "../../Link";
@@ -11,7 +10,7 @@ const About = () => {
   const [selected, setSelected] = useState(false);
 
   return (
-    <Section component="section" id="about">
+    <Box>
       <Typography
         sx={{ fontSize: 11, letterSpacing: 3 }}
         color="text.secondary"
@@ -51,7 +50,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consecteur et.`
       <Button variant="contained" component={Link} noLinkStyle href="/about">
         Go to the main page
       </Button>
-    </Section>
+    </Box>
   );
 };
 
