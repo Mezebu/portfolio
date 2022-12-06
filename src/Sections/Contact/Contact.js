@@ -1,11 +1,11 @@
 import { Grid, Toolbar, Typography } from "@mui/material";
 import { Box, Divider } from "@mui/material";
 import { motion } from "framer-motion";
-import Link from "../../Link";
-import Copyright from "../../components/Copyright/Copyright";
 
-import { contactData } from "./data";
 import { StyledAvatar, StyledContactSection, StyledFooter } from "./styles";
+import { contactData } from "./data";
+import Copyright from "../../components/Copyright/Copyright";
+import Link from "../../Link";
 
 const Contact = () => {
   return (
