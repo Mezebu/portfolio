@@ -1,11 +1,10 @@
 import { Box, Toolbar, Typography } from "@mui/material";
 
 import ProjectItems from "../../components/ProjectItems/ProjectItems";
-import Section from "../../components/Section/Section";
 
 const Works = () => {
   return (
-    <Section component="section" id="works">
+    <>
       <Box>
         <Typography
           sx={{ fontSize: 11, letterSpacing: 3 }}
@@ -21,7 +20,7 @@ const Works = () => {
       <Toolbar />
       <ProjectItems />
       <Toolbar />
-    </Section>
+    </>
   );
 };
 

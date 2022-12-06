@@ -60,7 +60,11 @@ export default function MyApp(props) {
                 opacity: 0,
                 clipPath: "polygon(49% 0, 49% 0, 50% 100%, 50% 100%)",
               }}
-              transition={{ duration: 0.75 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1.2,
+                times: [0, 0.5, 0.6, 1],
+              }}
             >
               <Layout>
                 <Component {...pageProps} />
