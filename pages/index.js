@@ -1,11 +1,9 @@
 import { Fragment } from "react";
+import { Box } from "@mui/material";
 import Head from "next/head";
 
 import { Hero, About, Works, Contact } from "../src/Sections";
 import SkillsSection from "../src/Sections/Skills/SkillsSection";
-import { Box, Fab } from "@mui/material";
-import ScrollToTop from "../src/components/ScrollToTop/ScrollToTop";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const Index = ({ children }) => {
   return (
@@ -19,11 +17,6 @@ const Index = ({ children }) => {
         <SkillsSection />
         <Works />
         <Contact />
-        <ScrollToTop {...children}>
-          <Fab size="small" color="warning" aria-label="scroll back to top">
-            <KeyboardArrowUpIcon />
-          </Fab>
-        </ScrollToTop>
       </Box>
     </Fragment>
   );
