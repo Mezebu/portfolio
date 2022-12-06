@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const StyledDate = styled(Typography)({
@@ -68,17 +68,22 @@ export const StyledYellowDot = styled(Box)(({ theme }) => ({
       : "20px 20px 60px #cfb12b, -20px -20px 60px #ffff3f",
 }));
 
-export const StyledGreenDot = styled(Box)(({ theme }) => ({
+export const StyledCardOne = styled(Card)(({ theme }) => ({
+  borderTopLeftRadius: 50,
+  borderBottomRightRadius: 50,
+  height: "50vh",
+  width: "20vw",
+  marginRight: 5,
+}));
+
+export const StyledCardTwo = styled(Card)(({ theme }) => ({
+  borderTopRightRadius: 50,
+  height: "50vh",
+  width: "20vw",
+  marginLeft: 3,
+  borderBottomLeftRadius: 50,
   background:
     theme.palette.mode === "light"
-      ? "linear-gradient(145deg, #00f67e, #00cf6a)"
-      : "linear-gradient(145deg, #00d659, #00b44b)",
-  width: 12,
-  height: 12,
-  borderRadius: 50,
-  marginRight: 5,
-  boxShadow:
-    theme.palette.mode === "light"
-      ? "20px 20px 60px #00bd61,-20px -20px 60px #00ff8b"
-      : "20px 20px 60px #00a444, -20px -20px 60px #00ec62",
+      ? "rgb(234, 191, 159)"
+      : "rgb(182, 137, 115)",
 }));
