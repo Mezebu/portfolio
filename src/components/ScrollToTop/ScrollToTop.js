@@ -1,4 +1,4 @@
-import { Box, Fade, useScrollTrigger } from "@mui/material";
+import { Box, Fade, useScrollTrigger, Tooltip } from "@mui/material";
 import { animateScroll as scroll } from "react-scroll";
 
 const ScrollToTop = ({ children, window }) => {
@@ -13,15 +13,17 @@ const ScrollToTop = ({ children, window }) => {
   });
 
   return (
-    <Fade in={trigger}>
-      <Box
-        onClick={handleClick}
-        role="presentation"
-        sx={{ position: "fixed", bottom: 16, right: 16 }}
-      >
-        {children}
-      </Box>
-    </Fade>
+    <Tooltip title="Scroll to top">
+      <Fade in={trigger}>
+        <Box
+          onClick={handleClick}
+          role="presentation"
+          sx={{ position: "fixed", bottom: 16, right: 16 }}
+        >
+          {children}
+        </Box>
+      </Fade>
+    </Tooltip>
   );
 };
 
