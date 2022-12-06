@@ -1,15 +1,14 @@
-import { Box, Container, Grid, Toolbar, Typography } from "@mui/material";
+import { Box, Grid, Toolbar, Typography } from "@mui/material";
+import Image from "next/legacy/image";
 
-import { SkillsWrapper, StyledAvatar, StyledText } from "./styles";
+import { StyledAvatar, StyledText } from "./styles";
 import { FlexColumn } from "../../../styles/globalStyles";
 
-import Image from "next/image";
 import { data } from "./data";
-import Section from "../../components/Section/Section";
 
 const SkillsSection = () => {
   return (
-    <Section component="section" id="skills">
+    <>
       <Typography
         sx={{ fontSize: 11, letterSpacing: 3 }}
         color="text.primary"
@@ -37,14 +36,14 @@ const SkillsSection = () => {
           <Grid item key={id} lg={2} md={4} sm={4} xs={6}>
             <FlexColumn>
               <StyledAvatar>
-                <Image src={icon} alt="react-icon" height="50%" width="50%" />
+                <Image src={icon} alt="react-icon" height={50} width={50} />
               </StyledAvatar>
               <StyledText variant="button">{title}</StyledText>
             </FlexColumn>
           </Grid>
         ))}
       </Grid>
-    </Section>
+    </>
   );
 };
 
