@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Box, Button, Toolbar, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
-import Accordion from "../../components/Accordion/Accordion";
-import { accordionData } from "./data";
 import PageNumber from "../../components/PageNumber/PageNumber";
+import Accordion from "../../components/Accordion/Accordion";
 import Link from "../../Link";
+import { accordionData } from "./data";
 
 const About = () => {
   const [selected, setSelected] = useState(false);
