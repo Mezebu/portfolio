@@ -1,8 +1,8 @@
 import { Box, Fab, Toolbar, Container } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-import NavBar from "../Navbar/index";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import NavBar from "../Navbar/index";
 
 const Layout = ({ children }) => {
   return (

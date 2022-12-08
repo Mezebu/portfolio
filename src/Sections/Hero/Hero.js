@@ -7,7 +7,7 @@ const Hero = () => {
         component="section"
         sx={{ display: "flex", alignItems: "center", height: "100%" }}
       >
-        <Typography>FRONTEND</Typography>
+        <Typography>Frontend</Typography>
         <Typography>DEVELOPER</Typography>
       </Box>
     </Box>

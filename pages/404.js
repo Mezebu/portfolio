@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import { FlexGrid } from "../styles/globalStyles";
-import { zero, four } from "../src/assets";
-import Image from "next/image";
-import Link from "../src/Link";
+import { zero, four, errorpage } from "../src/assets";
+import Image from "next/legacy/image";
+import Link from "next/link";
 
 const FourOhFour = () => {
   return (
     <Fragment>
       <Head>
-        <title>Ezeigwe Henry | 404 - Not Found</title>
+        <title>Ezeigwe Henry | 404 - Page Not Found</title>
       </Head>
       <Box sx={{ my: 5 }}>
         <Box
@@ -35,9 +35,7 @@ const FourOhFour = () => {
                   alignItems: "center",
                 }}
               >
-                <Image src={four} alt="four" layout="intrinsic" />
-                <Image src={zero} alt="zero" layout="intrinsic" />
-                <Image src={four} alt="four" layout="intrinsic" />
+                <Image src={errorpage} alt="four" layout="intrinsic" />
               </Box>
             </Grid>
             <Grid item lg={6} md={12} sm={12} xs={12}>
@@ -75,7 +73,6 @@ const FourOhFour = () => {
                   startIcon={<ArrowBackRoundedIcon />}
                   sx={{ textTransform: "none" }}
                   component={Link}
-                  noLinkStyle
                   href="/"
                 >
                   Back to home page

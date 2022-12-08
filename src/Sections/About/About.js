@@ -3,7 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 
 import PageNumber from "../../components/PageNumber/PageNumber";
 import Accordion from "../../components/Accordion/Accordion";
-import Link from "../../Link";
+import Link from "next/link";
 import { accordionData } from "./data";
 
 const About = () => {
@@ -47,7 +47,12 @@ Praesent commodo cursus magna, vel scelerisque nisl consecteur et.`
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
         <PageNumber page="02" />
       </Box>
-      <Button variant="contained" component={Link} noLinkStyle href="/about">
+      <Button
+        variant="contained"
+        component={Link}
+        href="/about"
+        disableElevation
+      >
         Go to the main page
       </Button>
     </Box>

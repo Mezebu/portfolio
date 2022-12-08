@@ -45,7 +45,7 @@ export default function MyApp(props) {
       <ThemeContext.Provider value={{ darkMode, setDarkMode: _setDarkMode }}>
         <ThemeProvider theme={darkMode ? darkTheme : theme}>
           <CssBaseline />
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout">
             <motion.div
               key={router.route}
               initial={{
