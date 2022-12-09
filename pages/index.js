@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Box } from "@mui/material";
 import Head from "next/head";
 
-import { Hero, About, Works, Contact } from "../src/Sections";
+import { Hero, About, Works } from "../src/Sections";
 import SkillsSection from "../src/Sections/Skills/SkillsSection";
 
 const Index = ({ children }) => {
@@ -16,7 +16,6 @@ const Index = ({ children }) => {
         <About />
         <SkillsSection />
         <Works />
-        <Contact />
       </Box>
     </Fragment>
   );
