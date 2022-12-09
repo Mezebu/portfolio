@@ -3,6 +3,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import NavBar from "../Navbar/index";
+import { Contact } from "../../Sections";
 
 const Layout = ({ children }) => {
   return (
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
           </Fab>
         </ScrollToTop>
       </Container>
+      <Contact />
     </Box>
   );
 };
