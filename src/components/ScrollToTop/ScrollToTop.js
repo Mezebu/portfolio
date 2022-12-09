@@ -3,7 +3,7 @@ import { animateScroll as scroll } from "react-scroll";
 
 const ScrollToTop = ({ children, window }) => {
   const handleClick = () => {
-    scroll.scrollToTop({ duration: 1500 });
+    scroll.scrollToTop({ duration: 1800 });
   };
 
   const trigger = useScrollTrigger({
