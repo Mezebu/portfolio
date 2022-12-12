@@ -3,7 +3,13 @@ import MuiLink from "@mui/material/Link";
 
 const Copyright = () => {
   return (
-    <Typography variant="subtitle2" align="center">
+    <Typography
+      variant="subtitle2"
+      align="center"
+      sx={{
+        color: "wheat",
+      }}
+    >
       <MuiLink
         sx={{ textDecoration: "none" }}
         color="inherit"

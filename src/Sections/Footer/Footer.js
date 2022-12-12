@@ -1,25 +1,28 @@
 import Typography from "@mui/material/Typography";
 import { StyledFooter, StyledTypography } from "./styles";
-import { Box, Container } from "@mui/material";
+import { Box, Container, CssBaseline } from "@mui/material";
+import Copyright from "../../components/Copyright/Copyright";
 
 export default function Footer() {
   return (
-    <Container>
-      <StyledFooter sx={{ my: 5 }}>
-        <Box>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: 600, textTransform: "capitalize" }}
-            align="center"
-            gutterBottom
-          >
-            Send me a message
-          </Typography>
-          <StyledTypography variant="h4" align="center">
-            mezebu07@gmail.com
-          </StyledTypography>
-        </Box>
-      </StyledFooter>
-    </Container>
+    <Box sx={{ paddingTop: 2 }}>
+      <CssBaseline />
+      <Box
+        component="footer"
+        sx={{
+          py: 3,
+          px: 2,
+          mt: "auto",
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[800]
+              : theme.palette.grey[800],
+        }}
+      >
+        <Container maxWidth="sm">
+          <Copyright />
+        </Container>
+      </Box>
+    </Box>
   );
 }

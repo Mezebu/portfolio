@@ -45,7 +45,7 @@ export default function MyApp(props) {
       <ThemeContext.Provider value={{ darkMode, setDarkMode: _setDarkMode }}>
         <ThemeProvider theme={darkMode ? darkTheme : theme}>
           <CssBaseline />
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             <motion.div
               key={router.route}
               initial={{
@@ -62,7 +62,7 @@ export default function MyApp(props) {
               }}
               transition={{
                 ease: "easeInOut",
-                duration: 1.2,
+                duration: 1,
                 times: [0, 0.5, 0.6, 1],
               }}
             >

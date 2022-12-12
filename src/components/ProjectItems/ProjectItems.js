@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import TabPanel from "./TabPanel";
 import { projectsData } from "./data";
 import ProjectCard from "./ProjectCard";
-import { StyledTab } from "./styels";
+import { StyledTab, StyledTabContainer } from "./styels";
 
 function a11yProps(index) {
   return {
@@ -22,7 +22,7 @@ const ProjectItems = () => {
   };
 
   return (
-    <Paper elevation={0} sx={{ borderRadius: 2 }}>
+    <StyledTabContainer elevation={0} sx={{ borderRadius: 2 }}>
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
@@ -40,7 +40,7 @@ const ProjectItems = () => {
             <StyledTab label="Item Four" {...a11yProps(3)} />
           </Tabs>
         </Box>
-        <AnimatePresence onExitComplete>
+        <AnimatePresence mode="popLayout">
           {projectsData.map(({ id, title, index }) => (
             <TabPanel key={id} value={value} index={index}>
               <ProjectCard title={title} />
@@ -48,7 +48,7 @@ const ProjectItems = () => {
           ))}
         </AnimatePresence>
       </Box>
-    </Paper>
+    </StyledTabContainer>
   );
 };
 
