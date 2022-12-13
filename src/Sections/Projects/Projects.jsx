@@ -1,6 +1,7 @@
 import { Box, Toolbar, Typography } from "@mui/material";
+import ProjectTab from "../../components/ProjectTab/ProjectTab";
 
-import ProjectItems from "../../components/ProjectItems/ProjectItems";
+import ProjectItems from "../../components/ProjectTab/ProjectTab";
 
 const Works = () => {
   return (
@@ -18,7 +19,7 @@ const Works = () => {
         </Typography>
       </Box>
       <Toolbar />
-      <ProjectItems />
+      <ProjectTab />
       <Toolbar />
     </>
   );

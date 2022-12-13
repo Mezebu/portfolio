@@ -19,27 +19,26 @@ const CardProject = () => {
   return (
     <Card
       variant="outlined"
+      elevation={0}
       sx={{
         background: "rgba( 234, 234, 234, 0.15 )",
-        boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
         backdropFilter: "blur( 3.5px )",
         WebkitBackdropFilter: "blur( 3.5px )",
-        border: "1px solid rgba( 255, 255, 255, 0.18 )",
       }}
     >
       <Grid container>
-        <Grid item lg={6}>
+        <Grid item lg={6} md={6}>
           <CardMedia>
             <Image
               loading="lazy"
               src={project}
               alt="Live from space album cover"
-              layout="intrinsic"
+              layout="responsive"
             />
           </CardMedia>
         </Grid>
 
-        <Grid item lg={6}>
+        <Grid item lg={6} md={6}>
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "1 0 auto" }}>
               <Typography component="div" variant="h5">

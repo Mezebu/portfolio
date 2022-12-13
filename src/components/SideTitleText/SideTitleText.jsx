@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-const SideTitleText = ({ title, color }) => {
+const SideTitleText = ({ title, color, align }) => {
   return (
     <Box
       component={motion.div}

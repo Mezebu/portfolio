@@ -12,3 +12,5 @@ export { default as nextjs } from "./nextjs-icon.svg";
 export { default as bootstrap } from "./bootstrap.png";
 export { default as errorpage } from "./404.svg";
 export { default as project } from "./project.jpg";
+export { default as dashboard } from "./dashboard.jpg";
+export { default as commerce } from "./commerce.jpg";
