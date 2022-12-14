@@ -9,12 +9,16 @@ const data = [
     heading: "Dashboard",
     image: dashboard,
     desc: "dashboard details",
+    code: "https://github.com/mezebu/admin-dashboard",
+    link: "https://transcendent-vacherin-3e33c3.netlify.app/",
   },
   {
     id: uuidv4(),
     heading: "Commerce",
     image: commerce,
     desc: "commerce details",
+    code: "https://github.com/mezebu/commerce-js",
+    link: "https://cosmic-licorice-418a80.netlify.app/",
   },
   {
     id: uuidv4(),
@@ -58,10 +62,10 @@ const works = () => {
         consequatur minus consectetur. Ducimus sunt ab aut sed vel cupiditate?
       </Typography>
       <Toolbar />
-      <Grid container spacing={2}>
-        {data.map(({ id, heading, image, desc }) => (
-          <Grid key={id} item lg={6} md={6} xs={12}>
-            <ProjectTab heading={heading} image={image} desc={desc} />
+      <Grid container spacing={1}>
+        {data.map(({ id, heading, image, desc, code, link }) => (
+          <Grid key={id} item lg={6} md={6} sm={12} xs={12}>
+            <ProjectTab {...{ heading, image, desc, code, link }} />
           </Grid>
         ))}
       </Grid>

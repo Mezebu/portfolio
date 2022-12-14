@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
-import { IconButton, Toolbar, Tooltip } from "@mui/material";
-import { animateScroll as scroll } from "react-scroll";
+import { ButtonBase, Toolbar, Tooltip } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
 import { Box, CssBaseline } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -9,13 +8,13 @@ import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 
 import { StyledToolbar, StyledAppBar, StyledNavLogo } from "./styles";
-import { ContactButton, NavLink } from "./styles";
+import { ContactButton, NavLink, ActionIcons } from "./styles";
 import { navLinks } from "./NavData";
 import ProgressBar from "../FramerAnimations/ProgressBar";
+import MobileMenu from "../MobileMenu/MobileMenu";
 import ElevationScroll from "./ElevationScroll";
 import ThemeContext from "../../ThemeContext";
 import Link from "../../Link";
-import MobileMenu from "../MobileMenu/MobileMenu";
 
 const NavBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,16 +28,12 @@ const NavBar = ({ children }) => {
     setDarkMode(!darkMode);
   };
 
-  const handleScroll = () => {
-    scroll.scrollToBottom({ duration: 2000 });
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 1.2 }}
+      transition={{ duration: 1.1 }}
     >
       <CssBaseline />
       <ElevationScroll {...children}>
@@ -55,22 +50,27 @@ const NavBar = ({ children }) => {
             </Box>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <ContactButton
-                onClick={handleScroll}
-                /* component={MuiLink}
+                component={Link}
                 href="mailto:mezebu07@gmail.com?Subject=Hey Henry!✋"
                 target="_blank"
-                rel="noopener" */
+                rel="noopener"
               >
-                Contact Me
+                Resume
               </ContactButton>
               <Tooltip title={`${themeTitle} mode`}>
-                <IconButton onClick={toggleTheme}>
-                  {theme.palette.mode === "dark" ? (
-                    <NightsStayRoundedIcon fontSize="medium" />
-                  ) : (
-                    <LightModeRoundedIcon fontSize="medium" />
-                  )}
-                </IconButton>
+                <ButtonBase
+                  component="div"
+                  sx={{ ml: 2, mr: 1 }}
+                  onClick={toggleTheme}
+                >
+                  <ActionIcons>
+                    {theme.palette.mode === "dark" ? (
+                      <NightsStayRoundedIcon sx={{ fontSize: 20 }} />
+                    ) : (
+                      <LightModeRoundedIcon sx={{ fontSize: 20 }} />
+                    )}
+                  </ActionIcons>
+                </ButtonBase>
               </Tooltip>
             </Box>
             <Box sx={{ mr: 2, display: { md: "none" } }}>

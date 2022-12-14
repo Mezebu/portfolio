@@ -1,6 +1,7 @@
-import { Paper, Tab } from "@mui/material";
+import { Box, Card, Paper, Tab } from "@mui/material";
 import { blue } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
+import TabPanel from "./TabPanel";
 
 export const StyledTab = styled(Tab)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightBold,
@@ -22,4 +23,6 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
   },
 }));
 
-export const StyledTabContainer = styled(Paper)(({ theme }) => ({}));
+export const StyledTabContainer = styled(Paper)(({ theme }) => ({
+  height: "100%",
+}));

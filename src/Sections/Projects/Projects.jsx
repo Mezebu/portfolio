@@ -1,7 +1,4 @@
 import { Box, Toolbar, Typography } from "@mui/material";
-import ProjectTab from "../../components/ProjectTab/ProjectTab";
-
-import ProjectItems from "../../components/ProjectTab/ProjectTab";
 
 const Works = () => {
   return (
@@ -18,8 +15,7 @@ const Works = () => {
           RECENT WORKS
         </Typography>
       </Box>
-      <Toolbar />
-      <ProjectTab />
+
       <Toolbar />
     </>
   );

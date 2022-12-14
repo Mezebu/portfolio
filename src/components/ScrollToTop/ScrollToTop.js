@@ -1,5 +1,6 @@
 import { Box, Fade, useScrollTrigger } from "@mui/material";
 import { animateScroll as scroll } from "react-scroll";
+import { PropTypes } from "prop-types";
 
 const ScrollToTop = ({ children, window }) => {
   const handleClick = () => {
@@ -26,3 +27,8 @@ const ScrollToTop = ({ children, window }) => {
 };
 
 export default ScrollToTop;
+
+ScrollToTop.propTypes = {
+  children: PropTypes.element.isRequired,
+  window: PropTypes.func,
+};

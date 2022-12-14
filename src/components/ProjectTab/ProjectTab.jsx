@@ -6,6 +6,8 @@ import TabPanel from "./TabPanel";
 import ProjectCard from "./ProjectCard";
 import { StyledTab, StyledTabContainer } from "./styels";
 import { FlexAlignCenter } from "../../../styles/globalStyles";
+import Image from "next/legacy/image";
+import BasicSpeedDial from "../SpeedDial/SpeedDial";
 
 function a11yProps(index) {
   return {
@@ -14,7 +16,7 @@ function a11yProps(index) {
   };
 }
 
-const ProjectTab = ({ heading, image, desc }) => {
+const ProjectTab = ({ heading, image, desc, code, link }) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -22,7 +24,7 @@ const ProjectTab = ({ heading, image, desc }) => {
   };
 
   return (
-    <>
+    <Box sx={{ my: 1 }}>
       <Typography
         sx={{
           fontWeight: 700,
@@ -50,7 +52,6 @@ const ProjectTab = ({ heading, image, desc }) => {
             >
               <StyledTab label="Image" {...a11yProps(0)} />
               <StyledTab label="Desc" {...a11yProps(1)} />
-              <StyledTab label="lang" {...a11yProps(2)} />
             </Tabs>
           </Box>
           <AnimatePresence mode="popLayout">
@@ -59,13 +60,32 @@ const ProjectTab = ({ heading, image, desc }) => {
                 <ProjectCard image={image} />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                {desc}
+                <Typography variant="subtitle2">
+                  {desc}
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nulla perferendis molestias maxime! Rerum esse sed veniam
+                  enim. Expedita ipsam similique quo possimus repellat iusto.
+                  Odio laborum necessitatibus eos consequatur non.
+                  <br />
+                  <br />
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas fugiat, id doloremque natus commodi mollitia aperiam,
+                  praesentium, magni nostrum a amet! Eum deserunt delectus
+                  libero vel unde corrupti, quia quos?
+                  <br />
+                  <br />
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Delectus laboriosam, nihil odit illo veniam nobis eligendi
+                  expedita consequuntur. Repellendus, eos. Quam obcaecati
+                  possimus numquam dolores. Recusandae eum fugit magnam nisi!
+                </Typography>
+                <BasicSpeedDial {...{ code, link }} />
               </TabPanel>
             </motion.div>
           </AnimatePresence>
         </Box>
       </StyledTabContainer>
-    </>
+    </Box>
   );
 };
 

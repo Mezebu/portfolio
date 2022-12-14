@@ -45,7 +45,7 @@ export default function About() {
         >
           <Grid container>
             <Grid item lg={2} md={2}>
-              <SideText title="ABOUT" color="#B68973" />
+              <SideText title="ABOUT" color="#497174" />
             </Grid>
             <Grid item lg={10} md={10}>
               <Box sx={{ mt: 2 }}>
@@ -115,7 +115,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                   },
                 }}
               >
-                <SideText title="SKILLS" color="#815B5B" />
+                <SideText title="SKILLS" color="#82C3EC" />
               </Box>
               <Box sx={{ mt: 2 }}>
                 <Typography
@@ -177,7 +177,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
               md={2}
               sx={{ display: { xs: "none", md: "block" } }}
             >
-              <SideText title="SKILLS" color="#815B5B" />
+              <SideText title="SKILLS" color="#BCCEF8" />
             </Grid>
           </Grid>
         </Box>

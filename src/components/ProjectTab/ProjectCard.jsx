@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 
 import { CardMedia, Grid } from "@mui/material";
 import Image from "next/legacy/image";
-import { project } from "../../assets";
 
 const ProjectCard = ({ image }) => {
   const theme = useTheme();

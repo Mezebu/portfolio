@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography, Box, Button, Paper } from "@mui/material";
 import { green, purple } from "@mui/material/colors";
-import { styled } from "@mui/material/styles";
+import { alpha, styled } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
   background:
@@ -82,7 +82,7 @@ export const ContactButton = styled(Button)(({ theme }) => ({
     content: "''",
     position: "absolute",
     width: "0",
-    height: "2px",
+    height: 2,
     bottom: "-3px",
     left: "0%",
     transform: "translate(0%,0%)",
@@ -122,4 +122,18 @@ export const StyledMobileMenu = styled(Paper)(({ theme }) => ({
     transform: "translateY(-50%) rotate(45deg)",
     zIndex: 1200,
   },
+}));
+
+export const ActionIcons = styled(Box)(({ theme }) => ({
+  width: 35,
+  height: 35,
+  border: "1px solid rgba( 255, 255, 255, 0.18 )",
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.black, 0.1),
+  "&:hover": {
+    backgroundColor: alpha(theme.palette.common.black, 0.25),
+  },
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));

@@ -1,14 +1,20 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import Image from "next/legacy/image";
+import { mockup } from "../../assets";
 
 const Hero = () => {
   return (
     <Box sx={{ height: { xs: "85vh", md: "80vh" } }}>
-      <Box
-        component="section"
-        sx={{ display: "flex", alignItems: "center", height: "100%" }}
-      >
-        <Typography>Frontend</Typography>
-        <Typography>DEVELOPER</Typography>
+      <Box>
+        <Grid container spacing={3}>
+          <Grid item lg={6}>
+            <Typography>Frontend</Typography>
+            <Typography>Developer</Typography>
+          </Grid>
+          <Grid item lg={6}>
+            <Image src={mockup} alt="mockup" layout="responsive" />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
