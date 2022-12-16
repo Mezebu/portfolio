@@ -15,3 +15,4 @@ export { default as project } from "./project.jpg";
 export { default as dashboard } from "./dashboard.svg";
 export { default as commerce } from "./commerce.jpg";
 export { default as mockup } from "./mockup.svg";
+export { default as heroImage } from "./hero-image.svg";
