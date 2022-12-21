@@ -16,3 +16,5 @@ export { default as dashboard } from "./dashboard.svg";
 export { default as commerce } from "./commerce.jpg";
 export { default as mockup } from "./mockup.svg";
 export { default as heroImage } from "./hero-image.svg";
+export { default as henry } from "./henry.svg";
+export { default as pc } from "./pc.svg";
