@@ -1,30 +1,38 @@
-import { Box, Typography } from "@mui/material";
-import Image from "next/legacy/image";
-import { henry } from "../../assets";
-import BannerText from "../../components/BannerText/BannerText";
+import { Box, Grid, Typography } from "@mui/material";
+import { FlexSpaceBtween } from "../../../styles/globalStyles";
+
+import Banner from "../../components/Banner/Banner";
+import HeroAccordion from "../../components/HeroAccordion/HeroAccordion";
+import { StyledBigHeading, StyledIcon } from "./styles";
 
 const Hero = () => {
   return (
-    <Box
-      sx={{ maxWidth: { xs: 350, sm: 500 }, margin: "auto", height: "82vh" }}
-    >
+    <Box sx={{ height: "83vh" }}>
       <Typography
         variant="h1"
         sx={{
-          fontSize: "clamp(14px, 5vw, 16px)",
+          fontSize: "clamp(12px, 4vw, 16px)",
           fontWeight: 600,
-          fontFamily: "montserrat",
         }}
         align="center"
       >
         Hi, my name is
       </Typography>
-      <Image
-        src={henry}
-        alt="computer illustration"
-        layout="responsive"
-        loading="lazy"
-      />
+      <Banner />
+      <StyledBigHeading variant="h2" align="center">
+        I build clean and simple websites with unique designs.
+      </StyledBigHeading>
+
+      <Grid container>
+        <Grid item lg={6} md={6} xs={12}>
+          <HeroAccordion />
+        </Grid>
+        <Grid item lg={6} md={6} xs={12}>
+          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+            scroll down
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

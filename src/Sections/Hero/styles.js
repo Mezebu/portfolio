@@ -16,74 +16,20 @@ export const StyledBannerText = styled(Typography)({
   color: "transparent",
 });
 
-export const StyledText = styled(Typography)({
-  fontFamily: "Montserrat",
-  fontWeight: 600,
+export const StyledBigHeading = styled(Typography)({
+  fontSize: "clamp(20px, 6vw, 30px)",
+  fontWeight: 700,
+  color: "#04bdb0",
 });
 
-export const StyledGreyDot = styled(Box)(({ theme }) => ({
+export const StyledIcon = styled(Box)(({ theme }) => ({
   background:
     theme.palette.mode === "light"
-      ? "linear-gradient(145deg, #cacaca, #f0f0f0)"
-      : "#001E3C",
-  width: 30,
-  height: 30,
-  position: "absolute",
-  borderRadius: 50,
-  left: "90%",
-  top: 150,
-  boxShadow:
-    theme.palette.mode === "light"
-      ? "20px 20px 60px #bebebe, -20px -20px 60px #ffffff"
-      : "inset 8px 8px 18px #001122,inset -8px -8px 18px #002b56 ",
-}));
-
-export const StyledRedDot = styled(Box)(({ theme }) => ({
-  background:
-    theme.palette.mode === "light"
-      ? "linear-gradient(145deg, #ff483a, #dc3c31)"
-      : "linear-gradient(145deg, #c41e1e, #a51919)",
-  width: 12,
-  height: 12,
-  borderRadius: 50,
-  marginRight: 5,
-  boxShadow:
-    theme.palette.mode === "light"
-      ? "19px 19px 38px #c696a6,-19px -19px 38px #ffe0fa"
-      : "20px 20px 60px #961717,-20px -20px 60px #d82121",
-}));
-
-export const StyledYellowDot = styled(Box)(({ theme }) => ({
-  background:
-    theme.palette.mode === "light"
-      ? "linear-gradient(145deg, #fffb3f, #e6d435)"
-      : "linear-gradient(145deg, #ffe739, #e4c230)",
-  width: 12,
-  height: 12,
-  borderRadius: 50,
-  marginRight: 5,
-  boxShadow:
-    theme.palette.mode === "light"
-      ? "20px 20px 60px #d1c130,-20px -20px 60px #ffff46"
-      : "20px 20px 60px #cfb12b, -20px -20px 60px #ffff3f",
-}));
-
-export const StyledCardOne = styled(Card)(({ theme }) => ({
-  borderTopLeftRadius: 50,
-  borderBottomRightRadius: 50,
-  height: "50vh",
-  width: "20vw",
-  marginRight: 5,
-}));
-
-export const StyledCardTwo = styled(Card)(({ theme }) => ({
-  borderTopRightRadius: 50,
-  height: "50vh",
-  width: "20vw",
-  marginLeft: 3,
-  borderBottomLeftRadius: 50,
-  background:
-    theme.palette.mode === "light"
-      ? "rgb(234, 191, 159)"
-      : "rgb(182, 137, 115)",
+      ? "rgba( 255, 255, 255, 0.25 )"
+      : "rgba(0, 30, 60, 0.85)",
+  border: "1px solid rgba( 255, 255, 255, 0.18 )",
+  borderRadius: theme.shape.borderRadius,
+  marginTop: theme.spacing(2),
+  padding: 3,
+  backdropFilter: "blur(10px)",
 }));

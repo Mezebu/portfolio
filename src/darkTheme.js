@@ -19,7 +19,7 @@ const darkTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Quicksand",
+    fontFamily: "Work Sans",
   },
 });
 

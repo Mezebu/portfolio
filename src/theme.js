@@ -13,12 +13,15 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+    info: {
+      main: "#00a79c",
+    },
     background: {
       default: "rgb(234, 234, 234)",
     },
   },
   typography: {
-    fontFamily: "Quicksand",
+    fontFamily: "Work Sans",
   },
 });
 

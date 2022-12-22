@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import TabPanel from "./TabPanel";
 import ProjectCard from "./ProjectCard";
 import { StyledTab, StyledTabContainer } from "./styels";
-import { FlexAlignCenter } from "../../../styles/globalStyles";
 import Image from "next/legacy/image";
 import BasicSpeedDial from "../SpeedDial/SpeedDial";
 

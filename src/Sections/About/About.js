@@ -12,13 +12,16 @@ const About = () => {
   return (
     <Box>
       <Typography
-        sx={{ fontSize: 11, letterSpacing: 3 }}
+        sx={{ fontSize: 11, letterSpacing: 3, fontFamily: "quicksand" }}
         color="text.secondary"
         variant="button"
       >
         About
       </Typography>
-      <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
+      <Typography
+        sx={{ fontWeight: 700, letterSpacing: 3, fontFamily: "quicksand" }}
+        variant="h6"
+      >
         A LITTLE ABOUT ME
       </Typography>
       <Box sx={{ my: 4 }}>

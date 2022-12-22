@@ -5,7 +5,6 @@ import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PublicIcon from "@mui/icons-material/Public";
-import Link from "next/link";
 import { StyledLink } from "./style";
 
 export default function BasicSpeedDial({ code, link }) {
@@ -41,7 +40,7 @@ export default function BasicSpeedDial({ code, link }) {
   return (
     <Box sx={{ height: 60, transform: "translateZ(0px)", flexGrow: 1 }}>
       <SpeedDial
-        ariaLabel="SpeedDial basic example"
+        ariaLabel="SpeedDial"
         sx={{ position: "absolute", bottom: 16, right: 16 }}
         icon={<SpeedDialIcon />}
       >
