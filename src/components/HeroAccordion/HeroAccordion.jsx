@@ -7,9 +7,8 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import ImageIcon from "@mui/icons-material/Image";
 import Image from "next/legacy/image";
-import { ecommerce, iphone } from "../../assets";
+import { computer, ecommerce, iphone } from "../../assets";
 
 const HeroAccordion = () => {
   return (
@@ -24,7 +23,7 @@ const HeroAccordion = () => {
       <ListItem sx={{ py: 3 }}>
         <ListItemAvatar>
           <Image
-            src={ecommerce}
+            src={computer}
             alt="ecommerce-illustration"
             layout="responsive"
           />

@@ -20,3 +20,4 @@ export { default as henry } from "./henry.svg";
 export { default as pc } from "./pc.svg";
 export { default as ecommerce } from "./ecommerce-website.png";
 export { default as iphone } from "./iphone14.svg";
+export { default as computer } from "./pc.png";
