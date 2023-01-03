@@ -1,11 +1,5 @@
-import { Avatar, Box, Paper } from "@mui/material";
-import { green, purple } from "@mui/material/colors";
+import { Avatar, Box, Paper, Tab } from "@mui/material";
 import { styled } from "@mui/material/styles";
-
-export const StyledContactSection = styled(Box)(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === "light" ? "rgb(182, 137, 115)" : "rgb(71, 45, 45)",
-}));
 
 export const StyledFooter = styled(Paper)(({ theme }) => ({
   display: "flex",
@@ -50,4 +44,21 @@ export const StyledAvatar = styled(Avatar)(({ theme }) => ({
     theme.palette.mode === "light"
       ? `2px solid ${theme.palette.error.light}`
       : `2px solid ${theme.palette.info.light}`,
+}));
+
+export const StyledTab = styled(Tab)(({ theme }) => ({
+  padding: 25,
+  "&:hover": {
+    color: "#40a9ff",
+    opacity: 1,
+  },
+  "&.Mui-selected": {
+    fontWeight: theme.typography.fontWeightBold,
+    backgroundColor:
+      theme.palette.mode === "light"
+        ? theme.palette.grey[300]
+        : theme.palette.grey[600],
+    borderRadius: theme.shape.borderRadius,
+    color: "#40a9ff",
+  },
 }));
