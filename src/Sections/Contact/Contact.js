@@ -1,74 +1,60 @@
-import { Container, Grid, Toolbar, Typography } from "@mui/material";
-import { Box, Divider } from "@mui/material";
-import { motion } from "framer-motion";
+import { Grid, Toolbar, Typography } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
+import PropTypes from "prop-types";
 
-import { StyledAvatar, StyledContactSection, StyledFooter } from "./styles";
+import {
+  StyledAvatar,
+  StyledContactSection,
+  StyledFooter,
+  StyledTab,
+} from "./styles";
 import { contactData } from "./data";
 import Copyright from "../../components/Copyright/Copyright";
 import Link from "../../Link";
+import { useState } from "react";
 
 const Contact = () => {
   return (
-    <StyledContactSection>
-      <Container>
-        <Box>
-          <Toolbar />
-          <Typography
-            sx={{ fontSize: 11, letterSpacing: 3 }}
-            color="text.primary"
-            variant="button"
-          >
-            Get in touch
-          </Typography>
-          <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
-            CONTACT
-          </Typography>
-          <Box sx={{ my: 2 }}>
-            {contactData.length > 0 && (
-              <Grid container spacing={3}>
-                {contactData.map(({ id, title, icon, detail, link }) => (
-                  <Grid item key={id} lg={4} md={4} sm={6} xs={12}>
-                    <StyledFooter
-                      elevation={0}
-                      component={motion.div}
-                      whileHover={{ scale: 1.04 }}
-                      transition={{
-                        type: "tween",
-                        stiffness: 400,
-                        damping: 10,
-                      }}
-                    >
-                      <StyledAvatar variant="rounded">
-                        <Box>{icon}</Box>
-                      </StyledAvatar>
-                      <Box sx={{ p: 2 }}>
-                        <Typography variant="subtitle1" fontWeight={600}>
-                          {title}
-                        </Typography>
-                        <Divider sx={{ my: 0.5 }} />
-                        <Typography
-                          component={Link}
-                          href={link}
-                          variant="subtitle2"
-                          fontWeight={600}
-                          underline="hover"
-                        >
-                          {detail}
-                        </Typography>
-                      </Box>
-                    </StyledFooter>
-                  </Grid>
-                ))}
-              </Grid>
-            )}
-          </Box>
-        </Box>
-        <Divider />
-        <Toolbar />
-        <Copyright />
-      </Container>
-    </StyledContactSection>
+    <>
+      <Toolbar />
+      <Typography
+        sx={{ fontSize: 11, letterSpacing: 3 }}
+        color="text.primary"
+        variant="button"
+      >
+        Get in touch
+      </Typography>
+      <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
+        CONTACT
+      </Typography>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          sx={{ fontWeight: 700, maxWidth: 250 }}
+        >
+          {"I'd"} love to collaborate! Let me know what {"you're"} after
+        </Typography>
+      </Box>
+
+      <Grid container sx={{ my: 5 }}>
+        <Grid item lg={7} md={12} sm={12} xs={12}>
+          Email
+        </Grid>
+        <Grid item lg={5} md={12} sm={12} xs={12}>
+          Socials
+        </Grid>
+      </Grid>
+
+      <Toolbar />
+    </>
   );
 };
 
 export default Contact;
+
+Contact.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
