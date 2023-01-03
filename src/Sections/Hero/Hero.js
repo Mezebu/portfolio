@@ -1,9 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
-import { FlexSpaceBtween } from "../../../styles/globalStyles";
 
 import Banner from "../../components/Banner/Banner";
 import HeroAccordion from "../../components/HeroAccordion/HeroAccordion";
-import { StyledBigHeading, StyledIcon } from "./styles";
+import { StyledBigHeading } from "./styles";
 
 const Hero = () => {
   return (
@@ -20,7 +19,7 @@ const Hero = () => {
       </Typography>
       <Banner />
       <StyledBigHeading variant="h2" align="center">
-        I build clean and simple websites with unique designs.
+        Creative Web Developer
       </StyledBigHeading>
 
       <Grid container>
