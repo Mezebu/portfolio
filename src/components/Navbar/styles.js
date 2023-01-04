@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Typography, Box, Button, Paper } from "@mui/material";
-import { green, purple } from "@mui/material/colors";
+import { purple } from "@mui/material/colors";
 import { alpha, styled } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
