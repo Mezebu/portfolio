@@ -1,60 +1,29 @@
-import { Grid, Toolbar, Typography } from "@mui/material";
-import { Box, Tab, Tabs } from "@mui/material";
-import PropTypes from "prop-types";
+import { Grid, Toolbar, Box, Container } from "@mui/material";
 
-import {
-  StyledAvatar,
-  StyledContactSection,
-  StyledFooter,
-  StyledTab,
-} from "./styles";
-import { contactData } from "./data";
 import Copyright from "../../components/Copyright/Copyright";
 import Link from "../../Link";
-import { useState } from "react";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import ContactForm from "../../components/ContactForm/ContactForm";
+import Socials from "../../components/Socials/Socials";
 
 const Contact = () => {
   return (
-    <>
+    <Container maxWidth="lg">
       <Toolbar />
-      <Typography
-        sx={{ fontSize: 11, letterSpacing: 3 }}
-        color="text.primary"
-        variant="button"
-      >
-        Get in touch
-      </Typography>
-      <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
-        CONTACT
-      </Typography>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          sx={{ fontWeight: 700, maxWidth: 250 }}
-        >
-          {"I'd"} love to collaborate! Let me know what {"you're"} after
-        </Typography>
-      </Box>
+      <SectionHeader subTitle="Get in touch" title="CONTACT" />
 
-      <Grid container sx={{ my: 5 }}>
-        <Grid item lg={7} md={12} sm={12} xs={12}>
-          Email
+      <Grid container sx={{ my: 5 }} spacing={2}>
+        <Grid item lg={6} md={6} sm={12} xs={12}>
+          <ContactForm />
         </Grid>
-        <Grid item lg={5} md={12} sm={12} xs={12}>
-          Socials
+        <Grid item lg={6} md={6} sm={12} xs={12}>
+          <Socials />
         </Grid>
       </Grid>
 
       <Toolbar />
-    </>
+    </Container>
   );
 };
 
 export default Contact;
-
-Contact.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
