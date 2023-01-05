@@ -27,3 +27,5 @@ export { default as telegram } from "./telegram.png";
 export { default as whatsapp } from "./whatsapp.png";
 export { default as google } from "./google.png";
 export { default as github } from "./github.png";
+export { default as weatherApp } from "./weather-app.svg";
+export { default as sun } from "./sun.svg";

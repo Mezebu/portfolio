@@ -1,10 +1,5 @@
-import {
-  Box,
-  Button,
-  InputAdornment,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Button, InputAdornment } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import { FlexJustifyCenter } from "../../../styles/globalStyles";

@@ -1,23 +1,18 @@
-import { Box, Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
+
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import Dashboard from "./Dashboard/Dashboard";
+import WeatherApp from "./WeatherApp/WeatherApp";
 
 const Works = () => {
   return (
-    <>
-      <Box>
-        <Typography
-          sx={{ fontSize: 11, letterSpacing: 3 }}
-          color="text.secondary"
-          variant="button"
-        >
-          My Work
-        </Typography>
-        <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
-          RECENT WORKS
-        </Typography>
-      </Box>
+    <Box>
+      <SectionHeader subTitle="my work" title="RECENT WORKS" />
 
+      <WeatherApp />
+      {/* <Dashboard /> */}
       <Toolbar />
-    </>
+    </Box>
   );
 };
 

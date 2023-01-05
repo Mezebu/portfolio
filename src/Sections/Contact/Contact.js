@@ -9,10 +9,9 @@ import Socials from "../../components/Socials/Socials";
 const Contact = () => {
   return (
     <Container maxWidth="lg">
-      <Toolbar />
       <SectionHeader subTitle="Get in touch" title="CONTACT" />
 
-      <Grid container sx={{ my: 5 }} spacing={2}>
+      <Grid container spacing={2}>
         <Grid item lg={6} md={6} sm={12} xs={12}>
           <ContactForm />
         </Grid>
