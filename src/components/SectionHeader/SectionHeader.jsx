@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 const SectionHeader = ({ title, subTitle }) => {
   return (
     <Box>
-      <Toolbar />
       <Typography
         sx={{ fontSize: 11, letterSpacing: 3 }}
         color="text.primary"

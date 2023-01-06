@@ -5,21 +5,13 @@ import { StyledAvatar, StyledText } from "./styles";
 import { FlexColumn } from "../../../styles/globalStyles";
 
 import { data } from "./data";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 const SkillsSection = () => {
   return (
     <>
-      <Typography
-        sx={{ fontSize: 11, letterSpacing: 3 }}
-        color="text.primary"
-        variant="button"
-      >
-        SKILLS
-      </Typography>
-      <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
-        PROGRAMMING LANGUAGES & TOOLS
-      </Typography>
       <Toolbar />
+      <SectionHeader subTitle="skills" title="PROGRAMMING LANGUAGES & TOOLS" />
 
       <Box sx={{ mb: 7 }}>
         <Typography sx={{ fontWeight: 500 }} variant="subtitle1">

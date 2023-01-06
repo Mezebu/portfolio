@@ -1,4 +1,4 @@
-export const accordionData = [
+export const data = [
   {
     pos: 1,
     title: "Responsive Design",

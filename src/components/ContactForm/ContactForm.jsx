@@ -1,6 +1,7 @@
 import { Box, Button, InputAdornment } from "@mui/material";
 import { TextField, Typography } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
+import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import { FlexJustifyCenter } from "../../../styles/globalStyles";
 
@@ -67,8 +68,9 @@ const ContactForm = () => {
           type="submit"
           sx={{ width: "100%", p: 2 }}
           disableElevation
+          endIcon={<SendRoundedIcon />}
         >
-          Submit
+          Send
         </Button>
       </Box>
     </Box>

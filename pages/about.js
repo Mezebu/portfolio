@@ -1,14 +1,13 @@
-import Head from "next/head";
 import { Typography, Button, Grid } from "@mui/material";
 import { Fragment, useState } from "react";
 import { Box, Toolbar } from "@mui/material";
 import { motion } from "framer-motion";
+import Head from "next/head";
+import Link from "next/link";
 
 import ProTip from "../src/ProTip";
-import Link from "next/link";
 import Accordion from "../src/components/Accordion/Accordion";
-import PageNumber from "../src/components/PageNumber/PageNumber";
-import { accordionData } from "../src/Sections/About/data";
+import { data } from "../src/Sections/About/data";
 import SideText from "../src/components/SideTitleText/SideTitleText";
 
 const container = {
@@ -80,7 +79,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                     .join("\n")}
 
                   <Box sx={{ mt: 5 }}>
-                    {accordionData.map(({ pos, title, content }) => (
+                    {data.map(({ pos, title, content }) => (
                       <Accordion
                         key={pos}
                         title={title}
@@ -92,13 +91,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                     ))}
                   </Box>
                 </Box>
-                <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                  <PageNumber page="02" />
-                </Box>
 
-                <Button variant="contained" component={Link} href="/">
-                  Go to the main page
-                </Button>
                 <ProTip />
               </Box>
             </Grid>
@@ -149,7 +142,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                     .join("\n")}
 
                   <Box sx={{ mt: 5 }}>
-                    {accordionData.map(({ pos, title, content }) => (
+                    {data.map(({ pos, title, content }) => (
                       <Accordion
                         key={pos}
                         title={title}
@@ -160,9 +153,6 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                       />
                     ))}
                   </Box>
-                </Box>
-                <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                  <PageNumber page="02" />
                 </Box>
 
                 <Button variant="contained" component={Link} href="/">

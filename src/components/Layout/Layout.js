@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
           </Fab>
         </ScrollToTop>
       </Container>
-      <Contact />
       <Footer />
     </Box>
   );
