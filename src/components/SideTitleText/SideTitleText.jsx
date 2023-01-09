@@ -2,14 +2,18 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-const SideTitleText = ({ title, color, align }) => {
+const SideTitleText = ({ title, color }) => {
   return (
     <Box
       component={motion.div}
       initial={{ y: 200 }}
       animate={{ y: 0 }}
       transition={{ duration: 1.5, type: "tween" }}
-      sx={{ position: { md: "sticky", top: 80 } }}
+      sx={{
+        position: { md: "sticky", top: 80 },
+        display: "flex",
+        justifyContent: "center",
+      }}
     >
       <Typography
         sx={{

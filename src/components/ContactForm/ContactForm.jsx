@@ -14,7 +14,7 @@ const ContactForm = () => {
           align="center"
           sx={{ fontWeight: 600, maxWidth: 300, mb: 2 }}
         >
-          Got ideas? Send me an email! {"I'd"} love to collaborate.
+          Got ideas? Send me an email, {"I'd"} love to collaborate.
         </Typography>
       </FlexJustifyCenter>
 
