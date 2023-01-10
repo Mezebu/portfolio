@@ -1,5 +1,5 @@
 // prettier-ignore
-import { react, css, htmlIcon, javaScript, mui, git, nextJs, bootstrap } from "../../assets";
+import { react, css, htmlIcon, javaScript, mui, git, nextJs, bootstrap, vscode } from "../../assets";
 
 export const data = [
   { id: 1, title: "HTML", icon: htmlIcon },
@@ -10,4 +10,5 @@ export const data = [
   { id: 6, title: "Version Control", icon: git },
   { id: 7, title: "Material UI", icon: mui },
   { id: 8, title: "Bootstrap", icon: bootstrap },
+  { id: 9, title: "VS Code", icon: vscode },
 ];

@@ -1,8 +1,7 @@
-import { Avatar, Box, Grid, Toolbar, Typography } from "@mui/material";
+import { Box, Grid, Toolbar, Typography } from "@mui/material";
 import Image from "next/legacy/image";
 
-import { StyledAvatar, StyledIcon, StyledText } from "./styles";
-import { FlexCenter, FlexColumn } from "../../../styles/globalStyles";
+import { StyledIcon, StyledImage, StyledSkill, StyledText } from "./styles";
 
 import { data } from "./data";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
@@ -25,34 +24,37 @@ const SkillsSection = () => {
               stack should be cost-effective.
               <br />
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-              tempore excepturi aspernatur libero velit natus. Natus nulla
-              laudantium eos vero ipsum esse, illum quia quisquam pariatur quas
-              perferendis unde vitae. Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Debitis modi quis deleniti itaque, laboriosam
-              iusto ducimus asperiores quibusdam blanditiis saepe. Eum optio
-              deserunt similique sed modi architecto dolorum minima distinctio?
+              As a developer, I spend the majority of my time in my code editor
+              because that is where I write the code for my sites. All editors
+              give the plain text format that my code requires in order to be
+              understood as a website. My favorite editor, VS Code, simplifies
+              my work by allowing me to personalize it with hundreds of add-on
+              features, functions, and themes, ensuring that the tool I use the
+              most looks and operates precisely the way I want it to.
               <br />
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-              tempore excepturi aspernatur libero velit natus. Natus nulla
-              laudantium eos vero ipsum esse, illum quia quisquam pariatur quas
-              perferendis unde vitae. Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Delectus ea fuga, a quibusdam, animi tempora
-              dolor reprehenderit assumenda, amet hic aperiam aut nam. Ea,
-              facilis nihil omnis deleniti nostrum earum.
+              Frontend frameworks range from full-featured, complicated
+              frameworks that save me a significant amount of time and effort to
+              basic, minimalistic frameworks that I utilize to modify to my
+              {"heart's"} content. Material UI and Bootstrap, my personal
+              favorites, are the most well-known framework and are ideal for
+              responsive websites. {"It's"}
+              excellent since I can customize the components to my precise
+              specifications.
             </Typography>
           </Box>
 
           <Grid container spacing={1}>
             {data.map(({ id, icon, title }) => (
               <Grid item key={id} lg={4} md={6} sm={6} xs={6}>
-                <StyledAvatar>
+                <StyledSkill>
                   <StyledIcon>
-                    <Image src={icon} alt="react-icon" layout="intrinsic" />
+                    <StyledImage>
+                      <Image src={icon} alt="react-icon" layout="intrinsic" />
+                    </StyledImage>
                   </StyledIcon>
                   <StyledText variant="button">{title}</StyledText>
-                </StyledAvatar>
+                </StyledSkill>
               </Grid>
             ))}
           </Grid>

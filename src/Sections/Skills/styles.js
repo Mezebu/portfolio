@@ -7,7 +7,7 @@ export const SkillsWrapper = styled(Box)(({ theme }) => ({
   justifyContent: "center",
 }));
 
-export const StyledAvatar = styled(Box)(({ theme }) => ({
+export const StyledSkill = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   backdropFilter: "blur(8px)",
@@ -16,36 +16,46 @@ export const StyledAvatar = styled(Box)(({ theme }) => ({
   borderRadius: 4,
 }));
 
-export const StyledIcon = styled(Button)({
-  boxSizing: " border-box",
-  WebkitTapHighlightColor: "transparent",
-  outline: 0,
-  border: 0,
+export const StyledIcon = styled(Box)(({ theme }) => ({
   cursor: "pointer",
-  userSelect: "none",
-  verticalAlign: "middle",
-  appearance: "none",
-  textDecoration: "none",
-  textAlign: "center",
-  flex: "0 0 auto",
-  fontSize: "1.5rem",
-  overflow: "visible",
-  padding: 8,
-  backgroundColor: "rgba(34, 51, 84, 0.02)",
-  color: "rgb(85, 105, 255)",
-  width: "72px",
-  height: "72px",
+  WebkitTapHighlightColor: "transparent",
+  border: "1px solid grey",
+  width: 70,
+  height: 70,
   borderRadius: "50px",
-  boxShadow:
-    "rgb(34 51 84 / 30%) 0px 1px 4px, rgb(34 51 84 / 10%) 0px 3px 12px 2px",
   display: "flex",
-  WebkitBoxAlign: "center",
   alignItems: "center",
   WebkitBoxPack: "center",
   justifyContent: "center",
-  position: "relative",
-  transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-});
+  ":hover": {
+    borderColor:
+      theme.palette.mode === "light"
+        ? theme.palette.info.main
+        : theme.palette.secondary.main,
+  },
+  transition: "all 2s cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+}));
+
+export const StyledImage = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  transition: "all 1s cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+  backgroundColor: "rgba(34, 51, 84, 0.02)",
+  boxShadow:
+    "rgb(34 51 84 / 30%) 0px 1px 4px, rgb(34 51 84 / 10%) 0px 3px 12px 2px",
+  width: 55,
+  height: 55,
+  padding: 8,
+  borderRadius: "50%",
+  cursor: "pointer",
+  ":hover": {
+    backgroundColor:
+      theme.palette.mode === "light"
+        ? theme.palette.info.main
+        : theme.palette.secondary.main,
+  },
+}));
 
 export const StyledText = styled(Typography)({
   lineHeight: 4,

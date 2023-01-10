@@ -29,3 +29,4 @@ export { default as github } from "./github.png";
 export { default as weatherApp } from "./weather-app.png";
 export { default as sun } from "./sun.svg";
 export { default as business } from "./business-analysis.svg";
+export { default as vscode } from "./visual-studio-code.svg";
