@@ -1,35 +1,19 @@
-import InfoIcon from "@mui/icons-material/Info";
-import RoofingIcon from "@mui/icons-material/Roofing";
-import PsychologyIcon from "@mui/icons-material/Psychology";
-import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import { v4 as uuidv4 } from "uuid";
 
 export const navLinks = [
   {
-    id: 1,
+    id: uuidv4(),
     title: "Home",
     page: "/",
-    icon: <RoofingIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -160,
   },
   {
-    id: 2,
-    title: "About",
-    page: "/about",
-    icon: <InfoIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -50,
-  },
-  {
-    id: 4,
+    id: uuidv4(),
     title: "Works",
     page: "/works",
-    icon: <WorkHistoryIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -50,
   },
   {
-    id: 3,
+    id: uuidv4(),
     title: "Contact",
     page: "/contact",
-    icon: <PsychologyIcon sx={{ fontSize: 15, mr: 0.5 }} />,
-    offSet: -50,
   },
 ];

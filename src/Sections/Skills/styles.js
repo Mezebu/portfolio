@@ -2,11 +2,6 @@ import { Avatar, Box, Button, Typography } from "@mui/material";
 import { blue, grey, red } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 
-export const SkillsWrapper = styled(Box)(({ theme }) => ({
-  display: "flex",
-  justifyContent: "center",
-}));
-
 export const StyledSkill = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
