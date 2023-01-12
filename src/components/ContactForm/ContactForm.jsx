@@ -1,11 +1,45 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 import { Box, Button, InputAdornment } from "@mui/material";
 import { TextField, Typography } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
+
 import { FlexJustifyCenter } from "../../../styles/globalStyles";
 
 const ContactForm = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLETE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Message sent successfully", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error(
+            "There was an error sending your message, please try again later",
+            { position: toast.POSITION.BOTTOM_RIGHT }
+          );
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <Box>
       <FlexJustifyCenter>
@@ -18,11 +52,17 @@ const ContactForm = () => {
         </Typography>
       </FlexJustifyCenter>
 
-      <Box component="form" sx={{ px: { sm: 7 } }}>
+      <Box
+        component="form"
+        ref={form}
+        onSubmit={sendEmail}
+        sx={{ px: { sm: 7 } }}
+      >
         <TextField
           id="input-with-icon-textfield"
           label="Enter your name"
           type="text"
+          name="user_name"
           InputProps={{
             endAdornment: (
               <InputAdornment position="start">
@@ -39,6 +79,7 @@ const ContactForm = () => {
           id="input-with-icon-textfield"
           label="Enter your email address"
           type="email"
+          name="user_email"
           InputProps={{
             endAdornment: (
               <InputAdornment position="start">
@@ -53,8 +94,9 @@ const ContactForm = () => {
         />
         <TextField
           id="filled-multiline-static"
-          label="Multiline"
+          label="Message"
           type="text"
+          name="message"
           multiline
           rows={5}
           variant="filled"
