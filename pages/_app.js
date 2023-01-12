@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery, CssBaseline } from "@mui/material";
+import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "@mui/material/styles";
 import { CacheProvider } from "@emotion/react";
 import PropTypes from "prop-types";
 import Head from "next/head";
+import "react-toastify/dist/ReactToastify.css";
 
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../src/components/Layout/Layout";
@@ -68,6 +70,7 @@ export default function MyApp(props) {
             >
               <Layout>
                 <Component {...pageProps} />
+                <ToastContainer />
               </Layout>
             </motion.div>
           </AnimatePresence>
