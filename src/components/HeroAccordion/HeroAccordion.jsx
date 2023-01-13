@@ -1,25 +1,14 @@
-import {
-  Avatar,
-  Divider,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { ListItem, ListItemAvatar, ListItemText } from "@mui/material";
+import { List, Typography } from "@mui/material";
 import Image from "next/legacy/image";
-import { computer, ecommerce, iphone } from "../../assets";
+
+import { computer, iphone } from "../../assets";
+import { StyledDivider } from "./styles";
 
 const HeroAccordion = () => {
   return (
     <List sx={{ width: "100%", maxWidth: 500, py: 5 }}>
-      <Divider
-        component="li"
-        sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === "light" ? "black" : "white",
-        }}
-      />
+      <StyledDivider />
       <ListItem sx={{ py: 3 }}>
         <ListItemAvatar>
           <Image
@@ -43,13 +32,7 @@ const HeroAccordion = () => {
           }
         />
       </ListItem>
-      <Divider
-        component="li"
-        sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === "light" ? "black" : "white",
-        }}
-      />
+      <StyledDivider />
       <ListItem sx={{ py: 3 }}>
         <ListItemAvatar>
           <Image

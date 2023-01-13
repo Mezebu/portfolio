@@ -1,5 +1,3 @@
-import Typography from "@mui/material/Typography";
-import { StyledFooter, StyledTypography } from "./styles";
 import { Box, Container, CssBaseline } from "@mui/material";
 import Copyright from "../../components/Copyright/Copyright";
 

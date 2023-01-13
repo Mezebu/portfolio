@@ -6,6 +6,7 @@ import { StyledIcon, StyledImage, StyledSkill, StyledText } from "./styles";
 import { data } from "./data";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import SideTitleText from "../../components/SideTitleText/SideTitleText";
+import Skill from "./Skill";
 
 const SkillsSection = () => {
   return (
@@ -43,21 +44,7 @@ const SkillsSection = () => {
               specifications.
             </Typography>
           </Box>
-
-          <Grid container spacing={1}>
-            {data.map(({ id, icon, title }) => (
-              <Grid item key={id} lg={4} md={6} sm={6} xs={6}>
-                <StyledSkill>
-                  <StyledIcon>
-                    <StyledImage>
-                      <Image src={icon} alt="react-icon" layout="intrinsic" />
-                    </StyledImage>
-                  </StyledIcon>
-                  <StyledText variant="button">{title}</StyledText>
-                </StyledSkill>
-              </Grid>
-            ))}
-          </Grid>
+          <Skill />
         </Grid>
         <Grid item lg={2} md={2} sx={{ display: { xs: "none", md: "block" } }}>
           <SideTitleText title="TOOLS" color="#497174" />

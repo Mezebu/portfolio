@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Box, Grid, Toolbar, Typography } from "@mui/material";
 
 import { data } from "./data";
@@ -10,7 +10,7 @@ const About = () => {
   const [selected, setSelected] = useState(false);
 
   return (
-    <Box>
+    <Fragment>
       <Toolbar />
       <SectionHeader subTitle="about" title=" A LITTLE ABOUT ME" />
       <Grid container>
@@ -54,9 +54,9 @@ const About = () => {
             </Typography>
 
             <Box sx={{ mt: 5 }}>
-              {data.map(({ pos, title, content }) => (
+              {data.map(({ id, pos, title, content }) => (
                 <Accordion
-                  key={pos}
+                  key={id}
                   title={title}
                   content={content}
                   pos={pos}
@@ -68,7 +68,7 @@ const About = () => {
           </Box>
         </Grid>
       </Grid>
-    </Box>
+    </Fragment>
   );
 };
 
