@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
-import Image from "next/image";
-import React from "react";
+import Image from "next/legacy/image";
+
 import { data } from "./data";
 import { StyledIcon, StyledImage, StyledSkill, StyledText } from "./styles";
 

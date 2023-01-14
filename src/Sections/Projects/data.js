@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { business, dashboard, sun, weatherApp } from "../../assets";
+import { dashboard, weatherApp } from "../../assets";
 
 export const data = [
   {

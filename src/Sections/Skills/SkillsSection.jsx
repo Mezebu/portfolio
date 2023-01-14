@@ -1,7 +1,4 @@
 import { Box, Grid, Toolbar, Typography } from "@mui/material";
-import Image from "next/legacy/image";
-
-import { StyledIcon, StyledImage, StyledSkill, StyledText } from "./styles";
 
 import { data } from "./data";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";

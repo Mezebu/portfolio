@@ -1,22 +1,21 @@
-import { Avatar, Box, Button, Typography } from "@mui/material";
-import { blue, grey, red } from "@mui/material/colors";
+import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const StyledSkill = styled(Box)(({ theme }) => ({
+export const StyledSkill = styled(Box)({
   display: "flex",
   alignItems: "center",
   backdropFilter: "blur(8px)",
   background: "rgba(255, 255, 255, 0.3)",
   padding: 10,
   borderRadius: 4,
-}));
+});
 
 export const StyledIcon = styled(Box)(({ theme }) => ({
   cursor: "pointer",
   WebkitTapHighlightColor: "transparent",
   border: "1px solid grey",
-  width: 70,
-  height: 70,
+  width: 65,
+  height: 65,
   borderRadius: "50px",
   display: "flex",
   alignItems: "center",
@@ -53,7 +52,6 @@ export const StyledImage = styled(Box)(({ theme }) => ({
 }));
 
 export const StyledText = styled(Typography)({
-  lineHeight: 4,
   fontWeight: 700,
   marginLeft: 10,
   fontSize: 12,
