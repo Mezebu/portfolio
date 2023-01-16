@@ -11,14 +11,13 @@ const About = () => {
 
   return (
     <Fragment>
-      <Toolbar />
       <SectionHeader subTitle="about" title=" A LITTLE ABOUT ME" />
       <Grid container>
         <Grid item lg={2} md={2} sx={{ display: { xs: "none", md: "block" } }}>
           <SideTitleText title="ABOUT" color="#497174" />
         </Grid>
         <Grid item lg={10} md={10}>
-          <Box>
+          <Box sx={{ mt: 2 }}>
             <Typography variant="body1">
               Hello, my name is Henry and I enjoy building functional and
               visually appealing interactive web apps that provide a positive
