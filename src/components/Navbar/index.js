@@ -80,7 +80,11 @@ const NavBar = ({ children }) => {
         </StyledAppBar>
       </ElevationScroll>
       <Toolbar />
-      {isOpen && <MobileMenu />}
+      {isOpen && (
+        <Box sx={{ display: { xs: "block", md: "none" } }}>
+          <MobileMenu />
+        </Box>
+      )}
     </motion.div>
   );
 };
