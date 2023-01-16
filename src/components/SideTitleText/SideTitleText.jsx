@@ -6,8 +6,9 @@ const SideTitleText = ({ title, color }) => {
   return (
     <Box
       component={motion.div}
+      whileInView={{ y: 0 }}
       initial={{ y: 200 }}
-      animate={{ y: 0 }}
+      viewport={{ once: "true" }}
       transition={{ duration: 1.5, type: "tween" }}
       sx={{
         position: { md: "sticky", top: 80 },
