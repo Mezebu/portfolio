@@ -4,11 +4,11 @@ import { data } from "./data";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import SideTitleText from "../../components/SideTitleText/SideTitleText";
 import Skill from "./Skill";
+import { Fragment } from "react";
 
 const SkillsSection = () => {
   return (
-    <>
-      <Toolbar />
+    <Fragment>
       <SectionHeader subTitle="skills" title="PROGRAMMING LANGUAGES & TOOLS" />
 
       <Grid container>
@@ -44,10 +44,10 @@ const SkillsSection = () => {
           <Skill />
         </Grid>
         <Grid item lg={2} md={2} sx={{ display: { xs: "none", md: "block" } }}>
-          <SideTitleText title="TOOLS" color="#497174" />
+          <SideTitleText title="TOOLS" color="#82C3EC" />
         </Grid>
       </Grid>
-    </>
+    </Fragment>
   );
 };
 
