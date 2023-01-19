@@ -18,18 +18,16 @@ const Hero = () => {
         Hi, my name is
       </Typography>
       <Banner />
-      <StyledBigHeading variant="h2" align="center">
+      {/*   <StyledBigHeading variant="h2" align="center">
         Creative Web Developer
-      </StyledBigHeading>
+      </StyledBigHeading> */}
 
       <Grid container>
         <Grid item lg={6} md={6} xs={12}>
           <HeroAccordion />
         </Grid>
         <Grid item lg={6} md={6} xs={12}>
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-            scroll down
-          </Box>
+          <Box sx={{ display: "flex", justifyContent: "flex-end" }}></Box>
         </Grid>
       </Grid>
     </Box>

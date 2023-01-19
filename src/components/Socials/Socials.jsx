@@ -22,7 +22,7 @@ const Socials = () => {
           <Grid item key={id} lg={4} md={4} sm={4} xs={6}>
             <Link href={link} target="_blank" rel="noopener" underline="none">
               <StyledLinks variant="outlined" elevation={0}>
-                <Image src={icon} alt={`${title}-icon`} loading="lazy" />
+                <Image src={icon} alt={`${title}-icon`} />
                 <Typography variant="caption">{title}</Typography>
               </StyledLinks>
             </Link>

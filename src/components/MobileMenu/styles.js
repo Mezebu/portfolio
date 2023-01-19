@@ -28,7 +28,7 @@ export const StyledPaper = styled(Box)(({ theme }) => ({
     display: "block",
     content: `""`,
     position: "absolute",
-    top: -1,
+    top: 0,
     left: 0,
     right: 0,
     height: 1,
