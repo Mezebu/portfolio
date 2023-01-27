@@ -24,7 +24,7 @@ const Works = () => {
       <Toolbar />
       <SectionHeader subTitle="my work" title="RECENT WORKS" />
 
-      <Grid container>
+      <Grid container sx={{ mt: 10 }}>
         <Grid item lg={2} md={2} sx={{ display: { xs: "none", md: "block" } }}>
           <SideTitleText title="PROJECTS" color="#439A97" />
         </Grid>
