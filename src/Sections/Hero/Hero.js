@@ -7,7 +7,7 @@ import { StyledBigHeading } from "./styles";
 const Hero = () => {
   return (
     <Box sx={{ height: "83vh" }}>
-      <Typography
+      {/* <Typography
         variant="h1"
         sx={{
           fontSize: "clamp(12px, 4vw, 16px)",
@@ -16,7 +16,7 @@ const Hero = () => {
         align="center"
       >
         Hi, my name is
-      </Typography>
+      </Typography> */}
       <Banner />
       {/*   <StyledBigHeading variant="h2" align="center">
         Creative Web Developer
