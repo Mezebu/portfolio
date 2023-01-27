@@ -6,21 +6,21 @@ import { telegram, twitter, whatsapp } from "../../assets";
 export const data = [
   {
     id: uuidv4(),
-    title: "Gmail",
+    title: "Email",
     icon: google,
     link: "mailto:mezebu07@gmail.com?Subject=Hey Henry!✋",
-  },
-  {
-    id: uuidv4(),
-    title: "LinkedIn",
-    icon: linkedin,
-    link: "https://linkedin.com/in/henry-ezeigwe-604892211",
   },
   {
     id: uuidv4(),
     title: "Github",
     icon: github,
     link: "https://github.com/mezebu",
+  },
+  {
+    id: uuidv4(),
+    title: "LinkedIn",
+    icon: linkedin,
+    link: "https://linkedin.com/in/henry-ezeigwe-604892211",
   },
   {
     id: uuidv4(),
