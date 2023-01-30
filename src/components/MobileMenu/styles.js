@@ -22,7 +22,7 @@ export const StyledPaper = styled(Box)(({ theme }) => ({
   backdropFilter: "blur(3px)",
   fontSize: 14,
   lineHeight: 14,
-  zIndex: 1,
+  zIndex: 2,
 
   "&::before": {
     display: "block",
