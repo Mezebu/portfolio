@@ -1,5 +1,6 @@
 import { Box, Grid, Toolbar, Typography } from "@mui/material";
 import Head from "next/head";
+import { Fragment } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { commerce, dashboard } from "../src/assets";
 import ProjectTab from "../src/components/ProjectTab/ProjectTab";
@@ -31,7 +32,7 @@ const data = [
 
 const works = () => {
   return (
-    <Box>
+    <Fragment>
       <Head>
         <title>Ezeigwe Henry | Projects</title>
       </Head>
@@ -80,7 +81,7 @@ const works = () => {
           ))}
         </Grid>
       </Box>
-    </Box>
+    </Fragment>
   );
 };
 
