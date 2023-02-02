@@ -1,6 +1,5 @@
-import { Box, Grid, Toolbar } from "@mui/material";
+import { Box, Grid, Toolbar, Typography } from "@mui/material";
 
-import SectionHeader from "../src/components/SectionHeader/SectionHeader";
 import ContactForm from "../src/components/ContactForm/ContactForm";
 import Socials from "../src/components/Socials/Socials";
 import { Fragment } from "react";
@@ -13,7 +12,18 @@ const Contact = () => {
         <title>Ezeigwe Henry | Contact Me</title>
       </Head>
       <Box>
-        <SectionHeader subTitle="Get in touch" title="CONTACT" />
+        <Typography
+          sx={{ fontSize: 11, letterSpacing: 3 }}
+          color="text.secondary"
+          variant="button"
+        >
+          Get In Touch
+        </Typography>
+        <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
+          CONTACT
+        </Typography>
+        <Toolbar />
+
         <Grid container spacing={2}>
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <ContactForm />
