@@ -1,9 +1,9 @@
-import { Fragment } from "react";
 import Head from "next/head";
+import { Fragment } from "react";
 import { Box, Grid, Toolbar, Typography } from "@mui/material";
 
-import ContactForm from "../src/components/ContactForm/ContactForm";
 import Socials from "../src/components/Socials/Socials";
+import ContactForm from "../src/components/ContactForm/ContactForm";
 
 const Contact = () => {
   return (
