@@ -1,95 +1,83 @@
-import { Box, Grid, Toolbar } from "@mui/material";
+import { useState } from "react";
+import { Box, Tabs, Toolbar } from "@mui/material";
 
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
-import { data } from "./data";
 
-import {
-  Avatar,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-  Divider,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Typography } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/legacy/image";
 import SideTitleText from "../../components/SideTitleText/SideTitleText";
+import { StyledTab, StyledTabContainer } from "./styles";
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 const Works = () => {
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <Box>
       <Toolbar />
       <SectionHeader subTitle="my work" title="RECENT WORKS" />
-
-      <Grid container sx={{ mt: 10 }}>
-        <Grid item lg={2} md={2} sx={{ display: { xs: "none", md: "block" } }}>
-          <SideTitleText title="PROJECTS" color="#439A97" />
-        </Grid>
-        <Grid item lg={10} md={10}>
-          {data.map(
-            ({ id, image, altName, avi, title, web, code, desc, stack }) => (
-              <Box key={id} sx={{ mt: { md: 4 } }}>
-                <Card variant="outlined" sx={{ maxWidth: 550 }}>
-                  <Image
-                    src={image}
-                    alt={altName}
-                    layout="responsive"
-                    loading="lazy"
-                  />
-                </Card>
-                <Card
-                  variant="outlined"
-                  sx={{
-                    position: "relative",
-                    left: { lg: 420, md: 300, sm: 120 },
-                    bottom: 50,
-                    maxWidth: 550,
-                  }}
-                >
-                  <CardHeader
-                    avatar={<Avatar aria-label={altName}>{avi}</Avatar>}
-                    title={<Typography variant="button">{title}</Typography>}
-                  />
-                  <Divider />
-                  <CardContent>
-                    <Typography variant="body2">{desc}</Typography>
-                    <Typography
-                      sx={{ mt: 2, fontweight: 800, fontSize: "small" }}
-                    >
-                      {stack}
-                    </Typography>
-                  </CardContent>
-                  <CardActions
-                    disableSpacing
-                    sx={{ display: "flex", justifyContent: "flex-end" }}
-                  >
-                    <IconButton
-                      aria-label="add to favorites"
-                      href={web}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <PublicIcon />
-                    </IconButton>
-                    <IconButton
-                      aria-label="github"
-                      href={code}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <GitHubIcon />
-                    </IconButton>
-                  </CardActions>
-                </Card>
-              </Box>
-            )
-          )}
-        </Grid>
-      </Grid>
-
+      <Box
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <StyledTabContainer
+          elevation={0}
+          variant="outlined"
+          sx={{ width: { xs: "100%", md: "80%" } }}
+        >
+          <Box sx={{ width: "100%", margin: "auto" }}>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="fullWidth"
+                aria-label="projects tab"
+                sx={{ pt: 0.5, mx: 0.5 }}
+              >
+                <StyledTab label="Item One" {...a11yProps(0)} />
+                <StyledTab label="Item Two" {...a11yProps(1)} />
+              </Tabs>
+            </Box>
+            <TabPanel value={value} index={0}>
+              Item One
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              Item Two
+            </TabPanel>
+          </Box>
+        </StyledTabContainer>
+      </Box>
       <Toolbar />
     </Box>
   );
