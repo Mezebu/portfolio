@@ -13,8 +13,8 @@ const links = [
   },
   {
     id: uuidv4(),
-    title: "Works",
-    page: "/works",
+    title: "Projects",
+    page: "/projects",
   },
   {
     id: uuidv4(),
