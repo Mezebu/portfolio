@@ -1,5 +1,4 @@
 import { Box, Collapse, Container, Typography } from "@mui/material";
-import { Divide as Hamburger } from "hamburger-react";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 
@@ -35,8 +34,8 @@ const Accordion = ({ pos, title, content, selected, setSelected }) => {
       </FlexSpaceBtween>
 
       <Collapse in={selected} timeout={500} unmountOnExit>
-        <Box sx={{ p: 2 }}>
-          <Container>
+        <Box sx={{ p: 2.8 }}>
+          <Container maxWidth="lg">
             <Typography sx={{ fontWeight: 500 }} variant="subtitle1">
               {content}
             </Typography>
