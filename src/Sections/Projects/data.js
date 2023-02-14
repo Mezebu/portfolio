@@ -4,7 +4,8 @@ import { dashboard, weatherApp } from "../../assets";
 export const data = [
   {
     id: uuidv4(),
-    altName: "weather-app",
+    bgLight: "#bbdefb",
+    bgDark: "#0d47a1",
     title: "Weather App",
     desc: `A simple weather app that collects weather data and time from a
             user's geolocation, as well as weather data across various
@@ -17,7 +18,8 @@ export const data = [
   },
   {
     id: uuidv4(),
-    altName: "dashboard",
+    bgLight: "#4db6ac",
+    bgDark: "#004d40",
     title: "Dashboard",
     desc: `A simple weather app that collects weather data and time from a
             user's geolocation, as well as weather data across various

@@ -23,23 +23,22 @@ const SkillsSection = () => {
               stack should be cost-effective.
               <br />
               <br />
-              As a developer, I spend the majority of my time in my code editor
-              because that is where I write the code for my sites. All editors
-              give the plain text format that my code requires in order to be
-              understood as a website. My favorite editor, VS Code, simplifies
-              my work by allowing me to personalize it with hundreds of add-on
-              features, functions, and themes, ensuring that the tool I use the
-              most looks and operates precisely the way I want it to.
-              <br />
-              <br />
               Frontend frameworks range from full-featured, complicated
               frameworks that save me a significant amount of time and effort to
               basic, minimalistic frameworks that I utilize to modify to my
-              {"heart's"} content. Material UI and Bootstrap, my personal
+              {" heart's"} desire. Material UI and Bootstrap, my personal
               favorites, are the most well-known framework and are ideal for
-              responsive websites. {"It's"}
+              responsive websites. {"It's "}
               excellent since I can customize the components to my precise
               specifications.
+              <br />
+              <br />I spend the majority of my time in my code editor because
+              that is where I write the code for my sites. All editors give the
+              plain text format that my code requires in order to be understood
+              as a website. My favorite editor, VS Code, simplifies my work by
+              allowing me to personalize it with hundreds of add-on features,
+              functions, and themes, ensuring that the tool I use the most looks
+              and operates precisely the way I want it to.
             </Typography>
           </Box>
           <Skill />

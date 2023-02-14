@@ -1,5 +1,11 @@
-import { Paper, Tab } from "@mui/material";
+import { Paper, Tab, Link } from "@mui/material";
 import { styled } from "@mui/material/styles";
+
+export const StyledLink = styled(Link)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});
 
 export const StyledTab = styled(Tab)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightBold,

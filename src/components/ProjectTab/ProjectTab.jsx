@@ -27,7 +27,6 @@ const ProjectTab = ({ heading, image, desc, code, link }) => {
         sx={{
           fontWeight: 700,
           color: "black",
-          fontFamily: "Montserrat",
           opacity: 0.3,
           transition: "all 0.5s ease-in-out",
           "&:hover": {
