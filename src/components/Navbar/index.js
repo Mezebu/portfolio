@@ -1,14 +1,13 @@
 import { useContext, useState } from "react";
-import { ButtonBase, Toolbar, Tooltip } from "@mui/material";
+import { IconButton, Toolbar, Tooltip, CssBaseline, Box } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
-import { Box, CssBaseline } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { motion } from "framer-motion";
 import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 
-import { StyledToolbar, StyledAppBar, StyledNavLogo } from "./styles";
-import { ContactButton, NavLink, ActionIcons } from "./styles";
+import { StyledAppBar, StyledNavLogo } from "./styles";
+import { NavLink, StyledToolbar } from "./styles";
 import { navLinks } from "./NavData";
 import ProgressBar from "../FramerAnimations/ProgressBar";
 import MobileMenu from "../MobileMenu/MobileMenu";
@@ -49,28 +48,14 @@ const NavBar = ({ children }) => {
               ))}
             </Box>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <ContactButton
-                component={Link}
-                href="mailto:mezebu07@gmail.com?Subject=Hey Henry!✋"
-                target="_blank"
-                rel="noopener"
-              >
-                Resume
-              </ContactButton>
               <Tooltip title={`${themeTitle} mode`}>
-                <ButtonBase
-                  component="div"
-                  sx={{ ml: 2, mr: 1 }}
-                  onClick={toggleTheme}
-                >
-                  <ActionIcons>
-                    {theme.palette.mode === "dark" ? (
-                      <NightsStayRoundedIcon sx={{ fontSize: 20 }} />
-                    ) : (
-                      <LightModeRoundedIcon sx={{ fontSize: 20 }} />
-                    )}
-                  </ActionIcons>
-                </ButtonBase>
+                <IconButton onClick={toggleTheme}>
+                  {theme.palette.mode === "dark" ? (
+                    <NightsStayRoundedIcon sx={{ fontSize: 20 }} />
+                  ) : (
+                    <LightModeRoundedIcon sx={{ fontSize: 20 }} />
+                  )}
+                </IconButton>
               </Tooltip>
             </Box>
             <Box sx={{ mr: 2, display: { md: "none" } }}>
@@ -82,7 +67,7 @@ const NavBar = ({ children }) => {
       <Toolbar />
       {isOpen && (
         <Box sx={{ display: { xs: "block", md: "none" } }}>
-          <MobileMenu />
+          <MobileMenu {...{ toggleTheme, themeTitle, theme }} />
         </Box>
       )}
     </motion.div>

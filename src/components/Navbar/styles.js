@@ -68,37 +68,6 @@ export const NavLink = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const ContactButton = styled(Button)(({ theme }) => ({
-  color:
-    theme.palette.mode === "light"
-      ? theme.palette.common.black
-      : theme.palette.common.white,
-  transition: "all 0.7s ease-in-out",
-  textTransform: "none",
-  "&:hover": {
-    position: "relative",
-  },
-  "&:before": {
-    content: "''",
-    position: "absolute",
-    width: "0",
-    height: 2,
-    bottom: "-3px",
-    left: "0%",
-    transform: "translate(0%,0%)",
-    backgroundColor:
-      theme.palette.mode === "light"
-        ? theme.palette.getContrastText(purple[100])
-        : theme.palette.getContrastText(purple[400]),
-    visibility: "hidden",
-    transition: "all 0.5s ease-in-out",
-  },
-  "&:hover:before": {
-    visibility: "visible",
-    width: "100%",
-  },
-}));
-
 export const StyledMobileMenu = styled(Paper)(({ theme }) => ({
   width: { xs: "70%", sm: "50%" },
   zIndex: 1200,
@@ -122,18 +91,4 @@ export const StyledMobileMenu = styled(Paper)(({ theme }) => ({
     transform: "translateY(-50%) rotate(45deg)",
     zIndex: 1200,
   },
-}));
-
-export const ActionIcons = styled(Box)(({ theme }) => ({
-  width: 35,
-  height: 35,
-  border: "1px solid rgba( 255, 255, 255, 0.18 )",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.black, 0.1),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.black, 0.25),
-  },
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
 }));
