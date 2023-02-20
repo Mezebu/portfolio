@@ -29,7 +29,7 @@ export const data = [
     end: "flex-end",
     image: weatherApp,
   },
-  /*   {
+  /* {
     id: uuidv4(),
     bgLight: "#4db6ac",
     bgDark: "#004d40",
