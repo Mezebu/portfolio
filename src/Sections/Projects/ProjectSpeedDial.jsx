@@ -1,9 +1,10 @@
-import Box from "@mui/material/Box";
-import SpeedDial from "@mui/material/SpeedDial";
-import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
+import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PublicIcon from "@mui/icons-material/Public";
+import SpeedDial from "@mui/material/SpeedDial";
+import Box from "@mui/material/Box";
+
 import { StyledLink } from "./styles";
 
 export default function ProjectSpeedDial({ web, code }) {
