@@ -25,6 +25,22 @@ const data = [
   },
   {
     id: uuidv4(),
+    heading: "Commerce",
+    image: commerce,
+    desc: "commerce details",
+    code: "https://github.com/mezebu/commerce-js",
+    link: "https://cosmic-licorice-418a80.netlify.app/",
+  },
+  {
+    id: uuidv4(),
+    heading: "Commerce",
+    image: commerce,
+    desc: "commerce details",
+    code: "https://github.com/mezebu/commerce-js",
+    link: "https://cosmic-licorice-418a80.netlify.app/",
+  },
+  {
+    id: uuidv4(),
     heading: "Weather",
     image: commerce,
     desc: "weather details",
