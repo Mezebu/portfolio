@@ -1,24 +1,20 @@
-import { Avatar, Box, Card, CardHeader, CardMedia, Grid } from "@mui/material";
-import Image from "next/image";
-import React from "react";
-
 import { useTheme } from "@mui/material/styles";
-import { purple } from "@mui/material/colors";
-
 import CardContent from "@mui/material/CardContent";
-
+import CardHeader from "@mui/material/CardHeader";
 import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
+import Image from "next/image";
+import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
 
-import { project } from "../../assets/index";
 import { data } from "./data";
-import BasicSpeedDial from "./data";
 import ProjectSpeedDial from "./ProjectSpeedDial";
 
 const ProjectCard = () => {
   const theme = useTheme();
 
   return (
-    <>
+    <Box>
       {data.map(
         // prettier-ignore
         ({ id, desc, title, stack, web, code, bgLight, bgDark, image, end }) => (
@@ -52,7 +48,7 @@ const ProjectCard = () => {
           </Box>
         )
       )}
-    </>
+    </Box>
   );
 };
 
