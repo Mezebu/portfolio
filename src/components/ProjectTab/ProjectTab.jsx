@@ -71,10 +71,6 @@ const ProjectTab = ({ heading, image, desc, code, link }) => {
                   libero vel unde corrupti, quia quos?
                   <br />
                   <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus laboriosam, nihil odit illo veniam nobis eligendi
-                  expedita consequuntur. Repellendus, eos. Quam obcaecati
-                  possimus numquam dolores. Recusandae eum fugit magnam nisi!
                 </Typography>
                 <BasicSpeedDial {...{ code, link }} />
               </TabPanel>
