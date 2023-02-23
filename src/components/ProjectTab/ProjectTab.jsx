@@ -55,6 +55,7 @@ const ProjectTab = ({ heading, image, desc, code, link }) => {
             <motion.div key={heading}>
               <TabPanel value={value} index={0}>
                 <ProjectCard image={image} />
+                <BasicSpeedDial {...{ code, link }} />
               </TabPanel>
               <TabPanel value={value} index={1}>
                 <Typography variant="subtitle2">
@@ -72,7 +73,6 @@ const ProjectTab = ({ heading, image, desc, code, link }) => {
                   <br />
                   <br />
                 </Typography>
-                <BasicSpeedDial {...{ code, link }} />
               </TabPanel>
             </motion.div>
           </AnimatePresence>

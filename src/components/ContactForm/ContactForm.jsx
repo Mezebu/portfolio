@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import { Box, Button, InputAdornment } from "@mui/material";
+import { Box, Button, Container, InputAdornment } from "@mui/material";
 import { TextField, Typography } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
@@ -41,7 +41,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Box>
+    <Container maxWidth="md">
       <FlexJustifyCenter>
         <Typography
           variant="subtitle1"
@@ -115,7 +115,7 @@ const ContactForm = () => {
           Send
         </Button>
       </Box>
-    </Box>
+    </Container>
   );
 };
 
