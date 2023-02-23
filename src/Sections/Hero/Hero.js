@@ -9,17 +9,6 @@ import { StyledBigHeading } from "./styles";
 const Hero = () => {
   return (
     <Box sx={{ height: "83vh" }}>
-      {/*   <Typography
-        variant="h1"
-        sx={{
-          fontSize: "clamp(12px, 4vw, 16px)",
-          fontWeight: 600,
-        }}
-        align="center"
-      >
-        Hi, my name is
-      </Typography> */}
-      {/*  <Banner /> */}
       <StyledBigHeading
         component={motion.div}
         initial={{ opacity: 0, y: 100 }}
@@ -33,8 +22,11 @@ const Hero = () => {
         <Typography
           component="span"
           sx={{
-            color: "#04bdb0",
-            fontSize: "clamp(50px, 8vw, 75px)",
+            color: (theme) =>
+              theme.palette.mode === "light"
+                ? theme.palette.primary.light
+                : theme.palette.secondary.light,
+            fontSize: "clamp(40px, 7vw, 70px)",
             fontWeight: 700,
           }}
         >
@@ -59,7 +51,7 @@ const Hero = () => {
             bgcolor: (theme) =>
               theme.palette.mode === "light"
                 ? theme.palette.common.black
-                : theme.palette.secondary,
+                : theme.palette.secondary.light,
           }}
         >
           Download Resume
