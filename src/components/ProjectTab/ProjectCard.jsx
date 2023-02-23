@@ -17,14 +17,16 @@ const ProjectCard = ({ image }) => {
   const theme = useTheme();
 
   return (
-    <motion.div
+    <Box
+      component={motion.div}
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -10, opacity: 0 }}
       transition={{ duration: 0.5 }}
+      sx={{ height: "100%" }}
     >
       <Image src={image} alt="project-image" layout="responsive" priority />
-    </motion.div>
+    </Box>
   );
 };
 

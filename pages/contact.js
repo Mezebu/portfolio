@@ -12,38 +12,26 @@ const Contact = () => {
         <title>Ezeigwe Henry | Contact Me</title>
       </Head>
       <Box>
-        <Box
-          sx={{
-            display: {
-              xs: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              md: "block",
-            },
-          }}
+        <Typography
+          sx={{ fontSize: 11, letterSpacing: 3 }}
+          color="text.secondary"
+          variant="subtitle2"
+          align="center"
         >
-          <Typography
-            sx={{ fontSize: 11, letterSpacing: 3 }}
-            color="text.secondary"
-            variant="button"
-          >
-            Get In Touch
-          </Typography>
-          <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
-            CONTACT
-          </Typography>
-        </Box>
+          Get In Touch
+        </Typography>
+        <Typography
+          align="center"
+          sx={{ fontWeight: 700, letterSpacing: 3 }}
+          variant="h6"
+        >
+          CONTACT
+        </Typography>
 
         <Toolbar />
 
-        <Grid container spacing={2}>
-          <Grid item lg={6} md={6} sm={12} xs={12}>
-            <ContactForm />
-          </Grid>
-          <Grid item lg={6} md={6} sm={12} xs={12}>
-            <Socials />
-          </Grid>
-        </Grid>
+        <ContactForm />
+
         <Toolbar />
       </Box>
     </Fragment>

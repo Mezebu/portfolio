@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Box, Grid, Toolbar, Typography } from "@mui/material";
 
-import { commerce, dashboard } from "../src/assets";
+import { calculator, commerce, dashboard, weather } from "../src/assets";
 import ProjectTab from "../src/components/ProjectTab/ProjectTab";
 
 const data = [
@@ -25,25 +25,17 @@ const data = [
   },
   {
     id: uuidv4(),
-    heading: "Commerce",
-    image: commerce,
-    desc: "commerce details",
-    code: "https://github.com/mezebu/commerce-js",
-    link: "https://cosmic-licorice-418a80.netlify.app/",
-  },
-  {
-    id: uuidv4(),
-    heading: "Commerce",
-    image: commerce,
-    desc: "commerce details",
-    code: "https://github.com/mezebu/commerce-js",
-    link: "https://cosmic-licorice-418a80.netlify.app/",
-  },
-  {
-    id: uuidv4(),
     heading: "Weather",
-    image: commerce,
+    image: weather,
     desc: "weather details",
+  },
+  {
+    id: uuidv4(),
+    heading: "Calculator",
+    image: calculator,
+    desc: "I created this Calculator using JavaScript, as well as HTML and CSS web programming. This Calculator does fundamental operations such as addition, multiplication, subtraction, and division, as well as computes a variety of percentage values, such as the % difference between two supplied numbers.",
+    code: "https://github.com/mezebu/calculator",
+    link: "https://mezebu.github.io/calculator/",
   },
 ];
 
