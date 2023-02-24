@@ -1,8 +1,7 @@
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { FlexCenter } from "../../../styles/globalStyles";
 
-import Banner from "../../components/Banner/Banner";
 import HeroAccordion from "../../components/HeroAccordion/HeroAccordion";
 import { StyledBigHeading } from "./styles";
 
@@ -13,12 +12,12 @@ const Hero = () => {
         component={motion.div}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2 }}
+        transition={{ duration: 1, delay: 0.6 }}
         viewport={{ once: true }}
         variant="h1"
         align="center"
       >
-        I BUILD THINGS FOR THE{" "}
+        I BUILD THINGS FOR{" "}
         <Typography
           component="span"
           sx={{
@@ -30,7 +29,7 @@ const Hero = () => {
             fontWeight: 700,
           }}
         >
-          WEB
+          THE WEB
         </Typography>
       </StyledBigHeading>
 

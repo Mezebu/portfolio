@@ -24,10 +24,11 @@ export const StyledToolbar = styled(Toolbar)({
 });
 
 export const StyledNavLogo = styled(Typography)({
-  fontFamily: "Nosifer",
-  background: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
+  fontFamily: "Montserrat",
+  /* background: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
   backgroundClip: "text",
-  color: "transparent",
+  color: "transparent", */
+  fontWeight: 800,
 });
 
 export const NavLink = styled(Box)(({ theme }) => ({

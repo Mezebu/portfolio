@@ -39,7 +39,7 @@ const NavBar = ({ children }) => {
         <StyledAppBar color="inherit">
           <ProgressBar />
           <StyledToolbar>
-            <StyledNavLogo variant="h5">Henry</StyledNavLogo>
+            <StyledNavLogo variant="h5">H.</StyledNavLogo>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {navLinks.map(({ id, page, title }) => (
                 <NavLink component={Link} key={id} href={page} underline="none">

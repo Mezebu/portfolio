@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { dashboard, weatherApp } from "../../assets";
+import { dashboard, weather } from "../../assets";
 
 export const data = [
   {
@@ -27,7 +27,7 @@ export const data = [
     web: "https://fanciful-marshmallow-d4a254.netlify.app/",
     code: "https://github.com/mezebu/weather",
     end: "flex-end",
-    image: weatherApp,
+    image: weather,
   },
   /* {
     id: uuidv4(),
