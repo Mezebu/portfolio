@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery, CssBaseline } from "@mui/material";
+import { AnimatePresence, motion } from "framer-motion";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "@mui/material/styles";
 import { CacheProvider } from "@emotion/react";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,8 +14,6 @@ import Layout from "../src/components/Layout/Layout";
 import ThemeContext from "../src/ThemeContext";
 import darkTheme from "../src/darkTheme";
 import theme from "../src/theme";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
