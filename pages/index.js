@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 import Head from "next/head";
 
 import { Hero, About, Projects, Skills } from "../src/Sections";
-import SkillsSection from "../src/Sections/Skills/SkillsSection";
 
 const Index = () => {
   return (
