@@ -14,7 +14,7 @@ const Hero = () => {
           component={motion.h1}
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
-          transition={{ duration: 0.9, delay: 0.8 }}
+          transition={{ duration: 1.2, delay: 0.9 }}
           variant="h1"
           align="center"
         >
@@ -39,7 +39,7 @@ const Hero = () => {
           component={motion.p}
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
-          transition={{ duration: 0.9, delay: 1 }}
+          transition={{ duration: 1.3, delay: 1 }}
           align="center"
           sx={{ mx: { lg: 10 } }}
         >
@@ -47,8 +47,7 @@ const Hero = () => {
           an interest in solving algorithmically complex problems. I have a
           passion for problem solving. Currently, I am building a web
           application that is a marketplace where people can subscribe to other
-          users to get access to video content they produce. The application
-          currently has 25 active users.
+          users to get access to video content they produce.
         </Typography>
       </Box>
 
@@ -60,7 +59,7 @@ const Hero = () => {
           component={motion.button}
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
-          transition={{ duration: 0.9, delay: 1.1 }}
+          transition={{ duration: 1.4, delay: 1.2 }}
           sx={{
             bgcolor: (theme) =>
               theme.palette.mode === "light"

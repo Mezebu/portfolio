@@ -41,26 +41,11 @@ const ContactForm = () => {
   };
 
   return (
-    <Container maxWidth="md">
-      <FlexJustifyCenter>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          sx={{ fontWeight: 600, maxWidth: 300, mb: 2 }}
-        >
-          Got ideas? Send me an email, {"I'd"} love to collaborate.
-        </Typography>
-      </FlexJustifyCenter>
-
-      <Box
-        component="form"
-        ref={form}
-        onSubmit={sendEmail}
-        sx={{ px: { sm: 7 } }}
-      >
+    <>
+      <Box component="form" ref={form} onSubmit={sendEmail}>
         <TextField
           id="input-with-icon-textfield"
-          label="Enter your name"
+          label="Name"
           type="text"
           name="user_name"
           InputProps={{
@@ -77,7 +62,7 @@ const ContactForm = () => {
         />
         <TextField
           id="input-with-icon-textfield"
-          label="Enter your email address"
+          label="Email"
           type="email"
           name="user_email"
           InputProps={{
@@ -115,7 +100,7 @@ const ContactForm = () => {
           Send
         </Button>
       </Box>
-    </Container>
+    </>
   );
 };
 
