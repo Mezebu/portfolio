@@ -31,3 +31,5 @@ export { default as vscode } from "./visual-studio-code.svg";
 export { default as commerce } from "./commercejs.png";
 export { default as weather } from "./weather.png";
 export { default as calculator } from "./calculator.png";
+export { default as stickerLight } from "./sticker-light.svg";
+export { default as stickerDark } from "./sticker-dark.svg";
