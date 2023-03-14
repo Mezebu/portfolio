@@ -1,20 +1,23 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+import { stickerDark, stickerLight } from "../../assets";
+import { StyledBigHeading } from "./styles";
 import { FlexCenter } from "../../../styles/globalStyles";
-import { container, item } from "../../components/FramerAnimations/variants";
 
 import HeroAccordion from "../../components/HeroAccordion/HeroAccordion";
-import { StyledBigHeading } from "./styles";
 
 const Hero = () => {
+  const theme = useTheme();
   return (
-    <Box sx={{ height: "90vh" }}>
+    <Box>
       <Box sx={{ overflow: "hidden" }}>
         <StyledBigHeading
           component={motion.h1}
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
-          transition={{ duration: 1.2, delay: 0.9 }}
+          transition={{ duration: 1, delay: 0.7 }}
           variant="h1"
           align="center"
         >
@@ -39,7 +42,7 @@ const Hero = () => {
           component={motion.p}
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
-          transition={{ duration: 1.3, delay: 1 }}
+          transition={{ duration: 1, delay: 1 }}
           align="center"
           sx={{ mx: { lg: 10 } }}
         >
@@ -59,7 +62,7 @@ const Hero = () => {
           component={motion.button}
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
-          transition={{ duration: 1.4, delay: 1.2 }}
+          transition={{ duration: 1, delay: 1 }}
           sx={{
             bgcolor: (theme) =>
               theme.palette.mode === "light"
@@ -72,11 +75,19 @@ const Hero = () => {
       </FlexCenter>
 
       <Grid container>
-        <Grid item lg={6} md={6} xs={12}>
-          test
+        <Grid item lg={6} md={6} sm={12} xs={12}>
+          {theme.palette.mode === "light" ? (
+            <FlexCenter sx={{ py: 5 }}>
+              <Image src={stickerLight} alt="sticker" />
+            </FlexCenter>
+          ) : (
+            <FlexCenter sx={{ py: 5 }}>
+              <Image src={stickerDark} alt="sticker" />
+            </FlexCenter>
+          )}
         </Grid>
         <Grid item lg={6} md={6} sm={12} xs={12}>
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
             <HeroAccordion />
           </Box>
         </Grid>
