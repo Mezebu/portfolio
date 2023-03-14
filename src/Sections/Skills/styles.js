@@ -1,13 +1,18 @@
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const StyledSkill = styled(Box)({
+export const StyledSkill = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  background: "rgba(255, 255, 255, 0.3)",
+  background:
+    theme.palette.mode === "light"
+      ? "rgba(255, 255, 255, 0.3)"
+      : "rgba(255, 255, 250, 0.1)",
   padding: 10,
   borderRadius: 4,
-});
+  backdropFilter: "blur(10px)",
+  border: "1px solid rgba( 255, 255, 255, 0.18 )",
+}));
 
 export const StyledIcon = styled(Box)(({ theme }) => ({
   cursor: "pointer",
