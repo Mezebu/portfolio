@@ -10,7 +10,6 @@ export const StyledSkill = styled(Box)(({ theme }) => ({
       : "rgba(255, 255, 250, 0.1)",
   padding: 10,
   borderRadius: 4,
-  backdropFilter: "blur(10px)",
   border: "1px solid rgba( 255, 255, 255, 0.18 )",
 }));
 
