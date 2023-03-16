@@ -17,7 +17,7 @@ const Hero = () => {
           component={motion.h1}
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
-          transition={{ duration: 1, delay: 0.7 }}
+          transition={{ duration: 1, delay: 1 }}
           variant="h1"
           align="center"
         >
@@ -78,11 +78,11 @@ const Hero = () => {
         <Grid item lg={6} md={6} sm={12} xs={12}>
           {theme.palette.mode === "light" ? (
             <FlexCenter sx={{ py: 5 }}>
-              <Image src={stickerLight} alt="sticker" />
+              <Image src={stickerLight} alt="sticker" priority={true} />
             </FlexCenter>
           ) : (
             <FlexCenter sx={{ py: 5 }}>
-              <Image src={stickerDark} alt="sticker" />
+              <Image src={stickerDark} alt="sticker" priority={true} />
             </FlexCenter>
           )}
         </Grid>
