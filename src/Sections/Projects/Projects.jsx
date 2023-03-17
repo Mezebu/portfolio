@@ -39,7 +39,7 @@ const Works = () => {
             <Box>
               <Typography
                 sx={{ fontSize: 10, letterSpacing: 2 }}
-                color="text.primary"
+                color="text.secondary"
                 variant="button"
               >
                 Project Name
@@ -48,12 +48,10 @@ const Works = () => {
                 {title}
               </Typography>
 
-              <Typography gutterBottom variant="body2" color="text.secondary">
+              <Typography gutterBottom variant="body2">
                 {desc}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {desc2}
-              </Typography>
+              <Typography variant="body2">{desc2}</Typography>
             </Box>
 
             <Box sx={{ my: 1 }}>
