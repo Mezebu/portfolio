@@ -34,7 +34,7 @@ const Accordion = ({ pos, title, content, selected, setSelected }) => {
       </FlexSpaceBtween>
 
       <Collapse in={selected} timeout={500} unmountOnExit>
-        <Box sx={{ py: 2, pl: 3.5 }}>
+        <Box sx={{ py: 2, pl: { xs: 3, sm: 2.5 } }}>
           <Container maxWidth="lg">
             <Typography sx={{ fontWeight: 500 }} variant="subtitle1">
               {content}
