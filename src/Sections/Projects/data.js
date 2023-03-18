@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { dashboard, weather } from "../../assets";
+import { commerce, dashboard, weather } from "../../assets";
 
 export const data = [
   {
@@ -10,9 +10,9 @@ export const data = [
     desc2: `Users can also filter the products based and categories and prices. These features, together with the product information, all contribute to a very dynamic
             experience that will guide the user through the checkout process.`,
     stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, Reacr Router",
-    web: "https://transcendent-vacherin-3e33c3.netlify.app/",
-    code: "https://github.com/mezebu/admin-dashboard",
-    image: dashboard,
+    web: "https://cosmic-licorice-418a80.netlify.app/",
+    code: "https://github.com/mezebu/commerce-js",
+    image: commerce,
   },
   {
     id: uuidv4(),

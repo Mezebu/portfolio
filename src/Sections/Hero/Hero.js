@@ -46,11 +46,9 @@ const Hero = () => {
           align="center"
           sx={{ mx: { lg: 10 } }}
         >
-          I am a web developer with skills in javascript and reactjs, and have
-          an interest in solving algorithmically complex problems. I have a
-          passion for problem solving. Currently, I am building a web
-          application that is a marketplace where people can subscribe to other
-          users to get access to video content they produce.
+          {`I'm`} a software developer and i enjoy implementing visual elements
+          that users see and interact with all the while keeping the balance
+          between visual and functional design.
         </Typography>
       </Box>
 
