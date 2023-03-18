@@ -14,7 +14,7 @@ const SkillsSection = () => {
 
       <Grid container>
         <Grid item lg={10} md={10}>
-          <Box sx={{ mb: 7, mt: 3 }}>
+          <Box sx={{ mb: 7 }}>
             <Typography sx={{ fontWeight: 500 }} variant="subtitle1">
               The nature of my project may influence the web stack I employ in
               development. When developing a web application, I address the

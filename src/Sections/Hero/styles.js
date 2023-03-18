@@ -19,8 +19,6 @@ export const StyledBannerText = styled(Typography)({
 export const StyledBigHeading = styled(Typography)({
   fontSize: "clamp(40px, 7vw, 70px)",
   fontWeight: 700,
-  /*   color: "#04bdb0",
-  fontFamily: "Montserrat", */
 });
 
 export const StyledIcon = styled(Box)(({ theme }) => ({

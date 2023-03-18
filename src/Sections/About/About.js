@@ -5,6 +5,7 @@ import { data } from "./data";
 import SideTitleText from "../../components/SideTitleText/SideTitleText";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import Accordion from "../../components/Accordion/Accordion";
+import AboutTab from "./AboutTab";
 
 const About = () => {
   const [selected, setSelected] = useState(false);
@@ -18,7 +19,7 @@ const About = () => {
         </Grid>
         <Grid item lg={10} md={10}>
           <Box sx={{ mt: 2 }}>
-            <Typography variant="body1">
+            <Typography variant="body1" gutterBottom>
               Hello, my name is Henry and I enjoy building functional and
               visually appealing interactive web apps that provide a positive
               user experience. {"I've"} been interested with technology since I
@@ -38,32 +39,33 @@ const About = () => {
               development. I am a tech-savvy professional who is fascinated by
               emerging digital technologies and strives to integrate usability
               and attractive design.
-              <br />
-              <br /> alias eius voluptatibus quia vitae nulla enim possimus
-              praesentium veritatis voluptatem error vel, minima ipsum in fuga
-              quaerat ab eligendi ea? Ab, ipsam repudiandae? Reprehenderit nihil
-              quod laudantium eligendi similique deserunt fuga nostrum maxime
-              qui, quibusdam eveniet blanditiis tempora non iusto assumenda
-              nesciunt, nobis nam accusamus, est hic illum. Ipsum eveniet
-              eligendi corporis! Velit? Dignissimos unde magni reiciendis.
-              Deserunt vero facere expedita tempora alias, doloribus error
-              quidem, veniam aspernatur impedit placeat itaque repellat porro
-              harum sint modi dolorum iusto saepe adipisci, ducimus eius
-              laudantium?
             </Typography>
 
             <Box sx={{ mt: 5 }}>
-              {data.map(({ id, pos, title, content }) => (
-                <Accordion
-                  key={id}
-                  title={title}
-                  content={content}
-                  pos={pos}
-                  selected={selected === pos}
-                  setSelected={setSelected}
-                />
-              ))}
+              <Typography
+                sx={{ fontSize: 13, letterSpacing: 2, fontWeight: 700, py: 4 }}
+              >
+                WHERE I HAVE WORKED
+              </Typography>
+              <AboutTab />
             </Box>
+          </Box>
+          <Box sx={{ mt: 3 }}>
+            <Typography
+              sx={{ fontSize: 13, letterSpacing: 2, fontWeight: 700, py: 4 }}
+            >
+              SERVICES
+            </Typography>
+            {data.map(({ id, pos, title, content }) => (
+              <Accordion
+                key={id}
+                title={title}
+                content={content}
+                pos={pos}
+                selected={selected === pos}
+                setSelected={setSelected}
+              />
+            ))}
           </Box>
         </Grid>
       </Grid>
