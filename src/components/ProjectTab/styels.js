@@ -5,7 +5,7 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightMedium,
 
   "&:hover": {
-    color: theme.palette.primary.dark,
+    color: theme.palette.primary.light,
     opacity: 1,
   },
   "&.Mui-selected": {
@@ -14,7 +14,7 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
     borderRadius: theme.shape.borderRadius,
     color:
       theme.palette.mode === "light"
-        ? theme.palette.success.light
+        ? theme.palette.primary.dark
         : theme.palette.common.white,
   },
 }));

@@ -14,7 +14,7 @@ function a11yProps(index) {
   };
 }
 
-const ProjectTab = ({ heading, image, desc, code, link }) => {
+const ProjectTab = ({ heading, image, desc, desc2, code, link, stack }) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -24,20 +24,25 @@ const ProjectTab = ({ heading, image, desc, code, link }) => {
   return (
     <Box sx={{ my: 1 }}>
       <Typography
+        gutterBottom
+        variant="subtitle2"
+        fontWeight={600}
+        align="center"
         sx={{
-          fontWeight: 700,
-          color: "black",
-          opacity: 0.3,
+          opacity: 0.7,
           transition: "all 0.5s ease-in-out",
           "&:hover": {
             opacity: 1,
           },
         }}
-        align="center"
       >
         {heading}
       </Typography>
-      <StyledTabContainer elevation={0} variant="outlined">
+      <StyledTabContainer
+        elevation={0}
+        variant="outlined"
+        sx={{ height: { xs: 390, md: 440 }, overflow: "auto" }}
+      >
         <Box sx={{ width: "100%", margin: "auto" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
@@ -47,34 +52,41 @@ const ProjectTab = ({ heading, image, desc, code, link }) => {
               aria-label="projects tab"
               sx={{ pt: 0.5, mx: 0.5 }}
             >
-              <StyledTab label="Image" {...a11yProps(0)} />
-              <StyledTab label="Desc" {...a11yProps(1)} />
+              <StyledTab label="Preview" {...a11yProps(0)} />
+              <StyledTab label="Description" {...a11yProps(1)} />
             </Tabs>
           </Box>
           <AnimatePresence mode="popLayout">
-            <motion.div key={heading}>
+            <Box component={motion.div} key={heading}>
               <TabPanel value={value} index={0}>
                 <ProjectCard image={image} />
                 <BasicSpeedDial {...{ code, link }} />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <Typography variant="subtitle2">
-                  {desc}
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Nulla perferendis molestias maxime! Rerum esse sed veniam
-                  enim. Expedita ipsam similique quo possimus repellat iusto.
-                  Odio laborum necessitatibus eos consequatur non.
-                  <br />
-                  <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas fugiat, id doloremque natus commodi mollitia aperiam,
-                  praesentium, magni nostrum a amet! Eum deserunt delectus
-                  libero vel unde corrupti, quia quos?
-                  <br />
-                  <br />
-                </Typography>
+                <Box>
+                  <Typography variant="subtitle2" gutterBottom>
+                    {desc}
+                  </Typography>
+                  <Typography variant="subtitle2" gutterBottom>
+                    {desc2}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: 11,
+                      fontWeight: 600,
+                      letterSpacing: 2,
+                      color: (theme) =>
+                        theme.palette.mode === "light"
+                          ? theme.palette.primary.dark
+                          : theme.palette.primary.dark,
+                    }}
+                    variant="button"
+                  >
+                    {stack}
+                  </Typography>
+                </Box>
               </TabPanel>
-            </motion.div>
+            </Box>
           </AnimatePresence>
         </Box>
       </StyledTabContainer>

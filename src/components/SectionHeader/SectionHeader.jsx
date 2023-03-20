@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const SectionHeader = ({ title, subTitle }) => {
   return (
-    <Box sx={{ mt: 10, mb: 5 }}>
+    <Box sx={{ mt: 7, mb: 5 }}>
       <Typography
         sx={{ fontSize: 11, letterSpacing: 3 }}
         color="text.primary"
