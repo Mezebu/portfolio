@@ -41,7 +41,7 @@ const About = () => {
               and attractive design.
             </Typography>
 
-            <Box sx={{ mt: 5 }}>
+            <Box sx={{ mt: 5 /* height: 350 */ }}>
               <Typography
                 sx={{ fontSize: 13, letterSpacing: 2, fontWeight: 700, py: 4 }}
               >

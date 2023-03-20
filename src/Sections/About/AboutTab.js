@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 
 import { StyledIcon } from "./styles";
 import { StyledTab } from "../../components/ProjectTab/styels";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 function a11yProps(index) {
   return {
@@ -19,18 +20,26 @@ function a11yProps(index) {
 const AboutTab = () => {
   const [value, setValue] = useState(0);
 
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Box sx={{ flexGrow: 1, display: "flex" }}>
+    <Box sx={{ display: { xs: "block", md: "flex" } }}>
       <Tabs
-        orientation="vertical"
+        orientation={matches ? "vertical" : "horizontal"}
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "divider", overflow: "visible" }}
+        sx={{
+          borderRight: 1,
+          borderColor: "divider",
+          overflow: "visible",
+          height: { md: 200 },
+        }}
       >
         <StyledTab label="Shieldtechub" {...a11yProps(0)} />
         <StyledTab label="PCCCZ" {...a11yProps(1)} />
@@ -39,7 +48,7 @@ const AboutTab = () => {
       <TabPanel
         value={value}
         index={0}
-        sx={{ ".mui-style-19kzrtu": { pt: 0 } }}
+        sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Box>
           <Typography variant="body1" fontWeight={600}>
@@ -95,7 +104,7 @@ const AboutTab = () => {
       <TabPanel
         value={value}
         index={1}
-        sx={{ ".mui-style-19kzrtu": { pt: 0 } }}
+        sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Typography variant="body1" fontWeight={600}>
           Frontend Developer{" "}
@@ -142,7 +151,7 @@ const AboutTab = () => {
       <TabPanel
         value={value}
         index={2}
-        sx={{ ".mui-style-19kzrtu": { pt: 0 } }}
+        sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Typography
           sx={{ fontSize: 10, letterSpacing: 2 }}
