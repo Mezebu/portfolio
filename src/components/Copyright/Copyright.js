@@ -4,7 +4,7 @@ import { Box, Link } from "@mui/material";
 const Copyright = () => {
   return (
     <Box>
-      <Typography variant="subtitle2" align="center" color="white">
+      <Typography variant="subtitle2" align="center">
         <Link
           sx={{ textDecoration: "none" }}
           color="inherit"
@@ -14,7 +14,7 @@ const Copyright = () => {
           © Designed & Built by Henry Ezeigwe
         </Link>
       </Typography>
-      <Typography variant="subtitle2" align="center" color="white">
+      <Typography variant="subtitle2" align="center">
         {new Date().getFullYear()} - Made with{" "}
         <Link
           sx={{ textDecoration: "none" }}
