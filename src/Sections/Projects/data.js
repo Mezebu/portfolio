@@ -9,7 +9,7 @@ export const data = [
            smooth shopping experience, with the ability to add multiple items to a shopping cart and allow the user to manage that cart.`,
     desc2: `Users can also filter the products based and categories and prices. These features, together with the product information, all contribute to a very dynamic
             experience that will guide the user through the checkout process.`,
-    stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, Reacr Router",
+    stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, React Router",
     web: "https://cosmic-licorice-418a80.netlify.app/",
     code: "https://github.com/mezebu/commerce-js",
     image: commerce,
