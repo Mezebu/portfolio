@@ -23,5 +23,7 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
 export const StyledTabContainer = styled(Paper)(({ theme }) => ({
   height: "100%",
   backgroundColor:
-    theme.palette.mode === "light" ? theme.palette.grey[100] : cyan[900],
+    theme.palette.mode === "light"
+      ? theme.palette.grey[100]
+      : theme.palette.background.paper,
 }));
