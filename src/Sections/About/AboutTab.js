@@ -153,14 +153,7 @@ const AboutTab = () => {
         index={2}
         sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
-        <Typography
-          sx={{ fontSize: 10, letterSpacing: 2 }}
-          color="text.secondary"
-          variant="button"
-        >
-          2019 - 2020
-        </Typography>
-        <Typography gutterBottom variant="body1" fontWeight={600}>
+        <Typography variant="body1" fontWeight={600}>
           ICT Technician{" "}
           <Link
             target="_blank"
@@ -170,6 +163,13 @@ const AboutTab = () => {
           >
             @ NYSC
           </Link>
+        </Typography>
+        <Typography
+          sx={{ fontSize: 10, letterSpacing: 2 }}
+          color="text.secondary"
+          gutterBottom
+        >
+          MARCH 2019 - 2020
         </Typography>
       </TabPanel>
     </Box>
