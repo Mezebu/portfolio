@@ -4,8 +4,9 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import TabPanel from "./TabPanel";
 import ProjectCard from "./ProjectCard";
-import { StyledTab, StyledTabContainer } from "./styels";
 import BasicSpeedDial from "../SpeedDial/SpeedDial";
+
+import { StyledTab, StyledTabContainer } from "./styels";
 
 function a11yProps(index) {
   return {
