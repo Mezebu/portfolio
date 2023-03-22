@@ -43,7 +43,7 @@ const About = () => {
 
             <Box sx={{ mt: 5 /* height: 350 */ }}>
               <Typography
-                sx={{ fontSize: 13, letterSpacing: 2, fontWeight: 700, py: 4 }}
+                sx={{ fontSize: 14, letterSpacing: 2, fontWeight: 700, py: 4 }}
               >
                 WHERE I HAVE WORKED
               </Typography>
@@ -52,9 +52,9 @@ const About = () => {
           </Box>
           <Box sx={{ mt: 3 }}>
             <Typography
-              sx={{ fontSize: 13, letterSpacing: 2, fontWeight: 700, py: 4 }}
+              sx={{ fontSize: 14, letterSpacing: 2, fontWeight: 700, py: 4 }}
             >
-              SERVICES
+              SERVICES I PROVIDE
             </Typography>
             {data.map(({ id, pos, title, content }) => (
               <Accordion
