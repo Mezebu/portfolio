@@ -1,4 +1,5 @@
 import { Paper, Tab } from "@mui/material";
+import { cyan } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 
 export const StyledTab = styled(Tab)(({ theme }) => ({
@@ -21,5 +22,6 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
 
 export const StyledTabContainer = styled(Paper)(({ theme }) => ({
   height: "100%",
-  backgroundColor: theme.palette.grey[100],
+  backgroundColor:
+    theme.palette.mode === "light" ? theme.palette.grey[100] : cyan[900],
 }));
