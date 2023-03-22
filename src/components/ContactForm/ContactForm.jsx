@@ -1,13 +1,12 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import { Box, Button, Container, InputAdornment } from "@mui/material";
-import { TextField, Typography } from "@mui/material";
+import { Box, Button, InputAdornment } from "@mui/material";
+import { TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-
-import { FlexJustifyCenter } from "../../../styles/globalStyles";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const ContactForm = () => {
   const form = useRef();
@@ -55,7 +54,7 @@ const ContactForm = () => {
               </InputAdornment>
             ),
           }}
-          variant="filled"
+          variant="standard"
           fullWidth
           margin="dense"
           required
@@ -72,7 +71,7 @@ const ContactForm = () => {
               </InputAdornment>
             ),
           }}
-          variant="filled"
+          variant="standard"
           fullWidth
           margin="dense"
           required
@@ -84,7 +83,7 @@ const ContactForm = () => {
           name="message"
           multiline
           rows={5}
-          variant="filled"
+          variant="standard"
           fullWidth
           margin="dense"
           required
@@ -93,9 +92,9 @@ const ContactForm = () => {
         <Button
           variant="contained"
           type="submit"
-          sx={{ width: "100%", p: 2 }}
+          sx={{ width: "100%", p: 2, fontSize: 15 }}
           disableElevation
-          endIcon={<SendRoundedIcon />}
+          endIcon={<ArrowOutwardIcon />}
         >
           Send
         </Button>
