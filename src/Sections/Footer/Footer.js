@@ -5,27 +5,18 @@ import Box from "@mui/material/Box";
 import { cyan } from "@mui/material/colors";
 
 import Copyright from "../../components/Copyright/Copyright";
+import { Divider } from "@mui/material";
 
 export default function Footer() {
   return (
-    <Box sx={{ paddingTop: 2 }}>
+    <Box sx={{ py: 2 }}>
       <CssBaseline />
-      <Box
-        component="footer"
-        sx={{
-          py: 3,
-          px: 2,
-          mt: "auto",
-          backgroundColor: (theme) =>
-            theme.palette.mode === "light"
-              ? cyan[900]
-              : theme.palette.grey[800],
-        }}
-      >
-        <Container maxWidth="sm">
+      <Container maxWidth="lg">
+        <Divider />
+        <Box component="footer" sx={{ py: 3, px: 2, mt: "auto" }}>
           <Copyright />
-        </Container>
-      </Box>
+        </Box>
+      </Container>
     </Box>
   );
 }
