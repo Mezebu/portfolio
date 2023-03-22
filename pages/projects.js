@@ -27,7 +27,7 @@ const data = [
             address provided. Users can also filter the products based and categories and prices.
             These features, together with the product information, all contribute to a very dynamic
             experience that will guide the user through the checkout process.`,
-    stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, Reacr Router",
+    stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, React Router",
     code: "https://github.com/mezebu/commerce-js",
     link: "https://cosmic-licorice-418a80.netlify.app/",
   },
