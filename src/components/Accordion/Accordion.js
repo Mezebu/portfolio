@@ -11,10 +11,7 @@ const Accordion = ({ pos, title, content, selected, setSelected }) => {
   };
 
   return (
-    <StyledAccordion
-      sx={{ py: { xs: 4, md: 5 }, ml: { xs: 0, md: 17 } }}
-      onClick={handleSelect}
-    >
+    <StyledAccordion sx={{ py: { xs: 4, md: 5 } }} onClick={handleSelect}>
       <FlexSpaceBtween>
         <FlexAlignCenter>
           <Box sx={{ mr: 4 }}>
@@ -39,7 +36,7 @@ const Accordion = ({ pos, title, content, selected, setSelected }) => {
       <Collapse in={selected} timeout={500} unmountOnExit>
         <Box sx={{ py: 2, pl: { xs: 3, sm: 2.5 } }}>
           <Container maxWidth="lg">
-            <Typography sx={{ fontWeight: 500 }} variant="subtitle1">
+            <Typography sx={{ fontWeight: 500 }} variant="body2">
               {content}
             </Typography>
           </Container>
