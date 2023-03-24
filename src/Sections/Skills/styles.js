@@ -41,7 +41,7 @@ export const StyledImage = styled(Box)(({ theme }) => ({
     "rgb(34 51 84 / 30%) 0px 1px 4px, rgb(34 51 84 / 10%) 0px 3px 12px 2px",
   width: 55,
   height: 55,
-  padding: 8,
+  padding: 9,
   borderRadius: "50%",
   cursor: "pointer",
   ":hover": {
