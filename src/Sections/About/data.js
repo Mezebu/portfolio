@@ -13,14 +13,16 @@ export const data = [
     id: uuidv4(),
     pos: 2,
     title: "Re-Design",
-    content:
-      "Is your website in need of a makeover? A website re-design can do wonders for your online presence and help drive engagement, conversions, and growth. As a web designer I specialise in website re-designs, bringing a fresh perspective and creative approach to help breathe new life into your online presence. Whether it's a redesign of your existing website or a complete overhaul.",
+    content: `Do you need to update your website? Your online presence can benefit greatly from a website 
+              redesign, which can increase engagement, conversions, and growth. I can help businesses update 
+              and refresh their existing websites to make them more modern, user-friendly, and optimized for 
+              search engines`,
   },
   {
     id: uuidv4(),
     pos: 3,
-    title: "Landing Pages",
-    content:
-      "First impressions matter, especially online. Make a great one with my web design services. I specialise in creating custom-designed website landing pages that are optimised for SEO and performance, user experience, and results. Whether you're promoting a new product or service, generating leads, or increasing conversions, I have the skills and experience to create a landing page that engages, informs, and inspires action.",
+    title: "Website Maintenance",
+    content: `I provide ongoing website maintenance services to ensure that websites remain up-to-date, 
+              secure, and free from bugs and errors.`,
   },
 ];
