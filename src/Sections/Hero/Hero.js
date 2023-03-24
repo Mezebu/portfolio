@@ -46,7 +46,7 @@ const Hero = () => {
           align="center"
           sx={{ mx: { lg: 10 } }}
         >
-          {`I'm`} a software developer and i enjoy implementing visual elements
+          {`I'm`} a frontend developer and i enjoy implementing visual elements
           that users see and interact with all the while keeping the balance
           between visual and functional design.
         </Typography>
