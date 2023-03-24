@@ -9,9 +9,43 @@ import ProjectTab from "../src/components/ProjectTab/ProjectTab";
 const data = [
   {
     id: uuidv4(),
+    heading: "Weather App",
+    image: weather,
+    desc: `A simple weather app that  uses OpenWeatherMap, a third-party API that allows a user get
+           up-to-date weather information for any location on the planet, including over 200,000
+           cities.`,
+    desc2: `Some other features include; fetching the user’s geolocation, the ability to view weather
+           data in either Celsius or Fahrenheit and the current time of any location inputted by the
+           user.`,
+    stack: "OpenWeatherMap API, MUI, Nextjs, Axios, Moment, Momemt-Timezone",
+    code: "https://github.com/mezebu/weather",
+    link: "https://fanciful-marshmallow-d4a254.netlify.app/",
+  },
+  {
+    id: uuidv4(),
+    heading: "Calculator",
+    image: calculator,
+    desc: `I created this Calculator using JavaScript, as well as HTML and CSS web programming. 
+           This Calculator does fundamental operations such as addition, multiplication, subtraction, 
+           and division, as well as computes a variety of percentage values, such as the % difference 
+           between two supplied numbers.`,
+    code: "https://github.com/mezebu/calculator",
+    link: "https://mezebu.github.io/calculator/",
+    stack: "HTML, CSS, Javascript",
+  },
+  {
+    id: uuidv4(),
     heading: "Dashboard",
     image: dashboard,
-    desc: "dashboard details",
+    desc: `A simple Dashboard interface designed to provide users with a 
+           comprehensive and intuitive way to visualize and analyze data. Built on top of the
+           Material-UI library, the dashboard features a sleek and modern design with customizable
+           components that can be tailored to suit your specific needs.`,
+    desc2: `The dashboard offers a range of data visualization tools, including charts, graphs, and 
+            tables, that allow you to explore and analyze your data in a variety of ways. You can filter
+            and sort data, create custom views, and drill down into specific data points to gain deeper
+            insights into your data.`,
+    stack: `Reactjs, ChartJS, MUI, Firebase, Axios, React Router, Framer Motion`,
     code: "https://github.com/mezebu/admin-dashboard",
     link: "https://transcendent-vacherin-3e33c3.netlify.app/",
   },
@@ -30,26 +64,6 @@ const data = [
     stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, React Router",
     code: "https://github.com/mezebu/commerce-js",
     link: "https://cosmic-licorice-418a80.netlify.app/",
-  },
-  {
-    id: uuidv4(),
-    heading: "Weather AppS",
-    image: weather,
-    desc: `A simple weather app that  uses OpenWeatherMap, a third-party API that allows a user get
-           up-to-date weather information for any location on the planet, including over 200,000
-           cities.`,
-    desc2: `Some other features include; fetching the user’s geolocation, the ability to view weather
-           data in either Celsius or Fahrenheit and the current time of any location inputted by the
-           user.`,
-    stack: "OpenWeatherMap API, MUI, Nextjs, Axios, Moment, Momemt-Timezone",
-  },
-  {
-    id: uuidv4(),
-    heading: "Calculator",
-    image: calculator,
-    desc: "I created this Calculator using JavaScript, as well as HTML and CSS web programming. This Calculator does fundamental operations such as addition, multiplication, subtraction, and division, as well as computes a variety of percentage values, such as the % difference between two supplied numbers.",
-    code: "https://github.com/mezebu/calculator",
-    link: "https://mezebu.github.io/calculator/",
   },
 ];
 
@@ -84,27 +98,25 @@ const works = () => {
         </Box>
 
         <Toolbar />
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos animi hic
-          porro distinctio voluptas consequuntur ipsum ipsam, repudiandae ea
-          illo consequatur minus consectetur. Ducimus sunt ab aut sed vel
-          cupiditate?
+        <Typography variant="body1" gutterBottom>
+          In my spare time, I enjoy creating personal projects that give me the
+          opportunity to experiment with new technologies and programming
+          languages, which can helps improve my skills and stay up-to-date with
+          the latest trends in frontend development.
         </Typography>
-        <br />
-        <br />
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos animi hic
-          porro distinctio voluptas consequuntur ipsum ipsam, repudiandae ea
-          illo consequatur minus consectetur. Ducimus sunt ab aut sed vel
-          cupiditate?
+
+        <Typography variant="body1" gutterBottom>
+          Having creative freedom is another benefit of working on personal
+          projects. This freedom allows me to design projects that are in line
+          with my interests and hobbies, which can be inspiring and fun.
         </Typography>
-        <br />
-        <br />
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos animi hic
-          porro distinctio voluptas consequuntur ipsum ipsam, repudiandae ea
-          illo consequatur minus consectetur. Ducimus sunt ab aut sed vel
-          cupiditate?
+
+        <Typography variant="body1" gutterBottom>
+          Overall, building personal projects as a frontend developer can be a
+          rewarding experience that helps me improve my skills, build my
+          portfolio, and solve real-world problems. It is also a fun and
+          creative way I explore my interests and passions while learning new
+          things.
         </Typography>
         <Toolbar />
         <Grid container spacing={1}>
