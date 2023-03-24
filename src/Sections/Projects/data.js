@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { commerce, dashboard, weather } from "../../assets";
+import { commerce, dashboard } from "../../assets";
 
 export const data = [
   {
@@ -16,30 +16,16 @@ export const data = [
   },
   {
     id: uuidv4(),
-    title: "Weather App",
-    desc: `A simple weather app that  uses OpenWeatherMap, a third-party API that allows a user get
-           up-to-date weather information for any location on the planet, including over 200,000
-           cities.`,
-    desc2: `Some other features include; fetching the user’s geolocation, the ability to view weather
-           data in either Celsius or Fahrenheit and the current time of any location inputted by the
-           user.`,
-    stack: "OpenWeatherMap API, MUI, Nextjs, Axios, Moment, Momemt-Timezone",
-    web: "https://fanciful-marshmallow-d4a254.netlify.app/",
-    code: "https://github.com/mezebu/weather",
-    end: "flex-end",
-    image: weather,
-  },
-  /* {
-    id: uuidv4(),
-    bgLight: "#4db6ac",
-    bgDark: "#004d40",
-    title: "Dashboard",
-    desc: `A simple weather app that collects weather data and time from a
-            user's geolocation, as well as weather data across various
-            cities all over the world using "openweathermap's API.`,
-    stack: "Reactjs, OpenWeatherMap API, MUI, Nextjs, Axios, Momemt-Timezone",
-    web: "https://transcendent-vacherin-3e33c3.netlify.app/",
-    code: "https://github.com/mezebu/admin-dashboard",
     image: dashboard,
-  }, */
+    desc: `A simple Dashboard interface designed to provide users with a 
+           comprehensive and intuitive way to visualize and analyze data. Built on top of the
+           Material-UI library, the dashboard features a sleek and modern design to suit your
+           specific needs.`,
+    desc2: `The dashboard offers a range of data visualization tools, including charts, graphs, and 
+            tables, that allow you to explore and analyze your data in a variety of ways. You can filter
+            and sort data, create custom views, and drill down into specific data points to gain deeper
+            insights into your data.`,
+    stack: `Reactjs, ChartJS, MUI, Firebase, Axios, React Router, Framer Motion`,
+    image: dashboard,
+  },
 ];
