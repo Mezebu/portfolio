@@ -1,10 +1,9 @@
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
 import { Box, Button, InputAdornment } from "@mui/material";
 import { TextField } from "@mui/material";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 import PersonIcon from "@mui/icons-material/Person";
-import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
