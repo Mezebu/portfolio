@@ -31,15 +31,7 @@ const data = [
 const Socials = () => {
   return (
     <Fragment>
-      <Box sx={{ mb: 5 }}>
-        <Typography sx={{ fontWeight: 700, letterSpacing: 3 }} variant="h6">
-          GOT IDEAS?
-        </Typography>
-        <Typography sx={{ fontWeight: 500 }} variant="body1">
-          Get in touch, {"I'd"} love to collaborate.
-        </Typography>
-      </Box>
-      <Box>
+      <Box sx={{ mt: 3 }}>
         {data.map(({ id, name, link, icon }) => (
           <StyledLinks key={id}>
             <StyledIcon>{icon}</StyledIcon>
