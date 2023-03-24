@@ -4,11 +4,15 @@ import Image from "next/legacy/image";
 
 import { computer, iphone } from "../../assets";
 import { StyledDivider } from "./styles";
+import AnimateDivider from "../FramerAnimations/AnimateDivider";
 
 const HeroAccordion = () => {
   return (
     <List sx={{ width: "100%", maxWidth: 500, py: 5 }}>
-      <StyledDivider />
+      <AnimateDivider delay={1.8}>
+        <StyledDivider />
+      </AnimateDivider>
+
       <ListItem sx={{ py: 3 }}>
         <ListItemAvatar>
           <Image
@@ -32,7 +36,9 @@ const HeroAccordion = () => {
           }
         />
       </ListItem>
-      <StyledDivider />
+      <AnimateDivider delay={2.2}>
+        <StyledDivider />
+      </AnimateDivider>
       <ListItem sx={{ py: 3 }}>
         <ListItemAvatar>
           <Image
