@@ -101,8 +101,8 @@ const works = () => {
         <Typography variant="body1" gutterBottom>
           In my spare time, I enjoy creating personal projects that give me the
           opportunity to experiment with new technologies and programming
-          languages, which can helps improve my skills and stay up-to-date with
-          the latest trends in frontend development.
+          languages, which helps improve my skills and stay up-to-date with the
+          latest trends in frontend development.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
