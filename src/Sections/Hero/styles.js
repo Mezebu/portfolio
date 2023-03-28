@@ -1,20 +1,5 @@
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-
-export const StyledDate = styled(Typography)({
-  writingMode: "vertical-rl",
-  textOrientation: "upright",
-  fontWeight: 800,
-  /* position: "relative",
-  right: 50,
-  top: 10, */
-});
-
-export const StyledBannerText = styled(Typography)({
-  background: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-  backgroundClip: "text",
-  color: "transparent",
-});
 
 export const StyledBigHeading = styled(Typography)({
   fontSize: "clamp(40px, 7vw, 70px)",
