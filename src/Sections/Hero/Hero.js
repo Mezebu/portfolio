@@ -44,7 +44,7 @@ const Hero = () => {
           initial={{ y: "100%" }}
           transition={{ duration: 1, delay: 1 }}
           align="center"
-          sx={{ mx: { lg: 10 } }}
+          sx={{ mx: { lg: 10, xs: 3 } }}
         >
           {`I'm`} a frontend developer and i enjoy implementing visual elements
           that users see and interact with all the while keeping the balance
