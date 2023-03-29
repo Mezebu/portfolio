@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <Fragment>
       <Head>
-        <title>Ezeigwe Henry | Portfolio</title>
+        <title> Henry Ezeigwe | Portfolio</title>
       </Head>
       <Box>
         <Hero />

@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -7,6 +7,7 @@ import { StyledBigHeading } from "./styles";
 import { FlexCenter } from "../../../styles/globalStyles";
 
 import HeroAccordion from "../../components/HeroAccordion/HeroAccordion";
+import ResumeBtn from "../../components/ResumeBtn/ResumeBtn";
 
 const Hero = () => {
   const theme = useTheme();
@@ -52,25 +53,7 @@ const Hero = () => {
         </Typography>
       </Box>
 
-      <FlexCenter sx={{ my: 3, overflow: "hidden" }}>
-        <Button
-          variant="contained"
-          size="large"
-          disableElevation
-          component={motion.button}
-          animate={{ y: 0 }}
-          initial={{ y: "100%" }}
-          transition={{ duration: 1, delay: 1 }}
-          sx={{
-            bgcolor: (theme) =>
-              theme.palette.mode === "light"
-                ? theme.palette.common.black
-                : theme.palette.secondary.light,
-          }}
-        >
-          Download Resume
-        </Button>
-      </FlexCenter>
+      <ResumeBtn />
 
       <Grid container>
         <Grid item lg={6} md={6} sm={12} xs={12}>
