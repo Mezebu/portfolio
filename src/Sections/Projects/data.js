@@ -17,15 +17,15 @@ export const data = [
   {
     id: uuidv4(),
     image: dashboard,
-    desc: `A simple Dashboard interface designed to provide users with a 
+    title: "Dashboard",
+    desc: `A dashboard interface designed to provide users with a 
            comprehensive and intuitive way to visualize and analyze data. Built on top of the
            Material-UI library, the dashboard features a sleek and modern design to suit your
            specific needs.`,
-    desc2: `The dashboard offers a range of data visualization tools, including charts, graphs, and 
-            tables, that allow you to explore and analyze your data in a variety of ways. You can filter
-            and sort data, create custom views, and drill down into specific data points to gain deeper
+    desc2: `It offers a range of visualization tools, including charts, graphs, and 
+            tables, that allow you analyze your data in a variety of ways. You can filter, sort, create 
+            custom views, and drill down into specific data points to gain deeper
             insights into your data.`,
     stack: `Reactjs, ChartJS, MUI, Firebase, Axios, React Router, Framer Motion`,
-    image: dashboard,
   },
 ];
