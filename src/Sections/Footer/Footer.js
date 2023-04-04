@@ -2,20 +2,22 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 
-import { cyan } from "@mui/material/colors";
-
 import Copyright from "../../components/Copyright/Copyright";
 import { Divider } from "@mui/material";
+import { FlexCenter } from "../../../styles/globalStyles";
 
 export default function Footer() {
   return (
-    <Box sx={{ py: 2 }}>
+    <Box sx={{ mt: 5 }}>
       <CssBaseline />
       <Container maxWidth="lg">
         <Divider />
-        <Box component="footer" sx={{ py: 3, px: 2, mt: "auto" }}>
+        <FlexCenter
+          component="footer"
+          sx={{ height: { xs: "10vh", sm: "20vh" } }}
+        >
           <Copyright />
-        </Box>
+        </FlexCenter>
       </Container>
     </Box>
   );
