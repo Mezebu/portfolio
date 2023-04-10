@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const StyledBigHeading = styled(Typography)({
-  fontSize: "clamp(40px, 7vw, 70px)",
+  fontSize: "clamp(35px, 7vw, 65px)",
   fontWeight: 700,
 });
 

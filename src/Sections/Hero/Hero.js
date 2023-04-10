@@ -22,20 +22,25 @@ const Hero = () => {
           variant="h1"
           align="center"
         >
-          I BUILD THINGS FOR{" "}
-          <Typography
-            component="span"
-            sx={{
-              color: (theme) =>
-                theme.palette.mode === "light"
-                  ? theme.palette.primary.light
-                  : theme.palette.secondary.light,
-              fontSize: "clamp(40px, 7vw, 70px)",
-              fontWeight: 700,
-            }}
-          >
-            THE WEB
-          </Typography>
+          BUILDING DIGITAL EXPERIENCES{" "}
+        </StyledBigHeading>
+      </Box>
+      <Box sx={{ overflow: "hidden" }}>
+        <StyledBigHeading
+          component={motion.h1}
+          animate={{ y: 0 }}
+          initial={{ y: "100%" }}
+          transition={{ duration: 1, delay: 1 }}
+          variant="h1"
+          align="center"
+          sx={{
+            color: (theme) =>
+              theme.palette.mode === "light"
+                ? theme.palette.primary.light
+                : theme.palette.secondary.light,
+          }}
+        >
+          CREATIVELY
         </StyledBigHeading>
       </Box>
       <Box sx={{ overflow: "hidden" }}>
@@ -45,7 +50,7 @@ const Hero = () => {
           initial={{ y: "100%" }}
           transition={{ duration: 1, delay: 1 }}
           align="center"
-          sx={{ mx: { lg: 10, xs: 3 } }}
+          sx={{ mx: { lg: 10, md: 7, xs: 3 } }}
         >
           {`I'm`} a frontend developer and i enjoy implementing visual elements
           that users see and interact with all the while keeping the balance
