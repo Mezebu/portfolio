@@ -43,7 +43,6 @@ const AboutTab = () => {
       >
         <StyledTab label="Shieldtechub" {...a11yProps(0)} />
         <StyledTab label="PCCCZ" {...a11yProps(1)} />
-        <StyledTab label="NYSC" {...a11yProps(2)} />
       </Tabs>
       <TabPanel
         value={value}
@@ -52,15 +51,7 @@ const AboutTab = () => {
       >
         <Box>
           <Typography variant="body1" fontWeight={600}>
-            Frontend Developer{" "}
-            <Link
-              target="_blank"
-              rel="noopener"
-              underline="hover"
-              href="https://www.shieldtechub.com/"
-            >
-              @ ShielTechub
-            </Link>
+            Frontend Developer <Link underline="hover">@ ShielTechub</Link>
           </Typography>
           <Typography
             sx={{ fontSize: 10, letterSpacing: 2 }}
@@ -107,15 +98,7 @@ const AboutTab = () => {
         sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Typography variant="body1" fontWeight={600}>
-          Frontend Developer{" "}
-          <Link
-            target="_blank"
-            rel="noopener"
-            underline="hover"
-            href="https://www.shieldtechub.com/"
-          >
-            @ PCCCZ
-          </Link>
+          Frontend Developer <Link underline="hover">@ PCCCZ</Link>
         </Typography>
         <Typography
           sx={{ fontSize: 10, letterSpacing: 2 }}
@@ -146,31 +129,22 @@ const AboutTab = () => {
               more user-friendly.
             </Typography>
           </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Daily maintenance of code, debugging issues and solving clients’
+              problems.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Testing website applications to ensure it works as expected and
+              also responsible for fixing bugs and implementing new features as
+              needed
+            </Typography>
+          </StyledIcon>
         </Box>
-      </TabPanel>
-      <TabPanel
-        value={value}
-        index={2}
-        sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
-      >
-        <Typography variant="body1" fontWeight={600}>
-          ICT Technician{" "}
-          <Link
-            target="_blank"
-            rel="noopener"
-            underline="hover"
-            href="https://www.nysc.gov.ng/"
-          >
-            @ NYSC
-          </Link>
-        </Typography>
-        <Typography
-          sx={{ fontSize: 10, letterSpacing: 2 }}
-          color="text.secondary"
-          gutterBottom
-        >
-          MARCH 2019 - 2020
-        </Typography>
       </TabPanel>
     </Box>
   );

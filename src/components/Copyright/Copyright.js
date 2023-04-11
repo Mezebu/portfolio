@@ -1,5 +1,4 @@
-import Typography from "@mui/material/Typography";
-import { Box, Link } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 const Copyright = () => {
   return (
@@ -11,11 +10,11 @@ const Copyright = () => {
           href="https://github.com/mezebu"
           target="_blank"
         >
-          © Designed & Built by Henry Ezeigwe
+          Designed & Built by Henry Ezeigwe
         </Link>
       </Typography>
       <Typography variant="subtitle2" align="center">
-        {new Date().getFullYear()} - Made with{" "}
+        © 2022 - Made with{" "}
         <Link
           sx={{ textDecoration: "none" }}
           color="inherit"

@@ -16,7 +16,7 @@ const Works = () => {
   return (
     <Box>
       <Toolbar />
-      <SectionHeader subTitle="my work" title="RECENT WORKS" />
+      <SectionHeader subTitle="my work" title="PERSONAL PROJECTS" />
       {data.map(({ id, desc, title, stack, web, code, desc2, image }) => (
         <Grid container key={id} spacing={3} sx={{ my: 2 }}>
           <Grid item lg={6} md={6} sm={12} xs={12}>

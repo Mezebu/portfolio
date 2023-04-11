@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
-import { motion } from "framer-motion";
-import Head from "next/head";
+import { Box, Button, Typography } from "@mui/material";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
-import { FlexGrid } from "../styles/globalStyles";
-import { zero, four, errorpage } from "../src/assets";
-import Image from "next/legacy/image";
+import Image from "next/image";
+import Head from "next/head";
 import Link from "next/link";
+import { errorpage } from "../src/assets";
+
+import { FlexJustifyCenter } from "../styles/globalStyles";
 
 const FourOhFour = () => {
   return (
@@ -14,59 +14,41 @@ const FourOhFour = () => {
       <Head>
         <title>Ezeigwe Henry | 404 - Page Not Found</title>
       </Head>
-      <Box sx={{ my: 5 }}>
-        <Box
-          component={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: 1,
-            delay: 0.5,
-            type: "tween",
-          }}
-          exit={{ opacity: 0 }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Image src={errorpage} alt="four" layout="intrinsic" />
-          </Box>
+      <Box>
+        <FlexJustifyCenter>
+          <Image src={errorpage} alt="error-image" width={600} />
+        </FlexJustifyCenter>
 
-          <Box sx={{ my: 5 }}>
-            <Typography
-              variant="h2"
-              sx={{ fontWeight: 600 }}
-              align="center"
-              gutterBottom
-            >
-              Page not found
-            </Typography>
-            <Typography
-              fontWeight={600}
-              variant="subtitle2"
-              align="center"
-              gutterBottom
-            >
-              This page {"doesn't"} exist or has been removed! <br />
-              Please go back to the home page
-            </Typography>
-          </Box>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Button
-              variant="contained"
-              disableElevation
-              startIcon={<ArrowBackRoundedIcon />}
-              sx={{ textTransform: "none" }}
-              component={Link}
-              href="/"
-            >
-              Back to home page
-            </Button>
-          </Box>
+        <Box sx={{ my: 2 }}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: 600 }}
+            align="center"
+            gutterBottom
+          >
+            Page not found
+          </Typography>
+          <Typography
+            fontWeight={600}
+            variant="subtitle2"
+            align="center"
+            gutterBottom
+          >
+            This page {"doesn't"} exist or has been removed! <br />
+            Please go back to the home page
+          </Typography>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Button
+            variant="contained"
+            disableElevation
+            startIcon={<ArrowBackRoundedIcon />}
+            sx={{ textTransform: "none" }}
+            component={Link}
+            href="/"
+          >
+            Back to home page
+          </Button>
         </Box>
       </Box>
     </Fragment>

@@ -1,10 +1,9 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import { Box, Grid, Link, Toolbar, Typography } from "@mui/material";
+import { Box, Grid, Toolbar, Typography } from "@mui/material";
 
 import Socials from "../src/components/Socials/Socials";
 import ContactForm from "../src/components/ContactForm/ContactForm";
-import { FlexJustifyCenter } from "../styles/globalStyles";
 
 const Contact = () => {
   return (
@@ -48,10 +47,10 @@ const Contact = () => {
 
         <Grid container spacing={4}>
           <Grid item lg={6} md={6}>
-            <Socials />
+            <ContactForm />
           </Grid>
           <Grid item lg={6} md={6}>
-            <ContactForm />
+            <Socials />
           </Grid>
         </Grid>
 
