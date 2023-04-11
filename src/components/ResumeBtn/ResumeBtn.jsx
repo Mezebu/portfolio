@@ -23,7 +23,7 @@ const ResumeBtn = () => {
                 ? theme.palette.common.black
                 : theme.palette.secondary.light,
           }}
-          href="https://drive.google.com/file/d/1aj5gVtzLawut7ZlgS8DF2lpByQxhG1wM/view?usp=share_link"
+          href="https://drive.google.com/file/d/181JUgl-S66pa6reI_VmDZed6iFzGNFMm/view?usp=share_link"
           target="_blank"
         >
           Resume
