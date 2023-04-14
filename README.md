@@ -40,11 +40,11 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## Credits
 
-This website was designed and developed by me. If you have any questions or feedback about the website, feel free to contact me at (mezebu07@gmail.com).
+This website was designed and developed by me. If you have any questions or feedback about the website, feel free to contact me at [mezebu07@gmail.com].
 
 ## Deployment
 
-This website is deployed using Vercel and can be accessed at (https://www.henryezeigwe.dev). Any changes pushed to the main branch of this repository will be automatically deployed to the live website.
+This website is deployed using Vercel and can be accessed at [https://www.henryezeigwe.dev]. Any changes pushed to the main branch of this repository will be automatically deployed to the live website.
 
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
