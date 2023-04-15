@@ -1,6 +1,6 @@
-import { AppBar, Toolbar, Typography, Box, Button, Paper } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Paper } from "@mui/material";
 import { purple } from "@mui/material/colors";
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
   background:
@@ -25,9 +25,6 @@ export const StyledToolbar = styled(Toolbar)({
 
 export const StyledNavLogo = styled(Typography)({
   fontFamily: "Montserrat",
-  /* background: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-  backgroundClip: "text",
-  color: "transparent", */
   fontWeight: 800,
 });
 
