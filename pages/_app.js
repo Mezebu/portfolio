@@ -15,7 +15,7 @@ import ThemeContext from "../src/ThemeContext";
 import darkTheme from "../src/darkTheme";
 import theme from "../src/theme";
 
-// Client-side cache, shared for the whole session of the user in the browser.
+// Client-side cache, shared for the whole session of the user in the browsers.
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
