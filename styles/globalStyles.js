@@ -28,10 +28,3 @@ export const FlexJustifyCenter = styled(Box)({
   display: "flex",
   justifyContent: "center",
 });
-
-export const FlexColumn = styled(Box)({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-});
