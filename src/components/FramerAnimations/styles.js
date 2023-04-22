@@ -8,7 +8,6 @@ export const StyledProgressBar = styled(Box)(({ theme }) => ({
   left: 0,
   right: 0,
   height: 2,
-  background:
-    theme.palette.mode === "light" ? "#00a79c" : theme.palette.info.light,
+  background: theme.palette.primary.light,
   transformOrigin: "0%",
 }));

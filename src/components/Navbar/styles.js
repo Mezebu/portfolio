@@ -65,7 +65,7 @@ export const NavLink = styled(Box)(({ theme }) => ({
     width: "100%",
   },
   "&.active": {
-    color: "#00a79c",
+    color: theme.palette.primary.light,
   },
 }));
 

@@ -1,6 +1,6 @@
 import { cloneElement } from "react";
-import PropTypes from "prop-types";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import PropTypes from "prop-types";
 
 const ElevationScroll = ({ children }) => {
   const trigger = useScrollTrigger({
