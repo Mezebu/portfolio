@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <Container maxWidth="lg">
         <main>{children}</main>
         <ScrollToTop {...children}>
-          <Fab size="small" color="info" aria-label="scroll back to top">
+          <Fab size="small" color="primary" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />
           </Fab>
         </ScrollToTop>

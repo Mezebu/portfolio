@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useMediaQuery, CssBaseline } from "@mui/material";
+import { CssBaseline } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "@mui/material/styles";
@@ -12,8 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../src/components/Layout/Layout";
 import ThemeContext from "../src/ThemeContext";
-import darkTheme from "../src/darkTheme";
-import theme from "../src/theme";
+import themes from "../src/themes";
 
 // Client-side cache, shared for the whole session of the user in the browsers.
 const clientSideEmotionCache = createEmotionCache();
@@ -22,30 +21,27 @@ export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const router = useRouter();
 
-  // Set dark mode based on media query
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const [darkMode, setDarkMode] = useState(prefersDarkMode);
+  const [selectedTheme, setSelectedTheme] = useState("default");
+
+  const handleThemeChange = (newTheme) => {
+    setSelectedTheme(newTheme);
+    localStorage.setItem("selectedTheme", newTheme);
+  };
 
   useEffect(() => {
-    const mode = localStorage.getItem("mode") === "true";
-    // set mode
-    console.log(`get localStore ${mode}`);
-    setDarkMode(mode);
+    const savedTheme = localStorage.getItem("selectedTheme");
+    if (savedTheme) {
+      setSelectedTheme(savedTheme);
+    }
   }, []);
-
-  const _setDarkMode = (newmode) => {
-    console.log(`set localStore ${newmode}`);
-    localStorage.setItem("mode", newmode);
-    setDarkMode(newmode);
-  };
 
   return (
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeContext.Provider value={{ darkMode, setDarkMode: _setDarkMode }}>
-        <ThemeProvider theme={darkMode ? darkTheme : theme}>
+      <ThemeContext.Provider value={{ handleThemeChange, selectedTheme }}>
+        <ThemeProvider theme={themes[selectedTheme] || themes.default}>
           <CssBaseline />
           <AnimatePresence mode="wait">
             <motion.div
