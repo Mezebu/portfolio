@@ -46,5 +46,5 @@ export const StyledMenu = styled((props) => (
 }));
 
 export const StyledMenuContainer = styled(Box)(({ theme }) => ({
-  borderRight: `1px solid ${theme.palette.grey[300]}`,
+  borderRight: `1px solid ${theme.palette.divider}`,
 }));
