@@ -10,7 +10,10 @@ export const StyledSkill = styled(Box)(({ theme }) => ({
       : "rgba(255, 255, 250, 0.1)",
   padding: 10,
   borderRadius: 4,
-  border: "1px solid rgba( 255, 255, 255, 0.18 )",
+  border:
+    theme.palette.mode === "light"
+      ? "1px solid rgba( 255, 255, 255, 0.18 )"
+      : `1px solid ${theme.palette.divider}`,
 }));
 
 export const StyledIcon = styled(Box)(({ theme }) => ({
@@ -25,7 +28,7 @@ export const StyledIcon = styled(Box)(({ theme }) => ({
   ":hover": {
     borderColor:
       theme.palette.mode === "light"
-        ? theme.palette.info.main
+        ? theme.palette.primary.main
         : theme.palette.secondary.main,
   },
   transition: "all 2s cubic-bezier(0.4, 0, 0.2, 1) 0ms",
@@ -47,7 +50,7 @@ export const StyledImage = styled(Box)(({ theme }) => ({
   ":hover": {
     backgroundColor:
       theme.palette.mode === "light"
-        ? theme.palette.info.main
+        ? theme.palette.primary.main
         : theme.palette.secondary.main,
   },
 }));

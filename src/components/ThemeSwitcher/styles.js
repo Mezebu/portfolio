@@ -1,6 +1,7 @@
 import { styled, alpha } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
 import { Box } from "@mui/material";
+import { grey } from "@mui/material/colors";
 
 export const StyledMenu = styled((props) => (
   <Menu
@@ -19,6 +20,7 @@ export const StyledMenu = styled((props) => (
   "& .MuiPaper-root": {
     borderRadius: 5,
     marginTop: theme.spacing(1),
+    backgroundColor: theme.palette.mode === "light" ? grey[100] : "",
     minWidth: 250,
     color:
       theme.palette.mode === "light"

@@ -1,22 +1,22 @@
 import React, { useContext } from "react";
-import { Box, Divider, Grid, MenuItem } from "@mui/material";
-import { Typography, useTheme } from "@mui/material";
+import { Typography, Divider, Grid, MenuItem } from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
+import PropTypes from "prop-types";
 
 import { StyledMenu, StyledMenuContainer } from "./styles";
 import { FlexAlignCenter, FlexCenter } from "../../../styles/globalStyles";
 import ThemeContext from "../../ThemeContext";
 
 const items = [
-  { id: uuidv4(), name: "Default", mode: "default" },
-  { id: uuidv4(), name: "Red", mode: "red" },
-  { id: uuidv4(), name: "Blue", mode: "blue" },
-  { id: uuidv4(), name: "Green", mode: "green" },
-  { id: uuidv4(), name: "Orange", mode: "orange" },
-  { id: uuidv4(), name: "Dark", mode: "dark" },
+  { id: uuidv4(), name: "Default", mode: "default", color: "teal" },
+  { id: uuidv4(), name: "Red", mode: "red", color: "red" },
+  { id: uuidv4(), name: "Blue", mode: "blue", color: "blue" },
+  { id: uuidv4(), name: "Green", mode: "green", color: "green" },
+  { id: uuidv4(), name: "Orange", mode: "orange", color: "orange" },
+  { id: uuidv4(), name: "Dark", mode: "dark", color: "blue" },
 ];
 
-const ThemeSwitcher = ({ anchorEl, handleClose, open }) => {
+const ThemeSwitcher = ({ openThemeMenu, handleClose, open }) => {
   const { selectedTheme, handleThemeChange } = useContext(ThemeContext);
   const themePicked =
     selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
@@ -27,7 +27,7 @@ const ThemeSwitcher = ({ anchorEl, handleClose, open }) => {
       MenuListProps={{
         "aria-labelledby": "demo-customized-button",
       }}
-      anchorEl={anchorEl}
+      anchorEl={openThemeMenu}
       open={open}
       onClose={handleClose}
     >
@@ -37,7 +37,7 @@ const ThemeSwitcher = ({ anchorEl, handleClose, open }) => {
       <Divider />
 
       <Grid container>
-        {items.map(({ id, name, mode }) => (
+        {items.map(({ id, name, mode, color }) => (
           <Grid item key={id} lg={6} md={6} sm={6} xs={6}>
             <StyledMenuContainer>
               <MenuItem
@@ -45,7 +45,6 @@ const ThemeSwitcher = ({ anchorEl, handleClose, open }) => {
                   py: 2,
                   display: "flex",
                   justifyContent: "center",
-                  flexDirection: "column",
                   height: 90,
                 }}
                 onClick={() => handleThemeChange(mode)}
@@ -68,3 +67,9 @@ const ThemeSwitcher = ({ anchorEl, handleClose, open }) => {
 };
 
 export default ThemeSwitcher;
+
+ThemeSwitcher.propTypes = {
+  openThemeMenu: PropTypes.object,
+  handleClose: PropTypes.func.isRequired,
+  open: PropTypes.bool,
+};

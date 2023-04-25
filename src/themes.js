@@ -17,7 +17,6 @@ const themes = {
       },
       background: {
         default: "rgb(234, 234, 234)",
-        paper: "#fff",
       },
     },
     typography: {
@@ -96,21 +95,43 @@ const themes = {
   green: createTheme({
     palette: {
       primary: {
-        main: "#1b5e20",
+        main: "#388e3c",
+        light: "#4caf50",
+        dark: "#1b5e20",
+        contrastText: "#fff",
+      },
+      secondary: {
+        main: "#689f38",
+        light: "#8bc34a",
+        dark: "#33691e",
+        contrastText: "#fff",
+      },
+      success: {
+        main: "#4caf50",
+        light: "#8bc34a",
+        dark: "#388e3c",
+        contrastText: "#fff",
+      },
+      error: {
+        main: "#f44336",
+        light: "#e57373",
+        dark: "#c62828",
+        contrastText: "#fff",
+      },
+      warning: {
+        main: "#ff9800",
+        light: "#ffb74d",
+        dark: "#f57c00",
+        contrastText: "#fff",
+      },
+      info: {
+        main: "#2196f3",
+        light: "#64b5f6",
+        dark: "#1976d2",
+        contrastText: "#fff",
       },
       background: {
         default: "rgb(200, 230, 201)",
-      },
-    },
-    typography: {
-      fontFamily: "Work Sans",
-      fontWeightBold: 700,
-    },
-  }),
-  purple: createTheme({
-    palette: {
-      primary: {
-        main: "#B10DC9",
       },
     },
     typography: {
@@ -132,7 +153,7 @@ const themes = {
       },
       background: {
         default: "rgb(0, 30, 60)",
-        paper: "rgb(0, 30, 50)",
+        paper: "rgb(10, 25, 41)",
       },
     },
     typography: {
