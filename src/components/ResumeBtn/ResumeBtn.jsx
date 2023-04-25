@@ -22,6 +22,7 @@ const ResumeBtn = () => {
               theme.palette.mode === "light"
                 ? theme.palette.common.black
                 : theme.palette.secondary.light,
+            color: (theme) => theme.palette.common.white,
           }}
           href="https://drive.google.com/file/d/1HGZio1IEnChCE4RLECd0EKm8e2D6Y1Kz/view?usp=share_link"
           target="_blank"
