@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IconButton, Toolbar, Tooltip, CssBaseline, Box } from "@mui/material";
 import { Squash as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
-import NightsStayRoundedIcon from "@mui/icons-material/NightsStayRounded";
+import Brightness4RoundedIcon from "@mui/icons-material/Brightness4Rounded";
 
 import { StyledAppBar, StyledNavLogo } from "./styles";
 import { NavLink, StyledToolbar } from "./styles";
@@ -16,14 +16,14 @@ import Link from "../../Link";
 
 const NavBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const [openThemeMenu, setOpenThemeMenu] = useState(null);
+  const open = Boolean(openThemeMenu);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setOpenThemeMenu(event.currentTarget);
   };
   const handleClose = () => {
-    setAnchorEl(null);
+    setOpenThemeMenu(null);
   };
 
   return (
@@ -47,7 +47,7 @@ const NavBar = ({ children }) => {
               ))}
             </Box>
 
-            <ThemeSwitcher {...{ open, handleClose, anchorEl }} />
+            <ThemeSwitcher {...{ open, handleClose, openThemeMenu }} />
 
             <FlexAlignCenter sx={{ mr: 2 }}>
               <Box>
@@ -59,7 +59,7 @@ const NavBar = ({ children }) => {
                     variant="contained"
                     onClick={handleClick}
                   >
-                    <NightsStayRoundedIcon sx={{ fontSize: 20 }} />
+                    <Brightness4RoundedIcon />
                   </IconButton>
                 </Tooltip>
               </Box>

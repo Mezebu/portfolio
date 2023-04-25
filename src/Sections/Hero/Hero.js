@@ -36,7 +36,7 @@ const Hero = () => {
           sx={{
             color: (theme) =>
               theme.palette.mode === "light"
-                ? theme.palette.primary.light
+                ? theme.palette.primary.dark
                 : theme.palette.secondary.light,
           }}
         >
