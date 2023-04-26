@@ -84,7 +84,7 @@ const themes = {
         hint: "#757575",
       },
       background: {
-        paper: "#fff",
+        default: "#eaf6ff",
       },
     },
     typography: {
