@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Tabs, Typography } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 import TabPanel from "./TabPanel";
 import ProjectCard from "./ProjectCard";
@@ -96,3 +97,13 @@ const ProjectTab = ({ heading, image, desc, desc2, code, link, stack }) => {
 };
 
 export default ProjectTab;
+
+ProjectTab.propTypes = {
+  heading: PropTypes.string,
+  image: PropTypes.object.isRequired,
+  desc: PropTypes.string,
+  desc2: PropTypes.string,
+  code: PropTypes.string,
+  link: PropTypes.string,
+  stack: PropTypes.string,
+};
