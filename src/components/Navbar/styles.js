@@ -9,7 +9,7 @@ export const StyledAppBar = styled(AppBar)(({ theme }) => ({
       : "rgba(0, 30, 60, 0.85)",
   border: "1px solid rgba( 255, 255, 255, 0.18 )",
   borderRadius: theme.shape.borderRadius,
-  marginTop: theme.spacing(2),
+  margin: `${theme.spacing(2)} auto 0`,
   padding: 3,
   backdropFilter: "blur(10px)",
   width: "95%",
