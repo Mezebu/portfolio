@@ -25,9 +25,6 @@ export const StyledToolbar = styled(Toolbar)({
 
 export const StyledNavLogo = styled(Typography)({
   fontFamily: "Montserrat",
-  /* background: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-  backgroundClip: "text",
-  color: "transparent", */
   fontWeight: 800,
 });
 
