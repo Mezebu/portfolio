@@ -14,9 +14,9 @@ export const StyledLinks = styled(Button)(({ theme }) => ({
   },
 }));
 
-export const StyledBox = styled(Box)(({ theme }) => ({
+export const StyledBox = styled(Box)({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-}));
+});
