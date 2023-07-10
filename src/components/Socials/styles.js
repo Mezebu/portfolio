@@ -1,31 +1,22 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const StyledLinks = styled(Box)(({ theme }) => ({
+export const StyledLinks = styled(Button)(({ theme }) => ({
   display: "flex",
-  alignItems: "center",
-  backgroundColor: "inherit",
-  cursor: "pointer",
+  flexDirection: "column",
+  justifyContent: "center",
+  border: `1px solid ${theme.palette.divider}`,
+  marginTop: 8,
+  padding: 12,
+  textTransform: "none",
   "&:hover": {
-    borderColor: "#00a79c",
+    borderColor: theme.palette.mode,
   },
 }));
 
-export const StyledIcon = styled(Box)(({ theme }) => ({
+export const StyledBox = styled(Box)({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  borderRadius: 2,
-  marginRight: 10,
-  marginTop: 5,
-  height: 35,
-  width: 35,
-  backgroundColor:
-    theme.palette.mode === "light"
-      ? theme.palette.grey[400]
-      : theme.palette.primary.dark,
-  cursor: "pointer",
-  "&:hover": {
-    borderColor: "#00a79c",
-  },
-}));
+  flexDirection: "column",
+});

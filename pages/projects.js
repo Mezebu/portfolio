@@ -71,7 +71,7 @@ const works = () => {
   return (
     <Fragment>
       <Head>
-        <title>Ezeigwe Henry | Projects</title>
+        <title>Henry Ezeigwe | Projects</title>
       </Head>
 
       <Box>
