@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <Fragment>
       <Head>
-        <title>Ezeigwe Henry | Contact Me</title>
+        <title>Henry Ezeigwe | Contact Me</title>
       </Head>
       <Box>
         <Box
@@ -44,13 +44,14 @@ const Contact = () => {
             forward to hearing from you soon.
           </Typography>
         </Box>
+        <Toolbar />
 
-        <Grid container spacing={4}>
-          <Grid item lg={6} md={6}>
-            <ContactForm />
-          </Grid>
-          <Grid item lg={6} md={6}>
+        <Grid container spacing={5}>
+          <Grid item xs={12} md={6}>
             <Socials />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <ContactForm />
           </Grid>
         </Grid>
 

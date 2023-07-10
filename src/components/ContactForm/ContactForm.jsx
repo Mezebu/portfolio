@@ -1,6 +1,5 @@
 import { useRef } from "react";
-import { Box, Button, InputAdornment } from "@mui/material";
-import { TextField } from "@mui/material";
+import { Box, Button, InputAdornment, TextField } from "@mui/material";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import PersonIcon from "@mui/icons-material/Person";
@@ -39,66 +38,64 @@ const ContactForm = () => {
   };
 
   return (
-    <>
-      <Box component="form" ref={form} onSubmit={sendEmail}>
-        <TextField
-          id="input-with-icon-textfield"
-          label="Name"
-          type="text"
-          name="user_name"
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="start">
-                <PersonIcon />
-              </InputAdornment>
-            ),
-          }}
-          variant="standard"
-          fullWidth
-          margin="dense"
-          required
-        />
-        <TextField
-          id="input-with-icon-textfield"
-          label="Email"
-          type="email"
-          name="user_email"
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="start">
-                <EmailRoundedIcon />
-              </InputAdornment>
-            ),
-          }}
-          variant="standard"
-          fullWidth
-          margin="dense"
-          required
-        />
-        <TextField
-          id="filled-multiline-static"
-          label="Message"
-          type="text"
-          name="message"
-          multiline
-          rows={5}
-          variant="standard"
-          fullWidth
-          margin="dense"
-          required
-        />
+    <Box component="form" ref={form} onSubmit={sendEmail}>
+      <TextField
+        id="input-with-icon-textfield"
+        label="Name"
+        type="text"
+        name="user_name"
+        variant="outlined"
+        fullWidth
+        margin="dense"
+        required
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="start">
+              <PersonIcon />
+            </InputAdornment>
+          ),
+        }}
+      />
+      <TextField
+        id="input-with-icon-textfield"
+        label="Email"
+        type="email"
+        name="user_email"
+        variant="outlined"
+        fullWidth
+        margin="dense"
+        required
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="start">
+              <EmailRoundedIcon />
+            </InputAdornment>
+          ),
+        }}
+      />
+      <TextField
+        id="filled-multiline-static"
+        label="Message"
+        type="text"
+        name="message"
+        multiline
+        rows={5}
+        variant="outlined"
+        fullWidth
+        margin="dense"
+        required
+      />
 
-        <Button
-          variant="contained"
-          type="submit"
-          sx={{ width: "100%", p: 2, fontSize: 15 }}
-          disableElevation
-          endIcon={<ArrowOutwardIcon />}
-        >
-          Send
-        </Button>
-      </Box>
-    </>
+      <Button
+        variant="contained"
+        type="submit"
+        sx={{ width: "100%", p: 2, fontSize: 15 }}
+        disableElevation
+        endIcon={<ArrowOutwardIcon />}
+      >
+        Send
+      </Button>
+    </Box>
   );
 };
 

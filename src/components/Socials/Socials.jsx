@@ -1,56 +1,31 @@
-import { Box, Link, Typography } from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-import { v4 as uuidv4 } from "uuid";
+import { Box, Grid, Link, Typography } from "@mui/material";
 
-import { StyledIcon, StyledLinks } from "./styles";
-import { Fragment } from "react";
-
-const data = [
-  {
-    id: uuidv4(),
-    name: "Email",
-    link: "mailto:mezebu07@gmail.com?Subject=Hello%20Henry",
-    icon: <EmailRoundedIcon />,
-  },
-  {
-    id: uuidv4(),
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/henry-ezeigwe",
-    icon: <LinkedInIcon />,
-  },
-  {
-    id: uuidv4(),
-    name: "Github",
-    link: "https://github.com/mezebu",
-    icon: <GitHubIcon />,
-  },
-];
+import { StyledBox, StyledLinks } from "./styles";
+import { data } from "./data";
 
 const Socials = () => {
   return (
-    <Fragment>
-      <Box sx={{ mt: 3 }}>
-        {data.map(({ id, name, link, icon }) => (
-          <StyledLinks key={id}>
-            <StyledIcon>{icon}</StyledIcon>
-            <Typography
-              component={Link}
-              href={link}
-              underline="hover"
-              color="text.primary"
-              sx={{ fontWeight: "500" }}
-              target="_blank"
-              rel="noopener"
-              variant="button"
-            >
-              {name}
-            </Typography>
+    <Grid container spacing={2}>
+      {data.map(({ id, name, link, icon }) => (
+        <Grid key={id} item xs={4} md={6}>
+          <StyledLinks
+            href={link}
+            fullWidth
+            size="large"
+            component={Link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <StyledBox>
+              <Box>{icon}</Box>
+              <Typography color="text.primary" sx={{ fontWeight: "500" }}>
+                {name}
+              </Typography>
+            </StyledBox>
           </StyledLinks>
-        ))}
-      </Box>
-    </Fragment>
+        </Grid>
+      ))}
+    </Grid>
   );
 };
 
