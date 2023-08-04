@@ -4,6 +4,12 @@ import { styled } from "@mui/material/styles";
 export const StyledBigHeading = styled(Typography)({
   fontSize: "clamp(35px, 7vw, 65px)",
   fontWeight: 700,
+  "&:hover": {
+    background:
+      "radial-gradient(circle farthest-corner at top left, #121FCF 0%, #CF1512 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  },
 });
 
 export const StyledIcon = styled(Box)(({ theme }) => ({
