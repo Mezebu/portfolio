@@ -21,3 +21,4 @@ export { default as stickerLight } from "./sticker-light.svg";
 export { default as stickerDark } from "./sticker-dark.svg";
 export { default as framerIcon } from "./framer-motion.svg";
 export { default as nodejs } from "./icons8-nodejs.svg";
+export { default as mongodb } from "./mongodb.svg";
