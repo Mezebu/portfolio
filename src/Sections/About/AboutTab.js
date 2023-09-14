@@ -43,6 +43,7 @@ const AboutTab = () => {
       >
         <StyledTab label="Shieldtechub" {...a11yProps(0)} />
         <StyledTab label="PCCCZ" {...a11yProps(1)} />
+        <StyledTab label="Font-IT NG" {...a11yProps(2)} />
       </Tabs>
       <TabPanel
         value={value}
@@ -51,14 +52,15 @@ const AboutTab = () => {
       >
         <Box>
           <Typography variant="body1" fontWeight={600}>
-            Frontend Developer <Link underline="hover">@ ShielTechub</Link>
+            Frontend Developer - Junior{" "}
+            <Link underline="hover">@ ShielTechub</Link>
           </Typography>
           <Typography
             sx={{ fontSize: 10, letterSpacing: 2 }}
             color="text.secondary"
             gutterBottom
           >
-            NOVEMBER 2022 - PRESENT
+            2022 - PRESENT
           </Typography>
         </Box>
 
@@ -66,28 +68,56 @@ const AboutTab = () => {
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Collaborated with the UX/UI design teams to enhance the website
-              and applications, resulting in a 30% increase in conversion rates.
+              Collaborated with a cross-functional team to conceptualize,
+              design, and develop the {"company's "} website from its initial
+              stages.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Performed regular site maintenance and optimization of web pages
-              for maximum speed, scalability, and the best user experience
+              I played a key role in the {"website's"} inception, contributing
+              to the design and layout, user interface, and overall user
+              experience.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Worked with a team of Web Designers, Back-end Designers, Project
-              Managers, and System Analysts to complete projects
+              I utilized web development tools and technologies to implement
+              responsive and visually appealing designs, ensuring compatibility
+              across various browsers and devices.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Got feedback from, and built solutions for, users and customers.
+              Worked closely with stakeholders to gather requirements,
+              incorporate feedback, and make continuous improvements to the
+              {"website's"} functionality and aesthetics.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Maintained and updated the website to ensure it remained current,
+              reflecting the {"company's"} latest products, services, and
+              branding.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Implemented SEO best practices to enhance the {"website's"}
+              visibility and ranking on search engines, driving increased
+              organic traffic.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Conducted regular quality assurance testing to identify and
+              rectify any bugs or issues, ensuring a seamless user experience.
             </Typography>
           </StyledIcon>
         </Box>
@@ -98,50 +128,118 @@ const AboutTab = () => {
         sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Typography variant="body1" fontWeight={600}>
-          Frontend Developer <Link underline="hover">@ PCCCZ</Link>
+          Frontend Developer - Intern <Link underline="hover">@ PCCCZ</Link>
         </Typography>
         <Typography
           sx={{ fontSize: 10, letterSpacing: 2 }}
           color="text.secondary"
           gutterBottom
         >
-          MARCH 2020 - 2022
+          2021 - 2022
         </Typography>
         <Box sx={{ mt: 2 }}>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Developed new ideas with the team and contributed to creating the
-              {` company's`} website framework using SCSS(SASS).
+              I tested front-end code in multiple browsers to ensure
+              cross-browser compatibility.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Tested front-end code in multiple browsers to ensure cross-browser
-              compatibility.
+              Wrote clean, efficient, and maintainable code in various
+              programming languages
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>Tested and deployed software applications</Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Troubleshooted and resolved software defects and issues.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Worked with back-end engineers to make the {`company's`} website
-              more user-friendly.
+              Created technical documentation and user manuals
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Daily maintenance of code, debugging issues and solving clients’
-              problems.
+              Participated in software development lifecycle activities
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Testing website applications to ensure it works as expected and
-              also responsible for fixing bugs and implementing new features as
-              needed
+              Participated in software development lifecycle activities
+            </Typography>
+          </StyledIcon>
+        </Box>
+      </TabPanel>
+      <TabPanel
+        value={value}
+        index={2}
+        sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
+      >
+        <Typography variant="body1" fontWeight={600}>
+          Administrative Assistant
+          <Link underline="hover"> @ Font-IT Limited - NYSC</Link>
+        </Typography>
+        <Typography
+          sx={{ fontSize: 10, letterSpacing: 2 }}
+          color="text.secondary"
+          gutterBottom
+        >
+          2019 - 2020
+        </Typography>
+        <Box sx={{ mt: 2 }}>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Answered and directed phone calls and assisted in the preparation
+              of meetings and presentations
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Managed calendars and scheduled appointments
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>Organized and maintained files and records</Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>Coordinated meetings and conferences</Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Handled incoming and outgoing correspondence
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>Maintained office supplies and inventory</Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Provided general administrative support to staff
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Prepared documents, reports and processed and distributed mails
             </Typography>
           </StyledIcon>
         </Box>
