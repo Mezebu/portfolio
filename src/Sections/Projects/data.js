@@ -27,5 +27,7 @@ export const data = [
             custom views, and drill down into specific data points to gain deeper
             insights into your data.`,
     stack: `Reactjs, ChartJS, MUI, Firebase, Axios, React Router, Framer Motion`,
+    web: "https://transcendent-vacherin-3e33c3.netlify.app/",
+    code: "https://github.com/mezebu/admin-dashboard",
   },
 ];
