@@ -189,14 +189,14 @@ const AboutTab = () => {
       >
         <Typography variant="body1" fontWeight={600}>
           Administrative Assistant
-          <Link underline="hover"> @ Font-IT Limited - NYSC</Link>
+          <Link underline="hover"> @ Font-IT Limited</Link>
         </Typography>
         <Typography
           sx={{ fontSize: 10, letterSpacing: 2 }}
           color="text.secondary"
           gutterBottom
         >
-          2019 - 2020
+          2019 - 2021
         </Typography>
         <Box sx={{ mt: 2 }}>
           <StyledIcon>
