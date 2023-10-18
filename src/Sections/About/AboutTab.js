@@ -52,8 +52,7 @@ const AboutTab = () => {
       >
         <Box>
           <Typography variant="body1" fontWeight={600}>
-            Frontend Developer - Junior{" "}
-            <Link underline="hover">@ ShielTechub</Link>
+            Frontend Developer <Link underline="hover">@ShielTechub</Link>
           </Typography>
           <Typography
             sx={{ fontSize: 10, letterSpacing: 2 }}
@@ -69,7 +68,7 @@ const AboutTab = () => {
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
               Collaborated with a cross-functional team to conceptualize,
-              design, and develop the {"company's "} website from its initial
+              design, and develop the {`company's`} website from its initial
               stages.
             </Typography>
           </StyledIcon>
@@ -84,33 +83,20 @@ const AboutTab = () => {
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              I utilized web development tools and technologies to implement
-              responsive and visually appealing designs, ensuring compatibility
-              across various browsers and devices.
+              Collaborated with a team to design and develop the company website
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Worked closely with stakeholders to gather requirements,
-              incorporate feedback, and make continuous improvements to the
-              {"website's"} functionality and aesthetics.
+              Implemented responsive designs and SEO best practices.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Maintained and updated the website to ensure it remained current,
-              reflecting the {"company's"} latest products, services, and
-              branding.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Implemented SEO best practices to enhance the {"website's"}
-              visibility and ranking on search engines, driving increased
-              organic traffic.
+              Conducted quality assurance testing for a seamless user
+              experience.
             </Typography>
           </StyledIcon>
           <StyledIcon>
@@ -118,6 +104,22 @@ const AboutTab = () => {
             <Typography>
               Conducted regular quality assurance testing to identify and
               rectify any bugs or issues, ensuring a seamless user experience.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Worked closely with stakeholders to gather requirements,
+              incorporate feedback, and make continuous improvements to the
+              {`website's`} functionality and aesthetics.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Maintained and updated the website to ensure it remained current,
+              reflecting the {`company's`} latest products, services, and
+              branding.
             </Typography>
           </StyledIcon>
         </Box>
@@ -128,7 +130,7 @@ const AboutTab = () => {
         sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Typography variant="body1" fontWeight={600}>
-          Frontend Developer - Intern <Link underline="hover">@ PCCCZ</Link>
+          Frontend Developer - Junior <Link underline="hover">@ PCCCZ</Link>
         </Typography>
         <Typography
           sx={{ fontSize: 10, letterSpacing: 2 }}
@@ -141,43 +143,37 @@ const AboutTab = () => {
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              I tested front-end code in multiple browsers to ensure
-              cross-browser compatibility.
+              Engaged in various phases of the software development lifecycle,
+              contributing to comprehensive project success.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Wrote clean, efficient, and maintainable code in various
-              programming languages
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>Tested and deployed software applications</Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Troubleshooted and resolved software defects and issues.
+              Conducted thorough testing and successfully deployed web
+              applications, guaranteeing seamless functionality across various
+              web browsers.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Created technical documentation and user manuals
+              Leveraged Git to proficiently manage code while fostering seamless
+              collaboration within the team.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Participated in software development lifecycle activities
+              Crafted and refined JavaScript code to elevate user interactions
+              and enrich the user experience on web pages.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Participated in software development lifecycle activities
+              Debugged and resolved coding issues, thereby enhancing website
+              functionality and ensuring a seamless user experience.
             </Typography>
           </StyledIcon>
         </Box>
@@ -202,44 +198,61 @@ const AboutTab = () => {
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Answered and directed phone calls and assisted in the preparation
-              of meetings and presentations
+              Efficiently oversaw and coordinated office operations,
+              encompassing scheduling, supplies, and equipment management for
+              optimal workflow.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Managed calendars and scheduled appointments
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>Organized and maintained files and records</Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>Coordinated meetings and conferences</Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Handled incoming and outgoing correspondence
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>Maintained office supplies and inventory</Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Provided general administrative support to staff
+              Offered comprehensive administrative assistance while adeptly
+              preparing documents to facilitate efficient office operations.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Prepared documents, reports and processed and distributed mails
+              Efficiently organized and facilitated meetings and conferences to
+              ensure productive collaboration and communication.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Proficiently managed both incoming and outgoing correspondence to
+              maintain effective communication channels.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Effectively oversaw and organized the calendars of executives and
+              teams within the organization to optimize time management and
+              productivity.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Accurately input data into databases and meticulously maintained
+              both paper and electronic filing systems for streamlined
+              information access.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Delivered exemplary front-line customer service and offered
+              support to clients, visitors, and employees with a welcoming and
+              helpful approach.
+            </Typography>
+          </StyledIcon>
+          <StyledIcon>
+            <ArrowRightRoundedIcon color="primary" />
+            <Typography>
+              Proficiently managed inquiries and efficiently resolved routine
+              issues to maintain smooth operations.
             </Typography>
           </StyledIcon>
         </Box>
