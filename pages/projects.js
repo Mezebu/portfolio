@@ -3,10 +3,21 @@ import { Fragment } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Box, Grid, Toolbar, Typography } from "@mui/material";
 
-import { calculator, commerce, dashboard, weather } from "../src/assets";
+import { calculator, commerce, dashboard, weather, movie } from "../src/assets";
 import ProjectTab from "../src/components/ProjectTab/ProjectTab";
 
 const data = [
+  {
+    id: uuidv4(),
+    heading: "Movie App",
+    image: movie,
+    desc: `The Movies App is a dynamic web application built with ReactJS that allows users to search for movies, TV series, and actors. It features a multi-criteria search function, enabling users to find content based on various filters and sorting options. The app includes a user-friendly interface with light and dark mode theming using MUI.`,
+    desc2: `Users can also save their favorite movies, actors, and TV series for easy access. The frontend is deployed on AWS S3 and CloudFront, ensuring a fast and reliable user experience. The app integrates with various TMDB API endpoints to provide up-to-date and detailed movie information.`,
+    stack:
+      "Typescript, Reactjs, Storybook, MUI, TMDB-API, AWS-CDK, React-Query, React-Hook-Form, Vitejs",
+    code: "https://github.com/mezebu/moviesApp",
+    link: "https://developement--euphonious-malabi-55c3be.netlify.app/",
+  },
   {
     id: uuidv4(),
     heading: "Weather App",
@@ -116,7 +127,7 @@ const works = () => {
           rewarding experience that helps me improve my skills, build my
           portfolio, and solve real-world problems. It is also a fun and
           creative way I explore my interests and passions while learning new
-          things.
+          things. Here are some of the projects I have worked on:
         </Typography>
         <Toolbar />
         <Grid container spacing={1}>
