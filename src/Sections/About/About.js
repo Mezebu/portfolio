@@ -20,32 +20,42 @@ const About = () => {
         <Grid item lg={10} md={10}>
           <Box sx={{ mt: 2 }}>
             <Typography variant="body1" gutterBottom>
-              Hello, my name is Henry and I enjoy building functional and
-              visually appealing interactive web apps that provide a positive
-              user experience. As a frontend developer, my mission is to create
-              intuitive and engaging user experiences through the use of clean
-              and efficient code. I believe that a website should not only look
-              great, but should also be easy to navigate and use.
+              Hi there! {`I'm`} Henry, a passionate Frontend Developer with over
+              three years of experience in creating websites and web
+              applications. I have a {`master's`} degree in computing from South
+              East Technological University, and I love bringing creativity and
+              technical skills to exciting projects.
             </Typography>
             <Typography variant="body1" gutterBottom>
-              I approach each project with a user-first mentality, taking the
-              time to understand the target audience and their needs in order to
-              create a website that meets those needs. I am skilled in creating
-              responsive designs that work across all devices and screen sizes,
-              and I am constantly staying up-to-date with the latest frontend
-              technologies and trends.
+              In my recent job at Shield Tech Hub, I worked with a fantastic
+              team to build custom eCommerce websites. I used tools like
+              Commerce.js to make online shopping easier and more enjoyable for
+              users. Before that, at PCCCZ Nigeria Company LTD, I helped improve
+              web pages using JavaScript and frameworks like Bootstrap and MUI,
+              making them more interactive and user-friendly.
             </Typography>
             <Typography variant="body1" gutterBottom>
-              I am passionate about creating websites that not only function
-              flawlessly, but also look great and showcase the brand or product
-              in the best possible light. I am committed to delivering
-              high-quality work and exceeding client expectations.
+              My journey in tech started at Font-IT Limited, where I managed
+              office tasks and provided administrative support, which helped me
+              develop strong organizational skills. Over the years, {`I’ve`}{" "}
+              become skilled in HTML, CSS, JavaScript, React.js, Next.js, and
+              many other technologies. I also know how to use Git for version
+              control, AWS for cloud services, and MongoDB for databases.
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Whether {`it's`} developing a new website from scratch or
-              improving an existing one, I am dedicated to providing the best
-              possible user experience and helping businesses achieve their
-              goals through effective frontend development.
+              During my {`master's`} program, I worked on projects like a Movie
+              Web App and a Serverless Web API. These projects helped me put my
+              skills to the test and learn more about using ReactJS and AWS
+              services to create efficient and scalable solutions.
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              When {`I'm`} not coding, I volunteer with The Brothers of Charity
+              Services South East, where I provide care and support to
+              individuals with intellectual disabilities. This experience has
+              taught me the value of patience, empathy, and detailed
+              documentation. I love working in team environments where I can
+              contribute and grow professionally. {`I’m`} excited to bring my
+              skills and passion to new challenges and opportunities.
             </Typography>
 
             <Box sx={{ mt: 5 /* height: 350 */ }}>
