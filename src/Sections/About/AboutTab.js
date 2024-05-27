@@ -59,7 +59,7 @@ const AboutTab = () => {
             color="text.secondary"
             gutterBottom
           >
-            2022 - PRESENT
+            2022 - 2023
           </Typography>
         </Box>
 
@@ -67,51 +67,37 @@ const AboutTab = () => {
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Collaborated with a cross-functional team to conceptualize,
-              design, and develop the {`company's`} website from its initial
-              stages.
+              Collaborated with a cross-functional team utilising Agile
+              approaches to conceptualise, design, and develop websites from the
+              start.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              I played a key role in the {"website's"} inception, contributing
-              to the design and layout, user interface, and overall user
-              experience.
+              Developed custom eCommerce solutions using the Commerce.js SDK,
+              enhancing online shopping experiences.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Collaborated with a team to design and develop the company website
+              Leveraged Commerce.js REST API for flexible integration with
+              various front-end frameworks and platforms
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Implemented responsive designs and SEO best practices.
+              Managed product listings, including creation, updating, and
+              inventory tracking, to ensure accurate product information.
             </Typography>
           </StyledIcon>
           <StyledIcon>
             <ArrowRightRoundedIcon color="primary" />
             <Typography>
-              Conducted quality assurance testing for a seamless user
-              experience.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Conducted regular quality assurance testing to identify and
-              rectify any bugs or issues, ensuring a seamless user experience.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Worked closely with stakeholders to gather requirements,
-              incorporate feedback, and make continuous improvements to the
-              {`website's`} functionality and aesthetics.
+              Enhanced customer experience by developing user authentication and
+              session management features.
             </Typography>
           </StyledIcon>
           <StyledIcon>
