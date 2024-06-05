@@ -34,6 +34,22 @@ const data = [
   },
   {
     id: uuidv4(),
+    heading: "CommerceJS",
+    image: commerce,
+    desc: `An e-commerce app that uses Commerce JS headless SDK. It provides users with a
+           smooth shopping experience that isn’t limited to a single product checkout flow but can
+           add multiple items to a shopping cart and allow the user to manage that cart.`,
+    desc2: `The shopping cart can include how many products someone wants to purchase, which
+            products they wish to purchase, the total cost, and the shipping cost depending on the
+            address provided. Users can also filter the products based and categories and prices.
+            These features, together with the product information, all contribute to a very dynamic
+            experience that will guide the user through the checkout process.`,
+    stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, React Router",
+    code: "https://github.com/mezebu/commerce-js",
+    link: "https://cosmic-licorice-418a80.netlify.app/",
+  },
+  {
+    id: uuidv4(),
     heading: "Calculator",
     image: calculator,
     desc: `I created this Calculator using JavaScript, as well as HTML and CSS web programming. 
@@ -59,22 +75,6 @@ const data = [
     stack: `Reactjs, ChartJS, MUI, Firebase, Axios, React Router, Framer Motion`,
     code: "https://github.com/mezebu/admin-dashboard",
     link: "https://transcendent-vacherin-3e33c3.netlify.app/",
-  },
-  {
-    id: uuidv4(),
-    heading: "CommerceJS",
-    image: commerce,
-    desc: `An e-commerce app that uses Commerce JS headless SDK. It provides users with a
-           smooth shopping experience that isn’t limited to a single product checkout flow but can
-           add multiple items to a shopping cart and allow the user to manage that cart.`,
-    desc2: `The shopping cart can include how many products someone wants to purchase, which
-            products they wish to purchase, the total cost, and the shipping cost depending on the
-            address provided. Users can also filter the products based and categories and prices.
-            These features, together with the product information, all contribute to a very dynamic
-            experience that will guide the user through the checkout process.`,
-    stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, React Router",
-    code: "https://github.com/mezebu/commerce-js",
-    link: "https://cosmic-licorice-418a80.netlify.app/",
   },
 ];
 

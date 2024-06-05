@@ -1,18 +1,17 @@
 import { v4 as uuidv4 } from "uuid";
-import { commerce, dashboard } from "../../assets";
+import { dashboard, movie } from "../../assets";
 
 export const data = [
   {
     id: uuidv4(),
-    title: "CommerceJs",
-    desc: `An e-commerce app that uses Commerce JS headless SDK. It provides users with a
-           smooth shopping experience, with the ability to add multiple items to a shopping cart and allow the user to manage that cart.`,
-    desc2: `Users can also filter the products based and categories and prices. These features, together with the product information, all contribute to a very dynamic
-            experience that will guide the user through the checkout process.`,
-    stack: "Reactjs, @chec/commerceJs, MUI, React-Hook-Form, React Router",
-    web: "https://cosmic-licorice-418a80.netlify.app/",
-    code: "https://github.com/mezebu/commerce-js",
-    image: commerce,
+    heading: "Movie App",
+    image: movie,
+    desc: `The Movies App is a dynamic web application built with ReactJS that allows users to search for movies, TV series, and actors. It features a multi-criteria search function, enabling users to find content based on various filters and sorting options. The app includes a user-friendly interface with light and dark mode theming using MUI.`,
+    desc2: `Users can also save their favorite movies, actors, and TV series for easy access. The frontend is deployed on AWS S3 and CloudFront, ensuring a fast and reliable user experience. The app integrates with various TMDB API endpoints to provide up-to-date and detailed movie information.`,
+    stack:
+      "Typescript, Reactjs, Storybook, MUI, TMDB-API, AWS-CDK, React-Query, React-Hook-Form, Vitejs",
+    code: "https://github.com/mezebu/moviesApp",
+    web: "https://developement--euphonious-malabi-55c3be.netlify.app/",
   },
   {
     id: uuidv4(),
