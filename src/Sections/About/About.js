@@ -20,42 +20,45 @@ const About = () => {
         <Grid item lg={10} md={10}>
           <Box sx={{ mt: 2 }}>
             <Typography variant="body1" gutterBottom>
-              Hi there! {`I'm`} Henry, a passionate Frontend Developer with over
-              three years of experience in creating websites and web
-              applications. I have a {`master's`} degree in computing from South
-              East Technological University, and I love bringing creativity and
-              technical skills to exciting projects.
+              {`Hi there! I'm Henry, a passionate Frontend Developer with over three years of experience in creating websites and web applications. I have a master's degree in computing from South East Technological
+               University, and I love bringing creativity and technical skills to exciting projects.`}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              In my recent job at Shield Tech Hub, I worked with a fantastic
-              team to build custom eCommerce websites. I used tools like
-              Commerce.js to make online shopping easier and more enjoyable for
-              users. Before that, at PCCCZ Nigeria Company LTD, I helped improve
-              web pages using JavaScript and frameworks like Bootstrap and MUI,
-              making them more interactive and user-friendly.
+              {`
+              In my recent job at Shield Tech Hub, I worked with a fantastic team to build custom 
+              eCommerce websites. I used tools like Commerce.js to make online shopping easier and more 
+              enjoyable for users. Before that, at PCCCZ Nigeria Company LTD, I helped improve web pages 
+              using JavaScript and frameworks like Bootstrap and MUI, making them more interactive and user-friendly.
+             `}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              My journey in tech started at Font-IT Limited, where I managed
-              office tasks and provided administrative support, which helped me
-              develop strong organizational skills. Over the years, {`I’ve`}{" "}
-              become skilled in HTML, CSS, JavaScript, React.js, Next.js, and
-              many other technologies. I also know how to use Git for version
-              control, AWS for cloud services, and MongoDB for databases.
+              {`
+              My journey in tech started at Font-IT Limited, where I managed office 
+              tasks and provided administrative support, which helped me develop strong organizational 
+              skills. Over the years, I’ve become skilled in HTML, CSS, JavaScript, React.js, Next.js, and many other technologies. I also know how to 
+              use Git for version control, AWS for cloud services, and MongoDB for databases.
+              `}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              During my {`master's`} program, I worked on projects like a Movie
-              Web App and a Serverless Web API. These projects helped me put my
-              skills to the test and learn more about using ReactJS and AWS
-              services to create efficient and scalable solutions.
+              {`
+            During my master's program, I worked on projects like a Movie Web App and a Serverless Web API. 
+            These projects helped me put my skills to the test and learn more about using ReactJS and AWS services to create efficient and scalable solutions.
+            `}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              When {`I'm`} not coding, I volunteer with The Brothers of Charity
-              Services South East, where I provide care and support to
-              individuals with intellectual disabilities. This experience has
-              taught me the value of patience, empathy, and detailed
-              documentation. I love working in team environments where I can
-              contribute and grow professionally. {`I’m`} excited to bring my
-              skills and passion to new challenges and opportunities.
+              {`
+              Additionally, I have held roles as an IT Customer Support Analyst at Interswitch and a 1st/2nd 
+              Line Customer Support Analyst at Font-IT Limited. These positions honed my skills in technical support, 
+              system troubleshooting, and user interaction, which have been invaluable in my development career.
+              `}
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              {`
+              When I'm not coding, I volunteer with The Brothers of Charity Services South East, where I 
+              provide care and support to individuals with intellectual disabilities. This experience has 
+              taught me the value of patience, empathy, and detailed documentation. I love working in team environments where I can contribute and grow professionally.
+              I’m excited to bring my skills and passion to new challenges and opportunities.
+               `}
             </Typography>
 
             <Box sx={{ mt: 5 /* height: 350 */ }}>

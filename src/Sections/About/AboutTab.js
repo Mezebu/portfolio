@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import { StyledIcon } from "./styles";
 import { StyledTab } from "../../components/ProjectTab/styels";
 import { useMediaQuery, useTheme } from "@mui/material";
+import { fontIT, interswitch, pcccz, shieldTech } from "./data";
 
 function a11yProps(index) {
   return {
@@ -43,7 +44,8 @@ const AboutTab = () => {
       >
         <StyledTab label="Shieldtechub" {...a11yProps(0)} />
         <StyledTab label="PCCCZ" {...a11yProps(1)} />
-        <StyledTab label="Font-IT NG" {...a11yProps(2)} />
+        <StyledTab label="Interswitch" {...a11yProps(2)} />
+        <StyledTab label="Font-IT NG" {...a11yProps(3)} />
       </Tabs>
       <TabPanel
         value={value}
@@ -59,55 +61,17 @@ const AboutTab = () => {
             color="text.secondary"
             gutterBottom
           >
-            2022 - 2023
+            (April 2022 – August 2023)
           </Typography>
         </Box>
 
         <Box sx={{ mt: 2 }}>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Collaborated with a cross-functional team utilising Agile
-              approaches to conceptualise, design, and develop websites from the
-              start.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Developed custom eCommerce solutions using the Commerce.js SDK,
-              enhancing online shopping experiences.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Leveraged Commerce.js REST API for flexible integration with
-              various front-end frameworks and platforms
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Managed product listings, including creation, updating, and
-              inventory tracking, to ensure accurate product information.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Enhanced customer experience by developing user authentication and
-              session management features.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Maintained and updated the website to ensure it remained current,
-              reflecting the {`company's`} latest products, services, and
-              branding.
-            </Typography>
-          </StyledIcon>
+          {shieldTech.map(({ id, content }) => (
+            <StyledIcon key={id}>
+              <ArrowRightRoundedIcon color="primary" />
+              <Typography>{content}</Typography>
+            </StyledIcon>
+          ))}
         </Box>
       </TabPanel>
       <TabPanel
@@ -116,52 +80,22 @@ const AboutTab = () => {
         sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Typography variant="body1" fontWeight={600}>
-          Frontend Developer - Junior <Link underline="hover">@ PCCCZ</Link>
+          Software Developer - Junior <Link underline="hover">@ PCCCZ</Link>
         </Typography>
         <Typography
           sx={{ fontSize: 10, letterSpacing: 2 }}
           color="text.secondary"
           gutterBottom
         >
-          2021 - 2022
+          (December 2021 – March 2022)
         </Typography>
         <Box sx={{ mt: 2 }}>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Engaged in various phases of the software development lifecycle,
-              contributing to comprehensive project success.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Conducted thorough testing and successfully deployed web
-              applications, guaranteeing seamless functionality across various
-              web browsers.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Leveraged Git to proficiently manage code while fostering seamless
-              collaboration within the team.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Crafted and refined JavaScript code to elevate user interactions
-              and enrich the user experience on web pages.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Debugged and resolved coding issues, thereby enhancing website
-              functionality and ensuring a seamless user experience.
-            </Typography>
-          </StyledIcon>
+          {pcccz.map(({ id, content }) => (
+            <StyledIcon key={id}>
+              <ArrowRightRoundedIcon color="primary" />
+              <Typography>{content}</Typography>
+            </StyledIcon>
+          ))}
         </Box>
       </TabPanel>
       <TabPanel
@@ -170,7 +104,33 @@ const AboutTab = () => {
         sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
       >
         <Typography variant="body1" fontWeight={600}>
-          Administrative Assistant
+          IT Customer Support Analyst
+          <Link underline="hover"> @ Interswitch</Link>
+        </Typography>
+        <Typography
+          sx={{ fontSize: 10, letterSpacing: 2 }}
+          color="text.secondary"
+          gutterBottom
+        >
+          (October 2018 – June 2020)
+        </Typography>
+        <Box sx={{ mt: 2 }}>
+          {interswitch.map(({ id, content }) => (
+            <StyledIcon key={id}>
+              <ArrowRightRoundedIcon color="primary" />
+              <Typography>{content}</Typography>
+            </StyledIcon>
+          ))}
+        </Box>
+      </TabPanel>
+
+      <TabPanel
+        value={value}
+        index={3}
+        sx={{ ".mui-style-19kzrtu": { pt: { xs: 2, md: 0 } } }}
+      >
+        <Typography variant="body1" fontWeight={600}>
+          1st/2nd Line Customer Support Analyst
           <Link underline="hover"> @ Font-IT Limited</Link>
         </Typography>
         <Typography
@@ -178,69 +138,15 @@ const AboutTab = () => {
           color="text.secondary"
           gutterBottom
         >
-          2019 - 2021
+          (October 2018 – June 2020)
         </Typography>
         <Box sx={{ mt: 2 }}>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Efficiently oversaw and coordinated office operations,
-              encompassing scheduling, supplies, and equipment management for
-              optimal workflow.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Offered comprehensive administrative assistance while adeptly
-              preparing documents to facilitate efficient office operations.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Efficiently organized and facilitated meetings and conferences to
-              ensure productive collaboration and communication.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Proficiently managed both incoming and outgoing correspondence to
-              maintain effective communication channels.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Effectively oversaw and organized the calendars of executives and
-              teams within the organization to optimize time management and
-              productivity.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Accurately input data into databases and meticulously maintained
-              both paper and electronic filing systems for streamlined
-              information access.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Delivered exemplary front-line customer service and offered
-              support to clients, visitors, and employees with a welcoming and
-              helpful approach.
-            </Typography>
-          </StyledIcon>
-          <StyledIcon>
-            <ArrowRightRoundedIcon color="primary" />
-            <Typography>
-              Proficiently managed inquiries and efficiently resolved routine
-              issues to maintain smooth operations.
-            </Typography>
-          </StyledIcon>
+          {fontIT.map(({ id, content }) => (
+            <StyledIcon key={id}>
+              <ArrowRightRoundedIcon color="primary" />
+              <Typography>{content}</Typography>
+            </StyledIcon>
+          ))}
         </Box>
       </TabPanel>
     </Box>
