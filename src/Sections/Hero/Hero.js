@@ -52,9 +52,10 @@ const Hero = () => {
           align="center"
           sx={{ mx: { lg: 10, md: 7, xs: 3 } }}
         >
-          {`I'm`} a frontend developer and i enjoy implementing visual elements
-          that users see and interact with all the while keeping the balance
-          between visual and functional design.
+          {`
+         I'm a dedicated Frontend Developer with a passion for implementing visual elements that users 
+         see and interact with, while maintaining a perfect balance between visual appeal and functional design.
+         `}
         </Typography>
       </Box>
 
