@@ -63,6 +63,8 @@ const AboutTab = () => {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
+        variant="scrollable"
+        scrollButtons="auto"
         sx={{
           borderRight: { md: 1 },
           borderBottom: { xs: 1, md: 0 },
