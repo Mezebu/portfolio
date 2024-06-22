@@ -61,16 +61,19 @@ const Hero = () => {
 
       <ResumeBtn />
 
-      <Grid container>
-        <Grid item lg={6} md={6} sm={12} xs={12}>
+      <Grid container spacing={2} alignItems="center">
+        <Grid
+          item
+          lg={6}
+          md={6}
+          sm={12}
+          xs={12}
+          sx={{ display: { xs: "none", sm: "flex" }, justifyContent: "center" }}
+        >
           {theme.palette.mode === "light" ? (
-            <FlexCenter sx={{ py: 5 }}>
-              <Image src={stickerLight} alt="sticker" priority={true} />
-            </FlexCenter>
+            <Image src={stickerLight} alt="sticker" priority={true} />
           ) : (
-            <FlexCenter sx={{ py: 5 }}>
-              <Image src={stickerDark} alt="sticker" priority={true} />
-            </FlexCenter>
+            <Image src={stickerDark} alt="sticker" priority={true} />
           )}
         </Grid>
         <Grid item lg={6} md={6} sm={12} xs={12}>
