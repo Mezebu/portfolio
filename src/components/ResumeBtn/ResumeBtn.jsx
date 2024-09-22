@@ -16,7 +16,7 @@ const ResumeBtn = () => {
           : theme.palette.secondary.light,
       color: (theme) => theme.palette.common.white,
     },
-    href: "https://drive.google.com/file/d/1v2z7mYxySUj5JEYX6SjL8n1c4OpQELNm/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/197J7ZrezV-M5RERPzCnKEV4dD0o8qnjy/view?usp=drive_link",
     target: "_blank",
   };
 
